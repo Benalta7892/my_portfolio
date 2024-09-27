@@ -1,8 +1,4 @@
 <%# browser-sync start --proxy "localhost:3000" --files "app/views/**/*.erb, app/assets/stylesheets/**/*.css, app/assets/javascripts/**/*.js, app/models/**/*.rb, app/controllers/**/*.rb" --no-notify --watch --watch-options-ignoreInitial --watch-options-awaitWriteFinish %>
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<% if @admin_user.avatar.attached? %>
-  <%= image_tag @admin_user.avatar.url, alt: "Avatar", class: "avatar-img", height: 300, width: 400 %>
-<% else %>
-  <p>Aucun avatar disponible.</p>
-<% end %>
+<%= cl_image_tag @admin_user.avatar.key, alt: "Avatar", class: "avatar-img", height: 300, width: 400, crop: :fill %>
