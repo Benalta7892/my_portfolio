@@ -24,11 +24,11 @@ user = User.create!(
   password: ENV["PASSWORD_ADMIN"],
   bio: ENV["BIO_ADMIN"],
   links: ENV["LINKS_ADMIN"],
-  admin: ENV["ADMIN_USER"]
+  admin: ENV["ADMIN_USER"] == "true"
 )
 
 puts "Attaching an avatar to the user..."
-if ENV["AVATAR_ADMIN"].present?
+unless user.avatar.attached?
   user.avatar.attach(io: URI.open(ENV["AVATAR_ADMIN"]), filename: "avatar.jpg")
 end
 
