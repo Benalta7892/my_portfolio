@@ -1,7 +1,12 @@
 <nav>
-  <a href="#">Accueil</a>
-  <a href="#">À propos</a>
-  <a href="#">CV</a>
-  <a href="#">Portfolio</a>
-  <a href="#">Contact</a>
+  <div class="logo">
+    <%= link_to image_tag('LogoBA.png'), root_path, :class => 'logo' %>
+  </div>
+  <div class="nav-links">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">CV</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>

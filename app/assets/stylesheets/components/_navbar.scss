@@ -3,12 +3,22 @@ nav {
   z-index: 1;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background: #03243f;
 }
 
-nav a {
+nav .logo img {
+  width: 55px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
   color: #f0f0f0;
   text-decoration: none;
   font-size: clamp(14px, 2vw, 20px);
@@ -16,7 +26,7 @@ nav a {
   position: relative;
 }
 
-nav a::before {
+.nav-links a::before {
   content: "";
   display: block;
   position: absolute;
@@ -30,7 +40,7 @@ nav a::before {
   transition: transform 0.2s ease-out;
 }
 
-nav a:hover::before {
+.nav-links a:hover::before {
   transform: scaleX(100%);
   background: #f1f1f1;
 }
