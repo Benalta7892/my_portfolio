@@ -35,18 +35,6 @@ h1 {
   position: relative;
 }
 
-// h1::after {
-//   content: "";
-//   position: absolute;
-//   display: block;
-//   height: 100%;
-//   width: 3px;
-//   background: #ebebeb;
-//   right: -10px;
-//   top: 0;
-//   animation: carret 1s infinite;
-// }
-
 @keyframes carret {
   0% {
     opacity: 0;
@@ -63,28 +51,10 @@ h1 {
   font-weight: 200;
   font-size: clamp(26px, 8vw, 40px);
   color: #f0f0f0;
-  // opacity: 0;
-  // transition: opacity 0.8s ease-out;
   position: relative;
   margin: 0 0 8px;
   position: relative;
   display: inline-block;
-}
-
-// .subtitle.active {
-//   opacity: 1;
-// }
-
-.subtitle::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 3px;
-  background: #ebebeb;
-  right: -10px;
-  top: 0;
-  animation: carret 1s infinite;
 }
 
 .links {
