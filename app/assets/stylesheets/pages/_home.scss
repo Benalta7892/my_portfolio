@@ -1,73 +1,93 @@
 // Specific CSS for your home-page
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: source code pro, sans-serif;
-  background: #111;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hero {
-  height: 100vh;
-  min-height: 700px;
-  border-bottom: 1px solid #f1f1f124;
+  width: 100%;
+  height: calc(100vh - 55px); // 100% de la hauteur de l'écran moins la hauteur de la navbar
+  min-height: calc(100vh - 55px);
   text-align: start;
-  padding-top: 150px;
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
-.hero-content {
-  margin: 24px;
-}
+  display: flex;
 
-h1 {
-  font-family: source code pro, sans-serif;
-  font-size: clamp(24px, 8vw, 80px);
-  display: inline-block;
-  font-weight: 800;
-  color: #f0f0f0;
-  text-transform: uppercase;
-  background-image: linear-gradient(to right, #999, #fff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-}
+  .hero-content {
+    flex-grow: 1;
 
-@keyframes carret {
-  0% {
-    opacity: 0;
+    .hero-top-content {
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      top: 30%;
+      left: 18%;
+
+      h1 {
+        font-family: source code pro, sans-serif;
+        font-size: clamp(16px, 5vw, 40px);
+        font-weight: 800;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #999, #fff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .subtitle {
+        font-weight: 200;
+        font-size: clamp(6px, 3vw, 24px);
+        color: #f0f0f0;
+        margin: 0;
+        display: inline-block;
+      }
+    }
+
+    .links {
+      position: absolute;
+      bottom: 8%;
+      left: 4%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.8;
+
+      .link {
+        box-shadow: 0px 0px 28px -7px #000000;
+        margin: clamp(2px, 0.5vw, 8px);
+
+        img {
+          width: clamp(20px, 4vw, 50px);
+          height: auto;
+        }
+      }
+    }
   }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
-.subtitle {
-  font-weight: 200;
-  font-size: clamp(26px, 8vw, 40px);
-  color: #f0f0f0;
-  position: relative;
-  margin: 0 0 8px;
-  position: relative;
-  display: inline-block;
-}
-
-.links {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.presentation {
+  width: 85%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  opacity: 0.8;
-}
-
-.link {
-  box-shadow: 0px 0px 28px -7px #000000;
-  margin: 8px;
+  justify-content: center;
 }
