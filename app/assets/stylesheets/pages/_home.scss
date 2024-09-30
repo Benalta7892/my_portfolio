@@ -13,7 +13,7 @@
 
 body {
   font-family: source code pro, sans-serif;
-  background: #d5d5d5;
+  background: #ffffff;
 
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body {
   min-height: calc(100vh - 80px);
   text-align: start;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
   background-position: center;
   background-size: cover;
@@ -67,7 +67,7 @@ body {
         font-size: clamp(16px, 5vw, 40px);
         font-weight: 800;
         text-transform: uppercase;
-        background: linear-gradient(to right, #999, #fff);
+        background: linear-gradient(to right, #cf995f, #fff);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -76,15 +76,16 @@ body {
       .subtitle {
         font-weight: 200;
         font-size: clamp(6px, 3vw, 24px);
-        color: #f0f0f0;
+        color: #cf995f;
         margin: 0;
         display: inline-block;
+        font-weight: 400;
       }
     }
 
     .links {
       position: absolute;
-      bottom: 8%;
+      bottom: 16%;
       left: 4%;
       display: flex;
       flex-direction: column;
@@ -93,6 +94,7 @@ body {
       .link {
         box-shadow: 0px 0px 28px -7px #000000;
         margin: clamp(2px, 0.5vw, 8px);
+        border-radius: 50%;
 
         img {
           width: clamp(20px, 4vw, 50px);
@@ -244,7 +246,7 @@ body {
               margin: 16px;
               padding: 16px;
               box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-              border-radius: 8px;
+              border-radius: 79% 21% 81% 19% / 15% 81% 19% 85%;
               transition: transform 0.3s ease-in-out;
             }
 
@@ -325,4 +327,9 @@ body {
       }
     }
   }
+}
+
+.svg-down {
+  position: relative;
+  top: -1px;
 }

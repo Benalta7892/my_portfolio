@@ -13,6 +13,7 @@ require "open-uri"
 puts "Clearing the database..."
 User.destroy_all
 Contact.destroy_all
+Project.destroy_all
 
 
 # Create a user
@@ -33,3 +34,34 @@ unless user.avatar.attached?
 end
 
 puts "User created!"
+
+# Create projects
+puts "Creating projects..."
+
+projects = [
+  {
+    title: "Portfolio",
+    description: "This is my portfolio. I built it with Ruby on Rails.",
+    pictures: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/zerotoheros_ayxbcc.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
+    ],
+    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
+    link: "https://github.com/Chorusgrey/zero_to_heroes",
+    dev_count: 5
+  }
+]
+
+projects.each do |project|
+  project = user.projects.create!(
+    title: project[:title],
+    description: project[:description],
+    technologies: project[:technologies],
+    link: project[:link],
+    dev_count: project[:dev_count]
+  )
+end
+
+puts "Projects created!"
