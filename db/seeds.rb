@@ -40,7 +40,7 @@ puts "Creating projects..."
 
 projects = [
   {
-    title: "Portfolio",
+    title: "Zero to Heroes",
     description: "This is my portfolio. I built it with Ruby on Rails.",
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/zerotoheros_ayxbcc.png",
@@ -54,14 +54,20 @@ projects = [
   }
 ]
 
-projects.each do |project|
+projects.each do |project_data|
   project = user.projects.create!(
-    title: project[:title],
-    description: project[:description],
-    technologies: project[:technologies],
-    link: project[:link],
-    dev_count: project[:dev_count]
+    title: project_data[:title],
+    description: project_data[:description],
+    technologies: project_data[:technologies],
+    link: project_data[:link],
+    dev_count: project_data[:dev_count]
   )
+
+  if project_data[:pictures]
+    project_data[:pictures].each_with_index do |picture_url, index|
+      project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
+    end
+  end
 end
 
 puts "Projects created!"
