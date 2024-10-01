@@ -2,12 +2,16 @@
 <%# <h1>Benoit <span>ALEXANDRE</span></h1> %>
 <%# <p>Développeur web - Full Stack</p> %>
 <%#= cl_image_tag @admin_user.avatar.key, alt: "Avatar", class: "avatar-img", height: 300, width: 400, crop: :fill %>
+
 <div class="custom-cursor"></div>
+
 <section class="hero">
   <div class="hero-content">
+
     <%# <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
     <%# <path fill="#ffffff" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,101.3C384,117,480,171,576,192C672,213,768,203,864,165.3C960,128,1056,64,1152,64C1248,64,1344,128,1392,160L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path> %>
     <%# </svg> %>
+
     <div class="hero-top-content">
       <h1 aria-label="Porsche, set free.">Benoit Alexandre-Tachdjian</h1>
       <p class="subtitle">Développeur web - Full Stack</p>
@@ -24,54 +28,75 @@
       </a>
     </div>
   </div>
+
   <%# <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
   <%# <path fill="#628395" fill-opacity="1" d="M0,256L48,256C96,256,192,256,288,256C384,256,480,256,576,240C672,224,768,192,864,176C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path> %>
   <%# </svg> %>
+
 </section>
-<div class="svg-wrapper">
-  <%# <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
-  <%# <path fill="#628395" fill-opacity="1" d="M0,32L26.7,64C53.3,96,107,160,160,165.3C213.3,171,267,117,320,85.3C373.3,53,427,43,480,48C533.3,53,587,75,640,101.3C693.3,128,747,160,800,149.3C853.3,139,907,85,960,96C1013.3,107,1067,181,1120,213.3C1173.3,245,1227,235,1280,213.3C1333.3,192,1387,160,1413,144L1440,128L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path> %>
-  <%# </svg> %>
-  <div class="container-presentation">
-    <div class="presentation">
-      <div class="text-presentation">
-        <h2>Hello world</h2>
-        <p>Je suis Benoit Alexandre-Tachdjian, <span>développeur web full stack</span>. Formé chez Le Wagon, j'ai acquis une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours et mes réalisations, et découvrez comment je peux vous accompagner dans vos projets !</p>
-        <a href="#"> ➡️ En savoir plus</a>
-      </div>
-      <div class="avatar-presentation">
-        <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
-      </div>
+
+
+<%# <div class="svg-wrapper"> %>
+
+<%# <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
+<%# <path fill="#628395" fill-opacity="1" d="M0,32L26.7,64C53.3,96,107,160,160,165.3C213.3,171,267,117,320,85.3C373.3,53,427,43,480,48C533.3,53,587,75,640,101.3C693.3,128,747,160,800,149.3C853.3,139,907,85,960,96C1013.3,107,1067,181,1120,213.3C1173.3,245,1227,235,1280,213.3C1333.3,192,1387,160,1413,144L1440,128L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path> %>
+<%# </svg> %>
+
+<div class="container-presentation">
+
+  <div class="presentation">
+
+    <div class="text-presentation">
+      <h2>Hello world</h2>
+      <p>Je suis Benoit Alexandre-Tachdjian, <span>développeur web full stack</span>. Formé chez Le Wagon, j'ai acquis une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours et mes réalisations, et découvrez comment je peux vous accompagner dans vos projets !</p>
+      <a href="#"> ➡️ En savoir plus</a>
     </div>
-    <div class="skills-container">
-      <h1>Skills</h1>
-      <div class="skills-content">
-        <div class="front-end">
-          <h2>Front-End</h2>
-          <div class="logos">
-            <%= cl_image_tag "html5_kf7hmz.png", alt: "HTML5 Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "css3_q9lv1h.png", alt: "CSS3 Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "js_qh6ndw.png", alt: "Javascript Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "figma_d7mc4z.png", alt: "Figma Logo", width: 100, height: 100 %>
-          </div>
-        </div>
-        <div class="back-end">
-          <h2>Back-End</h2>
-          <div class="logos">
-            <%= cl_image_tag "ruby_u4fzgi.png", alt: "Ruby Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "rails_w8dl1x.png", alt: "Ruby On Rails Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "php_ehpiwx.png", alt: "PHP Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "heroku_vqw6qd.png", alt: "Heroku Logo", width: 100, height: 100 %>
-            <%= cl_image_tag "postgresql_czwsff.png", alt: "PostgreSQL Logo", width: 100, height: 100 %>
-          </div>
-        </div>
-      </div>
+
+    <div class="avatar-presentation">
+      <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
     </div>
+
   </div>
-  <%# <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
-  <%# <path fill="#628395" fill-opacity="1" d="M0,288L30,288C60,288,120,288,180,261.3C240,235,300,181,360,186.7C420,192,480,256,540,288C600,320,660,320,720,304C780,288,840,256,900,250.7C960,245,1020,267,1080,245.3C1140,224,1200,160,1260,160C1320,160,1380,224,1410,256L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path> %>
-  <%# </svg> %>
+
+  <div class="skills-container">
+    <h2>Skills</h2>
+
+    <div class="skills-content">
+
+      <div class="front-end">
+        <h2>Front-End</h2>
+        <div class="logos">
+          <%= cl_image_tag "html5_kf7hmz.png", alt: "HTML5 Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "css3_q9lv1h.png", alt: "CSS3 Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "js_qh6ndw.png", alt: "Javascript Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "figma_d7mc4z.png", alt: "Figma Logo", width: 100, height: 100 %>
+        </div>
+      </div>
+
+      <div class="back-end">
+        <h2>Back-End</h2>
+        <div class="logos">
+          <%= cl_image_tag "ruby_u4fzgi.png", alt: "Ruby Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "rails_w8dl1x.png", alt: "Ruby On Rails Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "php_ehpiwx.png", alt: "PHP Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "heroku_vqw6qd.png", alt: "Heroku Logo", width: 100, height: 100 %>
+          <%= cl_image_tag "postgresql_czwsff.png", alt: "PostgreSQL Logo", width: 100, height: 100 %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+
+<%# <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
+<%# <path fill="#628395" fill-opacity="1" d="M0,288L30,288C60,288,120,288,180,261.3C240,235,300,181,360,186.7C420,192,480,256,540,288C600,320,660,320,720,304C780,288,840,256,900,250.7C960,245,1020,267,1080,245.3C1140,224,1200,160,1260,160C1320,160,1380,224,1410,256L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path> %>
+<%# </svg> %>
+
+<%# </div> %>
+
+
 <%# <svg class="svg-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> %>
 <%# <path fill="#628395" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,186.7C384,171,480,117,576,96C672,75,768,85,864,122.7C960,160,1056,224,1152,229.3C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path> %>
 <%# </svg> %>
@@ -89,21 +114,23 @@
 <%# </div> %>
 <%# </div> %>
 <%# </div> %>
-<% @projects.each do |project| %>
-  <div class="project">
-    <h2><%= project.title %></h2>
-    <p><%= project.description %></p>
-    <p>Technologies : <%= project.technologies %></p>
-    <p>Développeurs impliqués : <%= project.dev_count %></p>
-    <a href="<%= project.link %>">Voir le projet</a>
-    <% if project.pictures.attached? %>
-      <div class="project-pictures">
-        <% project.pictures.each do |picture| %>
-          <%= image_tag url_for(picture) %>
+
+<div class="container-projects">
+  <h2>Portfolio</h2>
+
+  <% @projects.each do |project| %>
+    <div class="carousel-project">
+      <div class="item">
+        <% if project.pictures.attached? %>
+          <div class="project-pictures">
+            <%= image_tag url_for(project.pictures.first) %>
+          </div>
+        <% else %>
+          <p>Aucune image disponible pour ce projet.</p>
         <% end %>
+        <div class="project-title"><%= project.title %></div>
       </div>
-    <% else %>
-      <p>Aucune image disponible pour ce projet.</p>
     <% end %>
   </div>
-<% end %>
+
+</div>
