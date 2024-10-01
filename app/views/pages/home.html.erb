@@ -115,22 +115,23 @@
 <%# </div> %>
 <%# </div> %>
 
-<div class="container-projects">
+<section class="section-portolio">
   <h2>Portfolio</h2>
 
-  <% @projects.each do |project| %>
-    <div class="carousel-project">
-      <div class="item">
-        <% if project.pictures.attached? %>
-          <div class="project-pictures">
+  <div class="container-portfolio">
+
+    <% @projects.each do |project| %>
+      <div class="card-portfolio">
+        <div class="project-picture">
+          <% if project.pictures.attached? %>
             <%= image_tag url_for(project.pictures.first) %>
-          </div>
-        <% else %>
-          <p>Aucune image disponible pour ce projet.</p>
-        <% end %>
+          <% else %>
+            <p>Aucune image disponible pour ce projet.</p>
+          <% end %>
+        </div>
         <div class="project-title"><%= project.title %></div>
       </div>
     <% end %>
-  </div>
 
-</div>
+  </div>
+</section>
