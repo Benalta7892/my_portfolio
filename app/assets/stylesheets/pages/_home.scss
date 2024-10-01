@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-* {
-  box-shadow: 0 0 0 3px red inset;
-}
+// * {
+//   box-shadow: 0 0 0 3px red inset;
+// }
 
 *,
 ::before,
@@ -191,7 +191,7 @@ body {
 
   .skills-container {
     position: relative;
-    top: 12%;
+    top: 18%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,6 +277,7 @@ body {
   justify-content: space-around;
   position: relative;
   font-family: source code pro, sans-serif;
+  flex-wrap: wrap;
 
   h2 {
     font-family: source code pro, sans-serif;
@@ -284,44 +285,75 @@ body {
     margin: 0;
   }
 
-  .card-portfolio {
-    position: relative;
+  .container-portfolio {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     align-items: center;
     margin: 8px;
     padding: 8px;
+    height: fit-content;
 
-    img {
-      height: 350px;
-      width: auto;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .project-picture {
+    .card-portfolio {
       position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 20), rgba(0, 0, 0, 20));
-    }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 8px;
+      padding: 8px;
 
-    .project-title {
-      font-family: source code pro, sans-serif;
-      position: absolute;
-      top: 45%;
-      color: white;
-      font-size: 44px;
-      font-weight: 800;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+      img {
+        height: 280px;
+        width: auto;
+        border-radius: 8px;
+        transition: opacity 0.3s ease-in-out;
+      }
 
-    &:hover img {
-      opacity: 0.2; /* L'image s'assombrit */
-    }
+      .project-picture {
+        position: relative;
+        border-radius: 8px;
+        background: linear-gradient(rgba(0, 0, 0, 20), rgba(0, 0, 0, 20));
+      }
 
-    &:hover .project-title {
-      opacity: 1; /* Le titre devient visible */
+      .project-title {
+        font-family: source code pro, sans-serif;
+        position: absolute;
+        top: 45%;
+        color: white;
+        font-size: 44px;
+        font-weight: 800;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 8px;
+      }
+
+      &:hover img {
+        opacity: 0.2; /* L'image s'assombrit */
+        border-radius: 8px;
+      }
+
+      &:hover .project-title {
+        opacity: 1; /* Le titre devient visible */
+        border-radius: 8px;
+      }
     }
+  }
+  .link-container {
+    display: flex;
+    padding-right: 20px;
+    align-self: end;
+    position: relative;
+    right: 2%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #03243f;
+    font-weight: bold;
+    font-size: 18px;
+    height: fit-content;
   }
 }
 

@@ -51,7 +51,61 @@ projects = [
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
+  },
+  {
+    title: "Pokéswype",
+    description: "This is a Pokémon game. I built it with JavaScript.",
+    pictures: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
+    ],
+    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
+    link: "https://github.com/Benalta7892/pokeswype",
+    dev_count: 5
+  },
+  {
+    title: "Zero to Heroes",
+    description: "This is my portfolio. I built it with Ruby on Rails.",
+    pictures: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/zerotoheros_ayxbcc.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
+    ],
+    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
+    link: "https://github.com/Chorusgrey/zero_to_heroes",
+    dev_count: 5
+  },
+  {
+    title: "Pokéswype",
+    description: "This is a Pokémon game. I built it with JavaScript.",
+    pictures: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
+    ],
+    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
+    link: "https://github.com/Benalta7892/pokeswype",
+    dev_count: 5
   }
+
 ]
 
 projects.each do |project_data|
