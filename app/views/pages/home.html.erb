@@ -146,27 +146,27 @@
 
   <%= form_with model: @contact, url: contacts_path, local: true do |form| %>
     <div>
-      <%= form.label :first_name %>
-      <%= form.text_field :first_name, required: true %>
-    </div>
-
-    <div>
-      <%= form.label :last_name %>
+      <%= form.label :last_name, "Nom" %>
       <%= form.text_field :last_name, required: true %>
     </div>
 
     <div>
-      <%= form.label :email %>
+      <%= form.label :first_name, "Prénom" %>
+      <%= form.text_field :first_name, required: true %>
+    </div>
+
+    <div>
+      <%= form.label :email, "Adresse email" %>
       <%= form.email_field :email, required: true %>
     </div>
 
     <div>
-      <%= form.label :subject %>
+      <%= form.label :subject, "Objet" %>
       <%= form.text_field :subject, required: true %>
     </div>
 
     <div>
-      <%= form.label :message %>
+      <%= form.label :message, "Message" %>
       <%= form.text_area :message, required: true %>
     </div>
 
