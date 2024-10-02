@@ -32,6 +32,8 @@ gem 'ffi', '< 1.17.0'
 
 gem "cloudinary"
 
+gem 'letter_opener'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
