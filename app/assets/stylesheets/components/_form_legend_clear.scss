@@ -8,3 +8,69 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+.form_contact {
+  width: 500px;
+  background-color: #023047;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  margin: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-form {
+  width: 100%;
+}
+
+.contact-input {
+  margin: 12px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+
+  .textarea {
+    width: 100%;
+    height: 100px;
+    margin: 8px;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    background-color: #fb8500;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+input {
+  font-family: source code pro, sans-serif;
+  font-size: clamp(12px, 2vw, 28px);
+  margin: 8px;
+  border-radius: 5px;
+}
+
+.contact-input label {
+  font-family: source code pro, sans-serif;
+  font-size: clamp(12px, 2vw, 28px);
+  margin: 8px;
+}
