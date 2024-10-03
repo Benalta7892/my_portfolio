@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-// * {
-//   box-shadow: 0 0 0 3px red inset;
-// }
+* {
+  box-shadow: 0 0 0 3px red inset;
+}
 
 *,
 ::before,
@@ -18,7 +18,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .hero {
@@ -36,16 +35,13 @@ body {
 
   // svg:nth-child(1) {
   //   position: absolute;
-  //   top: -50px;
-  //   width: 100%;
-  //   z-index: 0;
+  //   top: -1px;
   // }
 
-  // svg:nth-child(2) {
+  // svg:nth-child(3) {
   //   position: absolute;
-  //   bottom: -2px;
+  //   bottom: -1px;
   //   width: 100%;
-  //   z-index: 0;
   // }
 
   .hero-content {
@@ -107,16 +103,13 @@ body {
 //   }
 
 .container-presentation {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
-  position: relative;
-  height: 100vh;
+  margin-top: 120px;
 
   .presentation {
-    position: relative;
-    top: 8%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -134,7 +127,6 @@ body {
       margin: 8px;
       padding: 14px;
       position: relative;
-      top: -60px;
       // box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
     }
 
@@ -147,87 +139,76 @@ body {
       padding: 14px;
 
       img {
-        width: 50%;
+        width: clamp(134px, 20vw, 348px);
         height: auto;
         border-radius: 30% 70% 62% 38% / 30% 30% 70% 70%;
         border: 3px solid;
         box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-        position: relative;
-        top: -74px;
       }
     }
   }
+}
 
-  a {
-    text-decoration: none;
-    color: #03243f;
-    align-self: flex-end;
-    margin: 18px;
-  }
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  padding: 8px;
+  height: fit-content;
 
-  .skills-container {
-    position: relative;
-    top: 7%;
+  .skills-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 8px;
     padding: 8px;
-    height: fit-content;
-    // box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-    // border-radius: 5px;
+    z-index: 2;
 
-    // h1 {
-    //   font-family: source code pro, sans-serif;
-    //   font-size: clamp(12px, 2vw, 28px);
-    //   margin: 0px;
-    // }
-
-    .skills-content {
+    .front-end,
+    .back-end {
+      width: 50%;
+      justify-content: center;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       margin: 8px;
       padding: 8px;
-      z-index: 2;
+      transition: transform 0.3s ease-in-out;
 
-      .front-end,
-      .back-end {
-        width: 50%;
-        justify-content: center;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .logos {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
-        margin: 8px;
-        padding: 8px;
+        flex-wrap: wrap;
 
-        .logos {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          align-items: center;
-          margin: 8px;
-          padding: 8px;
+        img {
+          width: 14%;
+          height: auto;
+          margin: 16px;
+          padding: 16px;
+          box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+          border-radius: 79% 21% 81% 19% / 15% 81% 19% 85%;
+          transition: transform 0.3s ease-in-out;
+        }
 
-          img {
-            width: 14%;
-            height: auto;
-            margin: 16px;
-            padding: 16px;
-            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-            border-radius: 79% 21% 81% 19% / 15% 81% 19% 85%;
-            transition: transform 0.3s ease-in-out;
-          }
-
-          img:hover {
-            transform: scale(1.1);
-          }
+        img:hover {
+          transform: scale(1.1);
         }
       }
     }
   }
+}
+
+.skills-container > h2 {
+  margin: 0;
 }
 
 //   .svg-bottom {
@@ -239,15 +220,11 @@ body {
 // }
 
 .section-portolio {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  position: relative;
-  font-family: source code pro, sans-serif;
-  flex-wrap: wrap;
+  margin-top: 120px;
 
   .container-portfolio {
     display: flex;
@@ -314,11 +291,7 @@ body {
   }
 
   a {
-    text-decoration: none;
-    color: #03243f;
-    font-weight: bold;
-    font-size: 18px;
-    height: fit-content;
+    align-self: center;
   }
 }
 

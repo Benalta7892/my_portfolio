@@ -1,10 +1,11 @@
 class ContactMailer < ApplicationMailer
+  default to: ENV.fetch('EMAIL_ADMIN', nil)
+
   def contact_message(contact)
     @contact = contact
     mail(
-      to: "benoit.alexandre78@gmail.com",
-      from: %("#{@contact.first_name} #{@contact.last_name}" <ton-email@gmail.com>), # Affiche le nom du visiteur
-      reply_to: @contact.email, # L'email du visiteur pour que tu puisses lui répondre directement
+      from: @contact.email,
+      reply_to: @contact.email,
       subject: @contact.subject
     )
   end
