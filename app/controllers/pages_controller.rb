@@ -6,4 +6,7 @@ class PagesController < ApplicationController
     @projects = Project.all
     @contact = Contact.new
   end
+
+  def about
+  end
 end
