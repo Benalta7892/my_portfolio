@@ -18,58 +18,93 @@ legend ~ div.form-check:first-of-type {
 }
 
 .form-contact {
-  width: 500px;
-  background-color: #023047;
-  border-radius: 15px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-  margin: 12px;
-  padding: 12px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .custom-form {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  min-height: 355px;
+  justify-content: space-evenly;
+  margin-top: 28px;
+  padding: 28px;
+  background-color: #8ecae6;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
 }
 
 .contact-input {
-  margin: 12px;
-  padding: 12px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  animation: 1s ease-in-out 0s 1 slideInFromLeft;
-  transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+
+  // animation: 1s ease-in-out 0s 1 slideInFromLeft;
+  // transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
 
   .textarea {
     width: 100%;
-    height: 100px;
-    margin: 8px;
-    border-radius: 5px;
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+
+    &:hover {
+      background-color: #fb8500;
+      transform: scale(1.05);
+    }
   }
 
-  &:hover {
-    background-color: #fb8500;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-  }
+  // &:hover {
+  //   background-color: #fb8500;
+  //   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  //   transform: scale(1.05);
+  // }
 }
 
 input {
-  font-family: source code pro, sans-serif;
-  font-size: clamp(12px, 2vw, 28px);
-  margin: 8px;
-  border-radius: 5px;
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+
+  &:hover {
+    background-color: #fb8500;
+    transform: scale(1.05);
+  }
+  // font-family: source code pro, sans-serif;
+  // font-size: clamp(12px, 2vw, 28px);
+  // margin: 8px;
+  // border-radius: 5px;
 }
 
-.contact-input label {
-  font-family: source code pro, sans-serif;
-  font-size: clamp(12px, 2vw, 28px);
-  margin: 8px;
-}
+// textarea {
+//   width: 100%;
+//   margin-top: 14px;
+//   padding: 10px;
+//   border-radius: 8px;
+//   border: none;
+//   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+
+//   &:hover {
+//     background-color: #fb8500;
+//     transform: scale(1.05);
+//   }
+// font-family: "Source Code Pro", sans-serif;
+// font-size: 14px;
+// color: #999;
+// font-style: italic;
+// }
+
+// .contact-input label {
+//   font-family: source code pro, sans-serif;
+//   font-size: clamp(12px, 2vw, 28px);
+//   margin: 8px;
+// }
