@@ -27,6 +27,15 @@ h4 {
   font-weight: bold;
 }
 
+.subtitle {
+  font-weight: 200;
+  font-size: clamp(6px, 3vw, 24px);
+  color: #cf995f;
+  margin: 0;
+  display: inline-block;
+  font-weight: 400;
+}
+
 p {
   text-align: center;
   font-size: clamp(12px, 2vw, 28px);

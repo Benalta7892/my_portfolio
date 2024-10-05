@@ -1,0 +1,48 @@
+.small-hero {
+  width: 100%;
+  height: calc(100vh - 80px); // 100% de la hauteur de l'écran moins la hauteur de la navbar
+  min-height: calc(100vh - 80px);
+  text-align: start;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+
+  .small-hero-content {
+    flex-grow: 1;
+
+    .small-hero-top-content {
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      top: 30%;
+      left: 18%;
+    }
+
+    .links {
+      position: absolute;
+      bottom: 10%;
+      left: 4%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.8;
+
+      .link {
+        box-shadow: 0px 0px 28px -7px #000000;
+        margin: clamp(2px, 0.5vw, 8px);
+        border-radius: 50%;
+
+        img {
+          width: clamp(20px, 4vw, 50px);
+          height: auto;
+        }
+      }
+    }
+  }
+}
