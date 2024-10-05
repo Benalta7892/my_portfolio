@@ -2,14 +2,12 @@
   width: 100%;
   height: calc(100vh - 80px); // 100% de la hauteur de l'écran moins la hauteur de la navbar
   min-height: calc(100vh - 80px);
-  text-align: start;
-  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
+  // display: flex;
 
   // svg:nth-child(1) {
   //   position: absolute;
@@ -23,7 +21,10 @@
   // }
 
   .hero-content {
-    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     .hero-top-content {
       height: fit-content;
@@ -32,14 +33,16 @@
       flex-direction: column;
       align-items: flex-start;
       position: relative;
-      top: 30%;
+      // top: 30px;
       left: 18%;
     }
 
     .links {
-      position: absolute;
-      bottom: 10%;
+      position: relative;
+      bottom: -8%;
       left: 4%;
+      height: fit-content;
+      width: fit-content;
       display: flex;
       flex-direction: column;
       opacity: 0.8;
