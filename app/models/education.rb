@@ -11,7 +11,7 @@ class Education < ApplicationRecord
 
   validates :description, presence: true
 
-  validates :logo, presence: true
+  # validates :logo, presence: true
 
   def end_date_after_start_date
     return unless end_date < start_date

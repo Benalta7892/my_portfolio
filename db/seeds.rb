@@ -14,6 +14,9 @@ puts "Clearing the database..."
 User.destroy_all
 Contact.destroy_all
 Project.destroy_all
+Resume.destroy_all
+Education.destroy_all
+Experience.destroy_all
 
 
 # Create a user
@@ -117,7 +120,7 @@ projects.each do |project_data|
     dev_count: project_data[:dev_count]
   )
 
-  if project_data[:pictures]
+  if project_data[:pictures] && !project.pictures.attached?
     project_data[:pictures].each_with_index do |picture_url, index|
       project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
     end
@@ -125,3 +128,30 @@ projects.each do |project_data|
 end
 
 puts "Projects created!"
+
+puts "Creating a resume..."
+
+resume = user.create_resume!(
+  title: "Mon CV",
+  description: [
+      "Après plusieurs années dans la vente et l'immobilier, j'ai choisi de me
+    réorienter vers le développement web. J'ai suivi une formation chez Le Wagon,
+    où j'ai acquis des compétences solides en technologies comme Ruby on Rails,
+    JavaScript, et Stimulus. J'ai contribué à des projets collaboratifs,
+    créant des applications web complètes et fonctionnelles.",
+
+    "Je suis passionné par le développement de solutions web élégantes et performantes.
+    Toujours à la recherche de nouveaux défis, je suis disponible pour apporter mon
+    expertise à vos projets de développement web."
+  ]
+)
+
+unless resume.picture.attached?
+  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728137101/development/cv_exwatb.png"), filename: "cv_exwatb.png")
+end
+
+unless resume.pdf.attached?
+  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728137142/development/BenoitAlexandreCV_fryosx.pdf"), filename: "BenoitAlexandreCV_fryosx.pdf")
+end
+
+puts "Resume created: #{resume.title}"

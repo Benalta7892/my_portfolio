@@ -1,1 +1,28 @@
 <%= render 'shared/smallbanner', title: "À propos de moi", subtitle: "Voici la page à propos, découvrez mon parcours professionnel." %>
+<%# iCI JE VEUX AFFICHER IMAGE DE MON CV ET LES DEUX DESCRIPTION %>
+<p><%= @resume.description[0] %></p>
+<p><%= @resume.description[1] %></p>
+<%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
+
+
+<div class="education">
+  <h2>Éducation</h2>
+  <% @resume.educations.each do |education| %>
+    <div class="education-item">
+      <h3><%= education.diploma_name %> - <%= education.institution_name %></h3>
+      <p><%= education.description %></p>
+      <p><%= education.start_date.strftime("%Y") %> - <%= education.end_date.strftime("%Y") %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="experience">
+  <h2>Expérience</h2>
+  <% @resume.experiences.each do |experience| %>
+    <div class="experience-item">
+      <h3><%= experience.job_title %> - <%= experience.company_name %></h3>
+      <p><%= experience.missions %></p>
+      <p><%= experience.start_date.strftime("%Y") %> - <%= experience.end_date.strftime("%Y") %></p>
+    </div>
+  <% end %>
+</div>

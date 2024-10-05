@@ -60,23 +60,6 @@ body {
       position: relative;
       // box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
     }
-
-    .avatar-presentation {
-      width: 34%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 8px;
-      padding: 14px;
-
-      img {
-        width: clamp(134px, 20vw, 348px);
-        height: auto;
-        border-radius: 30% 70% 62% 38% / 30% 30% 70% 70%;
-        border: 3px solid;
-        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-      }
-    }
   }
 }
 
