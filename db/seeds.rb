@@ -172,7 +172,8 @@ educations = [
       "Projets Phares : Clone d'Airbnb et PokéSwype",
       "Développement en équipe depuis la conception jusqu'au déploiement."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/development/pngwing.com_rflqgf.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/development/pngwing.com_rflqgf.png",
+    order_position: 1
   },
   {
     diploma_name: "Bachelor Gestion et Transaction Immobilière",
@@ -180,7 +181,8 @@ educations = [
     location: "Paris, France",
     start_date: Date.new(2016, 2),
     end_date: Date.new(2016, 10),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306069/development/logo_zhk3sf.webp"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306069/development/logo_zhk3sf.webp",
+    order_position: 2
   },
   {
     diploma_name: "Bachelor Gestionnaire d'Unité Commercial",
@@ -188,7 +190,8 @@ educations = [
     location: "Paris, France",
     start_date: Date.new(2013, 2),
     end_date: Date.new(2014, 11),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/Novancia_Business_School_logo_ujzhry.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/Novancia_Business_School_logo_ujzhry.png",
+    order_position: 3
   },
   {
     diploma_name: "Bac Sciences et Technologies de la Gestion",
@@ -196,7 +199,8 @@ educations = [
     location: "Arpajon, France",
     start_date: Date.new(2010, 9),
     end_date: Date.new(2011, 6),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/academyversailles_msrk7l.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/academyversailles_msrk7l.png",
+    order_position: 4
   }
 ]
 
@@ -208,6 +212,7 @@ educations.each do |education_data|
     start_date: education_data[:start_date],
     end_date: education_data[:end_date],
     description: education_data[:description] || nil,
+    order_position: education_data[:order_position]
     )
 
     if education_data[:logo].present?
@@ -222,7 +227,7 @@ puts "Creating experiences..."
 experiences = [
   {
     job_title: "Conseiller vendeur",
-    company_name: "Nodus Paryly 2",
+    company_name: "Nodus Parly 2",
     location: "Le Chesnay, France",
     start_date: Date.new(2019, 5),
     end_date: Date.new(2023, 1),
@@ -230,11 +235,12 @@ experiences = [
       "Autonome dans la gestion complète de la boutique : Ouverture/fermeture, conseils/ventes,
         encaissement, stocks, merchandising, suivi du CA."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/noduslogo_gihmsr.jpg"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/noduslogo_gihmsr.jpg",
+    order_position: 1
   },
   {
     job_title: "Conseiller vendeur",
-    company_name: "Zara Paryly 2",
+    company_name: "Zara Parly 2",
     location: "Le Chesnay, France",
     start_date: Date.new(2016, 11),
     end_date: Date.new(2023, 1),
@@ -242,7 +248,8 @@ experiences = [
       "Amélioration continue en compétences organisationnelles à travers diverses tâches :
       Réassortiments des articles, merchandising, encaissement et entretien général."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png",
+    order_position: 2
   },
   {
     job_title: "Chargé de gestion locative",
@@ -257,11 +264,12 @@ experiences = [
       "Compétences validées en résolution de problèmes : Réclamations locataires et services
       généraux."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306118/development/resideetudes_ysx4tv.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306118/development/resideetudes_ysx4tv.png",
+    order_position: 3
   },
   {
     job_title: "Responsable chaussures et accessoires",
-    company_name: "Zara Paryly 2",
+    company_name: "Zara Parly 2",
     location: "Le Chesnay, France",
     start_date: Date.new(2013, 1),
     end_date: Date.new(2016, 2),
@@ -270,7 +278,8 @@ experiences = [
       objectifs et de confier des tâches, favorisant ainsi l'esprit d'équipe.",
       "Vision commerciale consolidée : Stratégies d'optimisation des ventes et de promotions."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png"
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png",
+    order_position: 4
   },
   {
     job_title: "Conseiller vendeur",
@@ -286,7 +295,8 @@ experiences = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/jules_klblcd.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306116/development/casa_acroll.webp",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/logo_totalenergies_sim0jr.webp"
-    ]
+    ],
+    order_position: 5
   }
 ]
 
@@ -297,7 +307,8 @@ experiences.each do |experience_data|
     location: experience_data[:location],
     start_date: experience_data[:start_date],
     end_date: experience_data[:end_date],
-    missions: experience_data[:missions]
+    missions: experience_data[:missions],
+    order_position: experience_data[:order_position]
   )
 
   if experience_data[:logo].present?

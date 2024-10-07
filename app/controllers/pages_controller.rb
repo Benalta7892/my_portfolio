@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
     return unless @resume
 
-    @educations = @resume.educations.order(start_date: :desc)
-    @experiences = @resume.experiences.order(start_date: :desc)
+    @educations = @resume.educations.order(order_position: :asc)
+    @experiences = @resume.experiences.order(order_position: :asc)
   end
 end
