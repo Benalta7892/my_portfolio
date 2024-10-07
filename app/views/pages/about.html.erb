@@ -10,18 +10,36 @@
   <% @resume.educations.each do |education| %>
     <div class="education-item">
       <h3><%= education.diploma_name %> - <%= education.institution_name %></h3>
-      <p><%= education.description %></p>
+
+      <!-- Parcourir la description comme tableau -->
+      <% if education.description.is_a?(Array) %>
+        <% education.description.each do |desc| %>
+          <p><%= desc %></p>
+        <% end %>
+      <% else %>
+        <p><%= education.description %></p>
+      <% end %>
+
       <p><%= education.start_date.strftime("%Y") %> - <%= education.end_date.strftime("%Y") %></p>
     </div>
   <% end %>
 </div>
+
 
 <div class="experience">
   <h2>Expérience</h2>
   <% @resume.experiences.each do |experience| %>
     <div class="experience-item">
       <h3><%= experience.job_title %> - <%= experience.company_name %></h3>
-      <p><%= experience.missions %></p>
+
+      <% if experience.missions.is_a?(Array) %>
+        <% experience.missions.each do |mission| %>
+          <p><%= mission %></p>
+        <% end %>
+      <% else %>
+        <p><%= experience.missions %></p>
+      <% end %>
+
       <p><%= experience.start_date.strftime("%Y") %> - <%= experience.end_date.strftime("%Y") %></p>
     </div>
   <% end %>

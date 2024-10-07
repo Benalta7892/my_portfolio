@@ -155,3 +155,162 @@ unless resume.pdf.attached?
 end
 
 puts "Resume created: #{resume.title}"
+
+puts "Creating educations..."
+
+educations = [
+  {
+    diploma_name: "Web Development Bootcamp",
+    institution_name: "Le Wagon",
+    location: "Paris, France",
+    start_date: Date.new(2023, 10),
+    end_date: Date.new(2024, 4),
+    description: [
+      "Bootcamp intensif de codage (6 mois).",
+      "Langages et technologies : Ruby on Rails, HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub, Heroku.",
+      "Conceptions Logicielles : Architecture MVC, conception et gestion de bases de données.",
+      "Projets Phares : Clone d'Airbnb et PokéSwype",
+      "Développement en équipe depuis la conception jusqu'au déploiement."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/development/pngwing.com_rflqgf.png"
+  },
+  {
+    diploma_name: "Bachelor Gestion et Transaction Immobilière",
+    institution_name: "Institut du Management des Services Immobiliers (IMSI) - Groupe IGS",
+    location: "Paris, France",
+    start_date: Date.new(2016, 2),
+    end_date: Date.new(2016, 10),
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306069/development/logo_zhk3sf.webp"
+  },
+  {
+    diploma_name: "Bachelor Gestionnaire d'Unité Commercial",
+    institution_name: "Novancia Business School",
+    location: "Paris, France",
+    start_date: Date.new(2013, 2),
+    end_date: Date.new(2014, 11),
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/Novancia_Business_School_logo_ujzhry.png"
+  },
+  {
+    diploma_name: "Bac Sciences et Technologies de la Gestion",
+    institution_name: "Lycée René Cassin",
+    location: "Arpajon, France",
+    start_date: Date.new(2010, 9),
+    end_date: Date.new(2011, 6),
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/academyversailles_msrk7l.png"
+  }
+]
+
+educations.each do |education_data|
+  education = resume.educations.create!(
+    diploma_name: education_data[:diploma_name],
+    institution_name: education_data[:institution_name],
+    location: education_data[:location],
+    start_date: education_data[:start_date],
+    end_date: education_data[:end_date],
+    description: education_data[:description] || nil,
+    )
+
+    if education_data[:logo].present?
+      education.logo.attach(io: URI.open(education_data[:logo]), filename: "logo.jpg")
+    end
+end
+
+puts "Educations created!"
+
+puts "Creating experiences..."
+
+experiences = [
+  {
+    job_title: "Conseiller vendeur",
+    company_name: "Nodus Paryly 2",
+    location: "Le Chesnay, France",
+    start_date: Date.new(2019, 5),
+    end_date: Date.new(2023, 1),
+    missions: [
+      "Autonome dans la gestion complète de la boutique : Ouverture/fermeture, conseils/ventes,
+        encaissement, stocks, merchandising, suivi du CA."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/noduslogo_gihmsr.jpg"
+  },
+  {
+    job_title: "Conseiller vendeur",
+    company_name: "Zara Paryly 2",
+    location: "Le Chesnay, France",
+    start_date: Date.new(2016, 11),
+    end_date: Date.new(2023, 1),
+    missions: [
+      "Amélioration continue en compétences organisationnelles à travers diverses tâches :
+      Réassortiments des articles, merchandising, encaissement et entretien général."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png"
+  },
+  {
+    job_title: "Chargé de gestion locative",
+    company_name: "Réside Études, Les Estudines",
+    location: "Levallois-Perret, France",
+    start_date: Date.new(2016, 2),
+    end_date: Date.new(2016, 10),
+    missions: [
+      "Adaptabilité renforcée dans un environnement de travail exigeants et évolutifs.",
+      "Capacité de coordination, pour une gestion efficace des opérations locatives : Visites,
+      états des lieux, rédaction des baux, suivi des paiements et des réparations.",
+      "Compétences validées en résolution de problèmes : Réclamations locataires et services
+      généraux."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306118/development/resideetudes_ysx4tv.png"
+  },
+  {
+    job_title: "Responsable chaussures et accessoires",
+    company_name: "Zara Paryly 2",
+    location: "Le Chesnay, France",
+    start_date: Date.new(2013, 1),
+    end_date: Date.new(2016, 2),
+    missions: [
+      "Développement d'aptitudes en leadership : Assumé la responsabilité de communiquer les
+      objectifs et de confier des tâches, favorisant ainsi l'esprit d'équipe.",
+      "Vision commerciale consolidée : Stratégies d'optimisation des ventes et de promotions."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png"
+  },
+  {
+    job_title: "Conseiller vendeur",
+    company_name: "Jules, Casa, Total",
+    location: "Thiais, France",
+    start_date: Date.new(2017, 9),
+    end_date: Date.new(2019, 5),
+    missions: [
+      "Acquisition de compétences en vente clés, contribuant activement à l'atteinte des
+      objectifs commerciaux."
+    ],
+    logo: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/jules_klblcd.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306116/development/casa_acroll.webp",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/logo_totalenergies_sim0jr.webp"
+    ]
+  }
+]
+
+experiences.each do |experience_data|
+  experience = resume.experiences.create!(
+    job_title: experience_data[:job_title],
+    company_name: experience_data[:company_name],
+    location: experience_data[:location],
+    start_date: experience_data[:start_date],
+    end_date: experience_data[:end_date],
+    missions: experience_data[:missions]
+  )
+
+  if experience_data[:logo].present?
+    # Si c'est un tableau de logos (plusieurs logos)
+    if experience_data[:logo].is_a?(Array)
+      experience_data[:logo].each_with_index do |logo_url, index|
+        experience.logos.attach(io: URI.open(logo_url), filename: "logo_#{index}.jpg")
+      end
+    # Si c'est un seul logo (string)
+    elsif experience_data[:logo].is_a?(String)
+      experience.logos.attach(io: URI.open(experience_data[:logo]), filename: "logo.jpg")
+    end
+  end
+end
+
+puts "Experiences created!"

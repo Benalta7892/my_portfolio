@@ -1,6 +1,8 @@
 class Experience < ApplicationRecord
   belongs_to :resume
 
+  has_many_attached :logos
+
   validates :job_title, presence: true
   validates :company_name, presence: true
   validates :location, presence: true
@@ -12,6 +14,8 @@ class Experience < ApplicationRecord
   validates :missions, presence: true
 
   # validates :logo, presence: true
+
+  serialize :missions, JSON
 
   def end_date_after_start_date
     return unless end_date < start_date
