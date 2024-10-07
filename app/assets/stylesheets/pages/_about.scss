@@ -1,0 +1,50 @@
+.cv-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 120px;
+}
+
+.cv-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8px;
+  padding: 8px;
+
+  p {
+    font-size: 1.5em;
+    text-indent: 80px;
+    text-align: left;
+  }
+}
+
+.cv-description p::first-letter {
+  font-size: 2em; /* Taille plus grande */
+  font-weight: bold; /* Mettre en gras */
+}
+
+.cv-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8px;
+  padding: 8px;
+  position: relative;
+  top: -99px;
+
+  img {
+    height: 435px;
+    margin: 8px;
+    padding: 8px;
+  }
+}
+
+.button-download {
+  margin: 8px;
+  padding: 8px;
+  align-self: center;
+  border: 1px solid black;
+  border-radius: 24px;
+}

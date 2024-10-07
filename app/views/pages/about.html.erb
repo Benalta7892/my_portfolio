@@ -1,8 +1,17 @@
-<%= render 'shared/smallbanner', title: "À propos de moi", subtitle: "Voici la page à propos, découvrez mon parcours professionnel." %>
-<%# iCI JE VEUX AFFICHER IMAGE DE MON CV ET LES DEUX DESCRIPTION %>
-<p><%= @resume.description[0] %></p>
-<p><%= @resume.description[1] %></p>
-<%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
+<%= render 'shared/smallbanner', title: @resume.title, subtitle: "Découvrez mon parcours professionnel." %>
+<div class="cv-container">
+  <div class="cv-description">
+    <p><%= @resume.description[0] %></p>
+    <p><%= @resume.description[1] %></p>
+  </div>
+  <div class="cv-download">
+    <%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
+    <%# bouton pour telecharger cv %>
+    <%= link_to "Télécharger/Imprimer mon CV", url_for(@resume.pdf), class: "button-download", download: true %>
+
+  </div>
+
+</div>
 
 
 <div class="education">

@@ -147,11 +147,11 @@ resume = user.create_resume!(
 )
 
 unless resume.picture.attached?
-  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728137101/development/cv_exwatb.png"), filename: "cv_exwatb.png")
+  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311478/development/cv_w47x6j.png"), filename: "cv.jpg")
 end
 
 unless resume.pdf.attached?
-  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728137142/development/BenoitAlexandreCV_fryosx.pdf"), filename: "BenoitAlexandreCV_fryosx.pdf")
+  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311466/development/BenoitAlexandreCV_rcioqa.pdf"), filename: "BenoitAlexandreCV.pdf")
 end
 
 puts "Resume created: #{resume.title}"
