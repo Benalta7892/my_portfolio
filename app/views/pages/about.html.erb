@@ -17,31 +17,22 @@
 
   <div class="ligne"></div>
 
-  <div class="rond r1" data-anim="1">&#127944;</div>
-  <div class="rond r2" data-anim="2">&#128167;</div>
-  <div class="rond r3" data-anim="3">&#128187;</div>
-  <div class="rond r4" data-anim="4">&#128293;</div>
+  <% @educations.each_with_index do |education, index| %>
+    <!-- Les éléments "rond" pour chaque éducation -->
+    <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">&#127944;</div>
 
-
-  <div class="box b1" data-anim="1">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
-    <a href="#" class="btn">Lorem ipsum</a>
-  </div>
-  <div class="box b2" data-anim="2">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
-    <a href="#" class="btn">Lorem ipsum</a>
-  </div>
-  <div class="box b3" data-anim="3">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
-    <a href="#" class="btn">Lorem ipsum</a>
-  </div>
-  <div class="box b4" data-anim="4">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
-    <a href="#" class="btn">Lorem ipsum</a>
-  </div>
+    <!-- Les éléments "box" pour chaque éducation -->
+    <div class="box b<%= index + 1 %>" data-anim="<%= index + 1 %>">
+      <h2><%= education.diploma_name %></h2>
+      <!-- Titre de l'éducation -->
+      <p><strong>Institution :</strong> <%= education.institution_name %></p>
+      <!-- Institution -->
+      <p><strong>Lieu :</strong> <%= education.location %></p>
+      <!-- Lieu -->
+      <p><strong>Période :</strong> Du <%= education.start_date.strftime('%d %B %Y') %> au <%= education.end_date.strftime('%d %B %Y') %></p>
+      <!-- Dates formatées -->
+      <a href="#" class="btn">En savoir plus</a> <!-- Bouton avec lien (à adapter si nécessaire) -->
+    </div>
+  <% end %>
 
 </div>
