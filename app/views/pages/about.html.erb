@@ -11,29 +11,37 @@
   </div>
 </div>
 
-<section class="section-education">
-  <h2>Éducation</h2>
-  <div class="education-container">
-    <% @resume.educations.each do |education| %>
-      <div class="education-item">
-        <%# Affichage du logo via cloudinary %>
-        <%= image_tag education.logo, alt: "Logo de l'école", class: "logo" %>
+<h1>Création de timeline</h1>
 
-        <h3><%= education.diploma_name %></h3>
-        <p><%= education.institution_name %></p>
-        <p class="education-date"><%= education.start_date.strftime("%Y") %> - <%= education.end_date.strftime("%Y") %></p>
-      </div>
-    <% end %>
+<div class="box-timeline">
+
+  <div class="ligne"></div>
+
+  <div class="rond r1" data-anim="1">&#127944;</div>
+  <div class="rond r2" data-anim="2">&#128167;</div>
+  <div class="rond r3" data-anim="3">&#128187;</div>
+  <div class="rond r4" data-anim="4">&#128293;</div>
+
+
+  <div class="box b1" data-anim="1">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
+    <a href="#" class="btn">Lorem ipsum</a>
   </div>
-</section>
+  <div class="box b2" data-anim="2">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
+    <a href="#" class="btn">Lorem ipsum</a>
+  </div>
+  <div class="box b3" data-anim="3">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
+    <a href="#" class="btn">Lorem ipsum</a>
+  </div>
+  <div class="box b4" data-anim="4">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci, aperiam velit esse vitae voluptas libero dolore nobis! Quos sapiente doloribus deleniti veniam quidem! Deleniti.</p>
+    <a href="#" class="btn">Lorem ipsum</a>
+  </div>
 
-
-<div class="experience">
-  <h2>Expérience</h2>
-  <% @resume.experiences.each do |experience| %>
-    <div class="experience-item">
-      <h3><%= experience.job_title %> - <%= experience.company_name %></h3>
-      <p><%= experience.start_date.strftime("%Y") %> - <%= experience.end_date.strftime("%Y") %></p>
-    </div>
-  <% end %>
 </div>
