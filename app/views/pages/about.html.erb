@@ -8,31 +8,24 @@
     <%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
     <%# bouton pour telecharger cv %>
     <%= link_to "Télécharger/Imprimer mon CV", url_for(@resume.pdf), class: "button-download", download: true %>
-
   </div>
-
 </div>
 
-
-<div class="education">
+<section class="section-education">
   <h2>Éducation</h2>
-  <% @resume.educations.each do |education| %>
-    <div class="education-item">
-      <h3><%= education.diploma_name %> - <%= education.institution_name %></h3>
+  <div class="education-container">
+    <% @resume.educations.each do |education| %>
+      <div class="education-item">
+        <%# Affichage du logo via cloudinary %>
+        <%= image_tag education.logo, alt: "Logo de l'école", class: "logo" %>
 
-      <!-- Parcourir la description comme tableau -->
-      <% if education.description.is_a?(Array) %>
-        <% education.description.each do |desc| %>
-          <p><%= desc %></p>
-        <% end %>
-      <% else %>
-        <p><%= education.description %></p>
-      <% end %>
-
-      <p><%= education.start_date.strftime("%Y") %> - <%= education.end_date.strftime("%Y") %></p>
-    </div>
-  <% end %>
-</div>
+        <h3><%= education.diploma_name %></h3>
+        <p><%= education.institution_name %></p>
+        <p class="education-date"><%= education.start_date.strftime("%Y") %> - <%= education.end_date.strftime("%Y") %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
 
 
 <div class="experience">
@@ -40,15 +33,6 @@
   <% @resume.experiences.each do |experience| %>
     <div class="experience-item">
       <h3><%= experience.job_title %> - <%= experience.company_name %></h3>
-
-      <% if experience.missions.is_a?(Array) %>
-        <% experience.missions.each do |mission| %>
-          <p><%= mission %></p>
-        <% end %>
-      <% else %>
-        <p><%= experience.missions %></p>
-      <% end %>
-
       <p><%= experience.start_date.strftime("%Y") %> - <%= experience.end_date.strftime("%Y") %></p>
     </div>
   <% end %>

@@ -48,3 +48,51 @@
   border: 1px solid black;
   border-radius: 24px;
 }
+
+.section-education {
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .education-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Espacement entre les colonnes */
+    justify-items: center;
+  }
+
+  .education-item {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Largeur maximum de chaque carte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .education-date {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+
+  .logo {
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+}
