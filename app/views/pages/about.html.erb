@@ -17,21 +17,20 @@
 
   <div class="ligne"></div>
 
-  <% @educations.each_with_index do |education, index| %>
-    <!-- Les éléments "rond" pour chaque éducation -->
-    <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">&#127944;</div>
+  <% icons = ["&#127891;", "&#127891;", "&#127891;", "&#127891;"] %> <!-- Définir les icônes ici -->
 
-    <!-- Les éléments "box" pour chaque éducation -->
-    <div class="box b<%= index + 1 %>" data-anim="<%= index + 1 %>">
+  <% @educations.each_with_index do |education, index| %>
+    <!-- Les éléments "rond" pour chaque éducation avec une icône différente -->
+    <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
+      <%= icons[index % icons.size].html_safe %> <!-- Afficher une icône différente -->
+    </div>
+
+    <!-- Appliquer des classes dynamiques pour alterner l'alignement des boîtes -->
+    <div class="box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
+      <p class="date"><%= education.start_date.strftime('%m/%Y') %> - <%= education.end_date.strftime('%m/%Y') %></p>
       <h2><%= education.diploma_name %></h2>
-      <!-- Titre de l'éducation -->
-      <p><strong>Institution :</strong> <%= education.institution_name %></p>
-      <!-- Institution -->
-      <p><strong>Lieu :</strong> <%= education.location %></p>
-      <!-- Lieu -->
-      <p><strong>Période :</strong> Du <%= education.start_date.strftime('%d %B %Y') %> au <%= education.end_date.strftime('%d %B %Y') %></p>
-      <!-- Dates formatées -->
-      <a href="#" class="btn">En savoir plus</a> <!-- Bouton avec lien (à adapter si nécessaire) -->
+      <p><%= education.institution_name %></p>
+      <p><%= education.location %></p>
     </div>
   <% end %>
 
