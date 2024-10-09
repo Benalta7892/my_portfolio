@@ -134,15 +134,11 @@ puts "Creating a resume..."
 resume = user.create_resume!(
   title: "Mon CV",
   description: [
-      "Après plusieurs années dans la vente et l'immobilier, j'ai choisi de me
-    réorienter vers le développement web. J'ai suivi une formation chez Le Wagon,
-    où j'ai acquis des compétences solides en technologies comme Ruby on Rails,
-    JavaScript, et Stimulus. J'ai contribué à des projets collaboratifs,
-    créant des applications web complètes et fonctionnelles.",
+    "Du commerce à la tech, je crée des solutions alliant simplicité,
+    esthétique et performance pour donner vie à des projets uniques.",
 
-    "Je suis passionné par le développement de solutions web élégantes et performantes.
-    Toujours à la recherche de nouveaux défis, je suis disponible pour apporter mon
-    expertise à vos projets de développement web."
+    "Transformer des idées en applications concrètes et explorer de nouvelles
+    technologies est ce qui me pousse à aller toujours plus loin."
   ]
 )
 
