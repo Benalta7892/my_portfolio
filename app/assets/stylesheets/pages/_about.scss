@@ -206,6 +206,12 @@
   .box {
     left: calc(50%);
   }
+
+  .box.left h2,
+  .box.left p,
+  .box.left a {
+    text-align: left; /* Le texte est aligné à droite */
+  }
 }
 
 // .section-education {
