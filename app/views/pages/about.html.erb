@@ -11,27 +11,29 @@
   </div>
 </div>
 
-<h1>Création de timeline</h1>
+<div class="section-parcours">
+  <h2>Mon parcours</h2>
+  <div class="box-timeline">
 
-<div class="box-timeline">
 
-  <div class="ligne"></div>
+    <div class="ligne"></div>
 
-  <% icons = ["&#127891;", "&#127891;", "&#127891;", "&#127891;"] %> <!-- Définir les icônes ici -->
+    <% icons = ["&#127891;", "&#127891;", "&#127891;", "&#127891;"] %> <!-- Définir les icônes ici -->
 
-  <% @educations.each_with_index do |education, index| %>
-    <!-- Les éléments "rond" pour chaque éducation avec une icône différente -->
-    <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
-      <%= icons[index % icons.size].html_safe %> <!-- Afficher une icône différente -->
-    </div>
+    <% @educations.each_with_index do |education, index| %>
+      <!-- Les éléments "rond" pour chaque éducation avec une icône différente -->
+      <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
+        <%= icons[index % icons.size].html_safe %> <!-- Afficher une icône différente -->
+      </div>
 
-    <!-- Appliquer des classes dynamiques pour alterner l'alignement des boîtes -->
-    <div class="box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
-      <p class="date"><%= education.start_date.strftime('%m/%Y') %> - <%= education.end_date.strftime('%m/%Y') %></p>
-      <h2><%= education.diploma_name %></h2>
-      <p><%= education.institution_name %></p>
-      <p><%= education.location %></p>
-    </div>
-  <% end %>
+      <!-- Appliquer des classes dynamiques pour alterner l'alignement des boîtes -->
+      <div class="box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
+        <p class="date"><%= education.start_date.strftime('%m/%Y') %> - <%= education.end_date.strftime('%m/%Y') %></p>
+        <h2><%= education.diploma_name %></h2>
+        <p><%= education.institution_name %></p>
+        <p><%= education.location %></p>
+      </div>
+    <% end %>
 
+  </div>
 </div>
