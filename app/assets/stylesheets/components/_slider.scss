@@ -1,32 +1,46 @@
-.slider-1 {
+:root {
+  --items-per-page: 4;
+}
+
+.carousel {
   width: 100%;
-  margin: 100px auto;
   overflow: hidden;
-  border: 1px solid #f1f1f1;
+  position: relative;
 }
 
-.slider-1 .slider {
+.carousel-container {
+  /* Prevent logos from wrapping to the next line */
+  white-space: nowrap;
   display: flex;
-  animation: slider-1 15s linear infinite;
+  gap: 100px;
 }
 
-.slider-1 p {
-  background: rgb(101, 15, 15);
-  flex-shrink: 0;
-  padding: 72px 0;
-  width: 100%;
+.carousel-item {
+  display: inline-block;
+  min-width: calc(100% / var(--items-per-page));
+  box-sizing: border-box;
+  padding: 20px;
   text-align: center;
-  font-size: 45px;
-  color: #f1f1f1;
-  margin: 0;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
 }
 
-@keyframes slider-1 {
-  0% {
-    transform: translateX(0);
-  }
+.carousel-mask-left,
+.carousel-mask-right {
+  position: absolute;
+  top: 0;
+  width: 20%; /* Ajuste selon la taille du fondu désiré */
+  height: 100%;
+  pointer-events: none; /* Laisse passer les clics */
+  z-index: 1;
+}
 
-  100% {
-    transform: translateX(-900%);
-  }
+.carousel-mask-left {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.carousel-mask-right {
+  right: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
 }
