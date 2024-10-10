@@ -33,6 +33,6 @@ document.addEventListener("turbo:load", function () {
     let lastTimestamp = null;
     requestAnimationFrame(animateCarousel);
   } else {
-    console.log("Pas de carousel pour le moment ici, ou pas... a voir");
+    console.log("Pas de slider logo pour le moment ici, ou pas... a voir");
   }
 });
