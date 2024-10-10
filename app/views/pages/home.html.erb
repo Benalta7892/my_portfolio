@@ -49,7 +49,7 @@
     <div class="text-presentation">
       <h2>Hello world</h2>
       <p>Je suis Benoit Alexandre-Tachdjian, <span>développeur web full stack</span>. Formé chez Le Wagon, j'ai acquis une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours et mes réalisations, et découvrez comment je peux vous accompagner dans vos projets !</p>
-      <%= link_to '➡️ En savoir plus', about_path %>
+      <%= link_to '➡️ En savoir plus', about_path, data: { turbo: false } %>
 
     </div>
 
@@ -122,6 +122,6 @@
 
   </div>
 
-  <%= link_to '➡️ En savoir plus', projects_path %>
+  <%= link_to '➡️ En savoir plus', projects_path, data: { turbo: false } %>
 
 </section>
