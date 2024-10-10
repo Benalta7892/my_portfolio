@@ -14,7 +14,7 @@ document.addEventListener("turbo:load", function () {
           reverse: false,
         })
           .setTween(tween)
-          .addIndicators() // Vous pouvez enlever cette ligne si vous ne voulez pas les indicateurs de débogage
+          // .addIndicators() // Vous pouvez enlever cette ligne si vous ne voulez pas les indicateurs de débogage
           .addTo(controller);
       }
     }
