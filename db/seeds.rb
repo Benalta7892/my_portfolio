@@ -46,7 +46,7 @@ projects = [
     title: "Zero to Heroes",
     description: "This is my portfolio. I built it with Ruby on Rails.",
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/zerotoheros_ayxbcc.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728655503/development/zerotohero1_axbno3.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
