@@ -1,2 +1,33 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<%= render 'shared/smallbanner', title: @project.title, subtitle: "Application web de location." %>
+
+<h2>Projects#show</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+<div class="project-show">
+  <div class="project-picture">
+    <% if @project.pictures.attached? %>
+      <% @project.pictures.each do |picture| %>
+        <%= image_tag url_for(picture) %>
+      <% end %>
+    <% else %>
+      <p>Aucune image disponible pour ce projet.</p>
+    <% end %>
+  </div>
+
+  <div class="project-description">
+    <h3><%= @project.title %></h3>
+    <p><%= @project.description %></p>
+
+    <p><strong>Technologies utilisées :</strong></p>
+    <div class="project-technologies">
+      <%# Affiche les technologies séparées par une virgule %>
+      <p><%= @project.technologies %></p>
+    </div>
+
+    <div class="project-links">
+      <% if @project.link.present? %>
+        <%= link_to "Voir le code source", @project.link, target: "_blank", class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @admin_user = User.find_by(admin: true)
-    @projects = Project.all
+    @projects = Project.order(created_at: :asc)
     @contact = Contact.new
   end
 

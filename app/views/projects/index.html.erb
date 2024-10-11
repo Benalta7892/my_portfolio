@@ -1,12 +1,12 @@
 <%= render 'shared/smallbanner', title: "Portfolio", subtitle: "Découvrez tous mes projets." %>
 
 <section class="section-portolio">
-  <h2>Portfolio</h2>
 
   <div class="container-portfolio">
 
     <% @projects.each do |project| %>
-      <div class="card-portfolio">
+      <%= link_to project_path(project), class: "card-portfolio", data: { turbo: false} do %>
+
         <div class="project-picture">
           <% if project.pictures.attached? %>
             <%= image_tag url_for(project.pictures.first) %>
@@ -15,7 +15,8 @@
           <% end %>
         </div>
         <div class="project-title"><%= project.title %></div>
-      </div>
+
+      <% end %>
     <% end %>
 
   </div>
