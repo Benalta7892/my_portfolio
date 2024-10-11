@@ -1,20 +1,26 @@
 .section-swiper {
-  width: 70%;
-  height: 700px;
-  overflow: hidden;
-  background-color: #000000;
+  width: 52%;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  border-radius: 24px;
+  margin: 50px 120px 0;
+  padding: 14px;
+  // box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.26);
+  // background-color: steelblue;
 
-  img {
+  .swiper-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Fait en sorte que l'image recouvre entièrement le parent */
-    object-position: center;
+    gap: 10px;
   }
 }
 
 .swiper {
   width: 100%;
   height: 100%;
+  border-radius: 24px;
 }
 
 .swiper-slide {
@@ -24,6 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 24px;
 }
 
 .swiper-slide img {
@@ -31,6 +38,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
 }
 
 .swiper {
@@ -38,6 +47,7 @@
   height: 300px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 24px;
 }
 
 .swiper-slide {
@@ -60,10 +70,12 @@
   width: 25%;
   height: 100%;
   opacity: 0.4;
+  border-radius: 24px;
 }
 
 .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
+  border-radius: 24px;
 }
 
 .swiper-slide img {
@@ -71,4 +83,64 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+}
+
+// /* Changer la taille des boutons de navigation */
+// .swiper-button-prev,
+// .swiper-button-next {
+//   width: 100px; /* Largeur du bouton */
+//   height: 100px; /* Hauteur du bouton */
+// }
+
+// /* Changer la couleur et la taille des flèches */
+// .swiper-button-prev::after,
+// .swiper-button-next::after {
+//   // font-size: 100px !important; /* Taille de la flèche */
+//   border: none !important; /* Supprimer le contour */
+//   background: none !important; /* Supprimer le fond */
+//   border-radius: 24px !important;
+//   display: flex !important;
+//   align-items: center !important;
+//   justify-content: center !important;
+//   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2) !important;
+//   color: black !important; /* Couleur de la flèche */
+// }
+
+.btn-carousel-next,
+.btn-carousel-prev {
+  height: fit-content;
+  margin: 8px;
+  padding: 8px;
+  border: none;
+  background: none;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  z-index: 100;
+
+  .custom-arrow {
+    height: 100px;
+    width: 70px;
+  }
+}
+
+/* Ajustement pour centrer verticalement les boutons */
+.btn-carousel-next,
+.btn-carousel-prev {
+  position: relative;
+  top: 50%; /* Place le bouton au milieu de la section */
+  transform: translateY(-50%); /* Centre le bouton verticalement */
+}
+
+.btn-carousel-next {
+  right: -30px; /* Ajuste la distance par rapport au bord droit */
+}
+
+.btn-carousel-prev {
+  left: -30px; /* Ajuste la distance par rapport au bord gauche */
 }

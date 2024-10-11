@@ -17,8 +17,8 @@ export default class extends Controller {
       loop: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".btn-carousel-next",
+        prevEl: ".btn-carousel-prev",
       },
       thumbs: {
         swiper: swiper,

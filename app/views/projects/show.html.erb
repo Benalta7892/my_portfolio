@@ -1,31 +1,48 @@
 <%= render 'shared/smallbanner', title: @project.title, subtitle: "Application web de location." %>
 
-<h2>Projects#show</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
 <section class="section-swiper">
-  <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-    <div class="swiper-wrapper">
-      <% @project.pictures.each do |picture| %>
-        <div class="swiper-slide">
-          <%= image_tag picture %>
-        </div>
-      <% end %>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+
+
+  <div class="btn-carousel-prev">
+    <%= cl_image_tag "arrowL_y08p76", class: "custom-arrow",  alt: 'Flèche de gauche' %>
   </div>
 
-  <div thumbsSlider="" class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <% @project.pictures.each do |picture| %>
-        <div class="swiper-slide">
-          <%= image_tag picture %>
-        </div>
-      <% end %>
+
+  <div class="swiper-container">
+    <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <% @project.pictures.each do |picture| %>
+          <div class="swiper-slide">
+            <%= image_tag picture %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <% @project.pictures.each do |picture| %>
+          <div class="swiper-slide">
+            <%= image_tag picture %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
+
+
+  <div class="btn-carousel-next">
+    <%= cl_image_tag "arrowR_v3vouj", class: "custom-arrow",  alt: 'Flèche de droite' %>
+  </div>
+
+
 </section>
+
+
+<h2>Projects#show</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
 
 <%# <div class="project-show"> %>
