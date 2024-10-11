@@ -3,28 +3,29 @@
 <h2>Projects#show</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-
-<div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-  <div class="swiper-wrapper">
-    <% @project.pictures.each do |picture| %>
-      <div class="swiper-slide">
-        <%= image_tag picture %>
-      </div>
-    <% end %>
+<section class="section-swiper">
+  <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <% @project.pictures.each do |picture| %>
+        <div class="swiper-slide">
+          <%= image_tag picture %>
+        </div>
+      <% end %>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
 
-<div thumbsSlider="" class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <% @project.pictures.each do |picture| %>
-      <div class="swiper-slide">
-        <%= image_tag picture %>
-      </div>
-    <% end %>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <% @project.pictures.each do |picture| %>
+        <div class="swiper-slide">
+          <%= image_tag picture %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
 
 
 <%# <div class="project-show"> %>
