@@ -1,0 +1,81 @@
+.carousel-portfolio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .carousel-items-portfolio,
+  .btn-carousel {
+    margin: 8px;
+    padding: 8px;
+  }
+}
+
+.carousel-items-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  padding: 8px;
+  height: fit-content;
+}
+
+.carousel-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: linear-gradient(rgba(0, 0, 0, 20), rgba(0, 0, 0, 20));
+
+  img {
+    position: relative;
+    border-radius: 24px;
+
+    border-radius: 24px;
+    width: 700px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .project-title {
+    font-family: source code pro, sans-serif;
+    position: absolute;
+    top: 45%;
+    color: white;
+    font-size: 44px;
+    font-weight: 800;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 24px;
+  }
+
+  &:hover img {
+    opacity: 0.2; /* L'image s'assombrit */
+  }
+
+  &:hover .project-title {
+    opacity: 1; /* Le titre devient visible */
+    border-radius: 24px;
+  }
+}
+
+.btn-carousel {
+  border: none;
+  background: none;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+
+  .custom-arrow {
+    height: 100px;
+    width: 70px;
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,9 +1,24 @@
-<%= render 'shared/smallbanner', title: "Mon Portfolio", subtitle: "Découvrez mes projets réalisés en tant que développeur full-stack." %>
+<%= render 'shared/smallbanner', title: "Portfolio", subtitle: "Découvrez tous mes projets." %>
 
-<div>
+<section class="section-portolio">
   <h2>Portfolio</h2>
 
-  <% @projects.each do |project| %>
-    <%= image_tag url_for(project.pictures.first) %>
-  <% end %>
-</div>
+  <div class="container-portfolio">
+
+    <% @projects.each do |project| %>
+      <div class="card-portfolio">
+        <div class="project-picture">
+          <% if project.pictures.attached? %>
+            <%= image_tag url_for(project.pictures.first) %>
+          <% else %>
+            <p>Aucune image disponible pour ce projet.</p>
+          <% end %>
+        </div>
+        <div class="project-title"><%= project.title %></div>
+      </div>
+    <% end %>
+
+  </div>
+
+
+</section>
