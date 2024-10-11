@@ -41,8 +41,31 @@
 </section>
 
 
-<h2>Projects#show</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<h2>Détails de conception</h2>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</p>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= @project.title %></h5>
+    <p class="card-text">
+      <strong>Technologies utilisées :</strong> <%= @project.technologies %>
+    </p>
+    <p class="card-text">
+      <strong>Nombre de développeurs :</strong> <%= @project.dev_count %>
+    </p>
+    <p class="card-text">
+      <strong>Lien vers le projet :</strong>
+      <% if @project.link.present? %>
+        <%= link_to @project.link, @project.link, target: "_blank", class: "card-link" %>
+      <% else %>
+        <span>Non disponible</span>
+      <% end %>
+    </p>
+  </div>
+</div>
 
 
 <%# <div class="project-show"> %>
