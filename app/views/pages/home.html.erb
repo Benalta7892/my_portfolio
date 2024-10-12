@@ -15,6 +15,7 @@
     <div class="hero-top-content">
       <h1 aria-label="Porsche, set free.">Benoit Alexandre-Tachdjian</h1>
       <p class="subtitle">Développeur web - Full Stack</p>
+      <%= link_to "Télécharger/Imprimer mon CV", url_for(@resume.pdf), class: "button-download", download: true %>
     </div>
     <div class="links">
       <%= link_to "https://www.linkedin.com/in/benalta7892", class: "link", target: "_blank" do %>
