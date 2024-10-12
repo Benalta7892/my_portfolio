@@ -85,6 +85,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 24px;
+  border: 4px solid black;
 }
 
 // /* Changer la taille des boutons de navigation */
@@ -133,7 +134,7 @@
 .btn-carousel-next,
 .btn-carousel-prev {
   position: relative;
-  top: 50%; /* Place le bouton au milieu de la section */
+  top: 40%; /* Place le bouton au milieu de la section */
   transform: translateY(-50%); /* Centre le bouton verticalement */
 }
 
