@@ -44,7 +44,13 @@ puts "Creating projects..."
 projects = [
   {
     title: "Zero to Heroes",
-    description: "This is my portfolio. I built it with Ruby on Rails.",
+    description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
+    features: [
+      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
+      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles à la location.",
+      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
+      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+    ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728655503/development/zerotohero1_axbno3.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
@@ -52,12 +58,29 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
+    frontend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+    ],
+    backend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
   {
     title: "Pokéswype",
     description: "This is a Pokémon game. I built it with JavaScript.",
+    features: [
+      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
+      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles.",
+      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
+      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+    ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
@@ -72,25 +95,59 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
+    frontend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+    ],
+    backend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
   },
   {
     title: "Zero to Heroes",
-    description: "This is my portfolio. I built it with Ruby on Rails.",
+    description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
+    features: [
+      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
+      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles à la location.",
+      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
+      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+    ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/zerotoheros_ayxbcc.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728655503/development/zerotohero1_axbno3.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
+    frontend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+    ],
+    backend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
   {
     title: "Pokéswype",
     description: "This is a Pokémon game. I built it with JavaScript.",
+    features: [
+      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
+      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles.",
+      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
+      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+    ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
@@ -105,6 +162,17 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
+    frontend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+    ],
+    backend_technologies: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
   }
@@ -115,7 +183,10 @@ projects.each do |project_data|
   project = user.projects.create!(
     title: project_data[:title],
     description: project_data[:description],
+    features: project_data[:features],
     technologies: project_data[:technologies],
+    frontend_technologies: project_data[:frontend_technologies],
+    backend_technologies: project_data[:backend_technologies],
     link: project_data[:link],
     dev_count: project_data[:dev_count]
   )

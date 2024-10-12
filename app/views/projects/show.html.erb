@@ -41,96 +41,89 @@
 </section>
 
 
-<h2>Détails</h2>
-<p>
-  Imaginez un service unique qui permet aux utilisateurs de louer des
-  super-héros pour des événements spéciaux. Une interface intuitive combinée à
-  une gestion fluide des réservations, le tout conçu pour offrir une expérience inoubliable.
-  <ul>
-    <li>Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.</li>
-    <li>Gestion des réservations passées, en cours et futures, ainsi que de vos propres super-héros disponibles à la location.</li>
-    <li>Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.</li>
-    <li>Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins.</li>
-  </ul>
-</p>
-
-<p>
-  <h3>Phase de conception (Design Sprint)</h3>
-  <ul>
-    <li>Problème a resoudre : mise en relation entre offre de location et future locataire proximité</li>
-    <li>Wireframe et maquette utilisé Figma pour creer l'interface utilsateur </li>
-    <li>Prototypage et test utilisateur pour valider les choix de design</li>
-    <li>Planification Agile avec des sprints de développement, planification des releases, et rétrospectives.</li>
-  </ul>
-
-  <h3>Phase de développement</h3>
-  <h4>Back-end</h4>
-  <ul>
-    <li>API RESTful avec Ruby on Rails.</li>
-    <li>gestion de la base de données (PostgreSQL, Cloudinary pour les images).</li>
-    <li>Authentification sécurisée avec Devise.</li>
-    <li>gem "geocoder" pour</li>
-    <li>pour Heroku pour </li>
-  </p>
-  <h4>Front-end</h4>
-  <ul>
-    <li>HTML, SCSS</li>
-    <li>JavaScript : Stimulus.js</li>
-    <li></li>
-  </ul>
-
+<div class="container my-5">
+  <!-- Carte du projet -->
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><%= @project.title %></h5>
-      <p class="card-text">
-        <strong>Technologies utilisées :</strong> <%= @project.technologies %>
-      </p>
-      <p class="card-text">
-        <strong>Nombre de développeurs :</strong> <%= @project.dev_count %>
-      </p>
-      <p class="card-text">
-        <strong>Lien vers le projet :</strong>
-        <% if @project.link.present? %>
-          <%= link_to @project.link, @project.link, target: "_blank", class: "card-link" %>
-        <% else %>
-          <span>Non disponible</span>
+      <h2 class="card-title">Détails du projet</h2>
+      <p class="card-text"><%= @project.description %></p>
+
+      <!-- Liste des fonctionnalités -->
+      <ul class="list-group list-group-flush mb-3">
+        <% @project.features.each do |feature| %>
+          <li class="list-group-item"><%= feature %></li>
         <% end %>
-      </p>
+      </ul>
+
+      <!-- Nombre de developpeurs -->
+      <p class="card-text">Projet d'équipe de  <%= @project.dev_count %> développeurs.</p>
+
+      <!-- Technologies utilisées -->
+      <h3>Technologies utilisées</h3>
+      <div class="row">
+        <!-- Technologies Front-End -->
+        <div class="col-6">
+          <h4>Front-End</h4>
+          <div class="logos d-flex flex-wrap justify-content-start">
+            <% @project.frontend_technologies.each do |tech_url| %>
+              <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo", style: "width: 50px; margin: 5px;" %>
+            <% end %>
+          </div>
+        </div>
+
+        <!-- Technologies Back-End -->
+        <div class="col-6">
+          <h4>Back-End</h4>
+          <div class="logos d-flex flex-wrap justify-content-start">
+            <% @project.backend_technologies.each do |tech_url| %>
+              <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo", style: "width: 50px; margin: 5px;" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lien vers le projet -->
+      <div class="mt-4">
+        <% if @project.link.present? %>
+          <%= link_to "Voir le projet", @project.link, target: "_blank", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
+</div>
 
 
-  <%# <div class="project-show"> %>
-  <%# <div class="project-picture"> %>
-  <%# if @project.pictures.attached? %>
-  <%# @project.pictures.each do |picture| %>
-    <%#= image_tag url_for(picture) %>
-    <%# end %>
-    <%# else %>
-    <%# <p>Aucune image disponible pour ce projet.</p> %>
-    <%# end %>
-    <%# </div> %>
+<%# <div class="project-show"> %>
+<%# <div class="project-picture"> %>
+<%# if @project.pictures.attached? %>
+<%# @project.pictures.each do |picture| %>
+  <%#= image_tag url_for(picture) %>
+  <%# end %>
+  <%# else %>
+  <%# <p>Aucune image disponible pour ce projet.</p> %>
+  <%# end %>
+  <%# </div> %>
 
-    <%# <div class="project-description"> %>
-    <%# <h3> %>
-    <%#= @project.title %>
-    <%# </h3> %>
-    <%# <p> %>
-    <%#= @project.description %>
-    <%# </p> %>
+  <%# <div class="project-description"> %>
+  <%# <h3> %>
+  <%#= @project.title %>
+  <%# </h3> %>
+  <%# <p> %>
+  <%#= @project.description %>
+  <%# </p> %>
 
-    <%# <p><strong>Technologies utilisées :</strong></p> %>
-    <%# <div class="project-technologies"> %>
-    <%# Affiche les technologies séparées par une virgule %>
-    <%# <p> %>
-    <%#= @project.technologies %>
-    <%# </p> %>
-    <%# </div> %>
+  <%# <p><strong>Technologies utilisées :</strong></p> %>
+  <%# <div class="project-technologies"> %>
+  <%# Affiche les technologies séparées par une virgule %>
+  <%# <p> %>
+  <%#= @project.technologies %>
+  <%# </p> %>
+  <%# </div> %>
 
-    <%# <div class="project-links"> %>
-    <%# if @project.link.present? %>
-    <%#= link_to "Voir le code source", @project.link, target: "_blank", class: "button" %>
-    <%# end %>
-    <%# </div> %>
-    <%# </div> %>
-    <%# </div> %>
+  <%# <div class="project-links"> %>
+  <%# if @project.link.present? %>
+  <%#= link_to "Voir le code source", @project.link, target: "_blank", class: "button" %>
+  <%# end %>
+  <%# </div> %>
+  <%# </div> %>
+  <%# </div> %>
