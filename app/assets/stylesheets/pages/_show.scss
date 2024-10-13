@@ -1,5 +1,34 @@
-.project-picture {
-  img {
-    height: 200px;
+.details-container {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  margin: 50px 120px 0;
+}
+
+.details-items {
+  display: flex;
+  margin: 8px;
+  padding: 8px;
+}
+
+.description {
+  width: 70%;
+
+  p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+.features {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  li {
+    font-size: 1.2em;
+    text-align: center;
+    marker: none;
   }
 }

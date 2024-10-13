@@ -40,56 +40,55 @@
 
 </section>
 
+<div class="details-container">
+  <h2>Détails du projet</h2>
 
-<div class="container my-5">
-  <!-- Carte du projet -->
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Détails du projet</h2>
-      <p class="card-text"><%= @project.description %></p>
+  <div class="details-items">
+    <div class="description">
+      <p><%= @project.description %></p>
+    </div>
 
-      <!-- Liste des fonctionnalités -->
-      <ul class="list-group list-group-flush mb-3">
+    <div class="features">
+      <ul>
         <% @project.features.each do |feature| %>
-          <li class="list-group-item"><%= feature %></li>
+          <li><%= feature %></li>
         <% end %>
       </ul>
+    </div>
 
-      <!-- Nombre de developpeurs -->
-      <p class="card-text">Projet d'équipe de  <%= @project.dev_count %> développeurs.</p>
-
-      <!-- Technologies utilisées -->
-      <h3>Technologies utilisées</h3>
-      <div class="row">
-        <!-- Technologies Front-End -->
-        <div class="col-6">
-          <h4>Front-End</h4>
-          <div class="logos d-flex flex-wrap justify-content-start">
-            <% @project.frontend_technologies.each do |tech_url| %>
-              <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo", style: "width: 50px; margin: 5px;" %>
-            <% end %>
-          </div>
-        </div>
-
-        <!-- Technologies Back-End -->
-        <div class="col-6">
-          <h4>Back-End</h4>
-          <div class="logos d-flex flex-wrap justify-content-start">
-            <% @project.backend_technologies.each do |tech_url| %>
-              <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo", style: "width: 50px; margin: 5px;" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-
-      <!-- Lien vers le projet -->
-      <div class="mt-4">
-        <% if @project.link.present? %>
-          <%= link_to "Voir le projet", @project.link, target: "_blank", class: "btn btn-primary" %>
-        <% end %>
-      </div>
+    <div class="dev-count">
+      <p>Projet d'équipe de  <%= @project.dev_count %> développeurs.</p>
     </div>
   </div>
+</div>
+
+
+<h2>Technologies utilisées</h2>
+
+<div >
+  <h4>Front-End</h4>
+  <div>
+    <% @project.frontend_technologies.each do |tech_url| %>
+      <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+    <% end %>
+  </div>
+</div>
+
+
+<div>
+  <h4>Back-End</h4>
+  <div>
+    <% @project.backend_technologies.each do |tech_url| %>
+      <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+    <% end %>
+  </div>
+</div>
+
+
+<div>
+  <% if @project.link.present? %>
+    <%= link_to "Voir le projet", @project.link, target: "_blank" %>
+  <% end %>
 </div>
 
 
