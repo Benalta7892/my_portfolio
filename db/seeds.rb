@@ -46,10 +46,10 @@ projects = [
     title: "Zero to Heroes",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
-      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
-      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles à la location.",
-      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
-      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+      "Espace personnel sécurisé.",
+      "Gestion des réservations.",
+      "Recherche basée sur la géolocalisation.",
+      "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728655503/development/zerotohero1_axbno3.png",
@@ -76,10 +76,10 @@ projects = [
     title: "Pokéswype",
     description: "This is a Pokémon game. I built it with JavaScript.",
     features: [
-      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
-      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles.",
-      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
-      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+      "Espace personnel sécurisé.",
+      "Gestion des réservations.",
+      "Recherche basée sur la géolocalisation.",
+      "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
@@ -113,10 +113,10 @@ projects = [
     title: "Zero to Heroes",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
-      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
-      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles à la location.",
-      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
-      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+      "Espace personnel sécurisé.",
+      "Gestion des réservations.",
+      "Recherche basée sur la géolocalisation.",
+      "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728655503/development/zerotohero1_axbno3.png",
@@ -143,10 +143,10 @@ projects = [
     title: "Pokéswype",
     description: "This is a Pokémon game. I built it with JavaScript.",
     features: [
-      "Accès à un espace personnel sécurisé avec authentification et création de compte simplifiée.",
-      "Gestion des réservations passées, en cours et futures, ainsi que des propres super-héros disponibles.",
-      "Recherche avancée de super-héros basée sur la géolocalisation pour trouver des héros près de chez vous.",
-      "Possibilité de réserver à la journée ou sur plusieurs jours, selon vos besoins."
+      "Espace personnel sécurisé.",
+      "Gestion des réservations.",
+      "Recherche basée sur la géolocalisation.",
+      "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
