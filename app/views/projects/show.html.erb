@@ -40,6 +40,13 @@
 
 </section>
 
+<div>
+  <% if @project.link.present? %>
+    🔗 <%= link_to "Lien GitHub", @project.link, target: "_blank" %>
+  <% end %>
+</div>
+
+
 <div class="details-container">
   <h2>Détails du projet</h2>
 
@@ -91,14 +98,18 @@
       </div>
     </div>
 
+
+    <div class="Outils">
+      <h2>Technologies Back-End</h2>
+      <div class="logos">
+        <% @project.backend_technologies.each do |tech_url| %>
+          <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+        <% end %>
+      </div>
+    </div>
+
+
   </div>
-</div>
-
-
-<div>
-  <% if @project.link.present? %>
-    🔗 <%= link_to "Voir le projet", @project.link, target: "_blank" %>
-  <% end %>
 </div>
 
 
