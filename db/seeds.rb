@@ -43,7 +43,7 @@ puts "Creating projects..."
 
 projects = [
   {
-    title: "Zero to Heroes",
+    title: "Zero to Heroes1",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
       "Espace personnel sécurisé.",
@@ -62,24 +62,36 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
     ],
     backend_technologies: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
+    tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
   {
-    title: "Pokéswype",
-    description: "This is a Pokémon game. I built it with JavaScript.",
+    title: "PokéSwype1",
+    description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
     features: [
       "Espace personnel sécurisé.",
-      "Gestion des réservations.",
-      "Recherche basée sur la géolocalisation.",
-      "Réservation à la journée ou pour plusieurs jours."
+      "Gestion des échanges de cartes.",
+      "Recherche avec Swype, basée sur la géolocalisation.",
+      "Messagerie instantanée",
+      "Validation des échange par QR Code",
+      "Notifications en temps réel",
+      "Système de notation pour renforcer la confiance."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
@@ -99,18 +111,26 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
     ],
     backend_technologies: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
+    tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
   },
   {
-    title: "Zero to Heroes",
+    title: "Zero to Heroes2",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
       "Espace personnel sécurisé.",
@@ -129,24 +149,36 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
     ],
     backend_technologies: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
+    tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
   {
-    title: "Pokéswype",
-    description: "This is a Pokémon game. I built it with JavaScript.",
+    title: "PokéSwype2",
+    description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
     features: [
       "Espace personnel sécurisé.",
-      "Gestion des réservations.",
-      "Recherche basée sur la géolocalisation.",
-      "Réservation à la journée ou pour plusieurs jours."
+      "Gestion des échanges de cartes.",
+      "Recherche avec Swype, basée sur la géolocalisation.",
+      "Messagerie instantanée",
+      "Validation des échange par QR Code",
+      "Notifications en temps réel",
+      "Système de notation pour renforcer la confiance."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
@@ -166,12 +198,20 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
     ],
     backend_technologies: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+    ],
+    tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
@@ -187,6 +227,7 @@ projects.each do |project_data|
     technologies: project_data[:technologies],
     frontend_technologies: project_data[:frontend_technologies],
     backend_technologies: project_data[:backend_technologies],
+    tools: project_data[:tools],
     link: project_data[:link],
     dev_count: project_data[:dev_count]
   )
