@@ -1,5 +1,3 @@
-
-
 <section class="section-swiper">
 
 
@@ -76,46 +74,45 @@
 
 <%# <h2>Technologies utilisées</h2> %>
 
-<section class="container-presentation">
 
-  <div class="skills-container">
-    <div class="skills-content">
+<section class="section-skills">
+  <div class="skills-content">
 
-      <div class="front-end">
-        <h2>Stack Front-End</h2>
-        <div class="logos">
-          <% @project.frontend_technologies.each do |tech_url| %>
-            <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
-          <% end %>
-        </div>
+    <div class="front-end">
+      <h2>Stack Front-End</h2>
+      <div class="logos">
+        <% @project.frontend_technologies.each do |tech_url| %>
+          <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+        <% end %>
       </div>
-
-      <%# <div class="barre"></div> %>
-
-      <div class="back-end">
-        <h2>Stack Back-End</h2>
-        <div class="logos">
-          <% @project.backend_technologies.each do |tech_url| %>
-            <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
-          <% end %>
-        </div>
-      </div>
-
-      <%# <div class="barre"></div> %>
-
-      <div class="back-end">
-        <h2>Outils</h2>
-        <div class="logos">
-          <% @project.tools.each do |tech_url| %>
-            <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
-          <% end %>
-        </div>
-      </div>
-
-
     </div>
+
+    <%# <div class="barre"></div> %>
+
+    <div class="back-end">
+      <h2>Stack Back-End</h2>
+      <div class="logos">
+        <% @project.backend_technologies.each do |tech_url| %>
+          <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+        <% end %>
+      </div>
+    </div>
+
+    <%# <div class="barre"></div> %>
+
+    <div class="back-end">
+      <h2>Outils</h2>
+      <div class="logos">
+        <% @project.tools.each do |tech_url| %>
+          <%= image_tag tech_url, alt: "Logo technologie", class: "tech-logo" %>
+        <% end %>
+      </div>
+    </div>
+
+
   </div>
 </section>
+
 
 <%# <div class="project-show"> %>
 <%# <div class="project-picture"> %>

@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-// * {
-//   box-shadow: 0 0 0 3px red inset;
-// }
+* {
+  box-shadow: 0 0 0 3px red inset;
+}
 
 *,
 ::before,
@@ -13,33 +13,20 @@
 
 body {
   font-family: source code pro, sans-serif;
-  background: #ffffff;
+  background: #c32929;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-// .svg-wrapper {
-//   position: relative;
-//   width: 100%;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-
-//   .svg-top {
-//     position: absolute;
-//     top: 0;
-//     width: 100%;
-//   }
-
 .container-presentation {
   // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 240px);
   margin: 0 120px;
+  background-color: bisque;
 
   .presentation {
     display: flex;
@@ -64,15 +51,12 @@ body {
   }
 }
 
-.skills-container {
+.section-skills {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: 8px;
-  padding: 8px;
-  // height: fit-content;
-  width: calc(100% - 16px);
+  margin: 0 120px;
+  background-color: bisque;
 
   .skills-content {
     width: 100%;
@@ -136,20 +120,12 @@ body {
   margin: 0;
 }
 
-//   .svg-bottom {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     z-index: 0;
-//   }
-// }
-
 .section-portolio {
-  // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 120px 0;
+  margin: 0 120px;
+  background-color: bisque;
 
   .container-portfolio {
     display: flex;
@@ -220,8 +196,3 @@ body {
     align-self: center;
   }
 }
-
-// // .svg-down {
-// //   position: relative;
-// //   top: -1px;
-// // }

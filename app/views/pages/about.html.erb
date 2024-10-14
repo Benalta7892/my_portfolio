@@ -1,4 +1,4 @@
-<div class="cv-container">
+<section class="cv-container">
   <div class="cv-description">
     <p><%= @resume.description[0] %></p>
     <p><%= @resume.description[1] %></p>
@@ -8,7 +8,7 @@
     <%# bouton pour telecharger cv %>
     <%= link_to "Télécharger/Imprimer mon CV", url_for(@resume.pdf), class: "button-download", download: true %>
   </div>
-</div>
+</section>
 
 <div class="section-parcours">
   <h2>Mon parcours</h2>
@@ -45,16 +45,6 @@
   <div class="carousel-mask-right"></div>
 
   <div class="carousel-container" id="carouselContainer" role="list">
-    <%= cl_image_tag("html5_kf7hmz.png", alt: "html") %>
-    <%= cl_image_tag("css3_q9lv1h.png", alt: "css") %>
-    <%= cl_image_tag("js_qh6ndw.png", alt: "javascript") %>
-    <%= cl_image_tag("figma_d7mc4z.png", alt: "figma") %>
-    <%= cl_image_tag("ruby_u4fzgi.png", alt: "ruby") %>
-    <%= cl_image_tag("rails_w8dl1x.png", alt: "rails") %>
-    <%= cl_image_tag("php_ehpiwx.png", alt: "php") %>
-    <%= cl_image_tag("heroku_vqw6qd.png", alt: "heroku") %>
-    <%= cl_image_tag("postgresql_czwsff.png", alt: "postgresql") %>
-
     <%= cl_image_tag("html5_kf7hmz.png", alt: "html") %>
     <%= cl_image_tag("css3_q9lv1h.png", alt: "css") %>
     <%= cl_image_tag("js_qh6ndw.png", alt: "javascript") %>
