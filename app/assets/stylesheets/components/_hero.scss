@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: calc(100vh - 80px); // 100% de la hauteur de l'écran moins la hauteur de la navbar
+  height: 100vh; // 100% de la hauteur de l'écran moins la hauteur de la navbar
   min-height: calc(100vh - 80px);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
@@ -45,7 +45,6 @@
 
     .links {
       position: relative;
-      bottom: -8%;
       left: 4%;
       height: fit-content;
       width: fit-content;

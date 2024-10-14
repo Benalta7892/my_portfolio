@@ -44,6 +44,7 @@ puts "Creating projects..."
 projects = [
   {
     title: "Zero to Heroes1",
+    subtitle: "Application web de location.",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
       "Espace personnel sécurisé.",
@@ -83,6 +84,7 @@ projects = [
   },
   {
     title: "PokéSwype1",
+    subtitle: "Application web de collection.",
     description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
     features: [
       "Espace personnel sécurisé.",
@@ -131,6 +133,7 @@ projects = [
   },
   {
     title: "Zero to Heroes2",
+    subtitle: "Application web de location.",
     description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
     features: [
       "Espace personnel sécurisé.",
@@ -170,6 +173,7 @@ projects = [
   },
   {
     title: "PokéSwype2",
+    subtitle: "Application web de collection.",
     description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
     features: [
       "Espace personnel sécurisé.",
@@ -222,6 +226,7 @@ projects = [
 projects.each do |project_data|
   project = user.projects.create!(
     title: project_data[:title],
+    subtitle: project_data[:subtitle],
     description: project_data[:description],
     features: project_data[:features],
     technologies: project_data[:technologies],
