@@ -122,8 +122,8 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",
@@ -161,8 +161,8 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
@@ -209,8 +209,8 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728893702/development/git_fjcrsy.jpg",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894044/development/github_rfgzsa.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",
