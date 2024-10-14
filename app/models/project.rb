@@ -9,6 +9,7 @@ class Project < ApplicationRecord
   serialize :features, JSON
   serialize :frontend_technologies, JSON
   serialize :backend_technologies, JSON
+  serialize :tools, JSON
 
   validates :technologies, presence: true
   validates :link, presence: true
