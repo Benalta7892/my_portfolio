@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-* {
-  box-shadow: 0 0 0 3px red inset;
-}
+// * {
+//   box-shadow: 0 0 0 3px red inset;
+// }
 
 *,
 ::before,
@@ -13,11 +13,17 @@
 
 body {
   font-family: source code pro, sans-serif;
-  background: #c32929;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  width: calc(100% - 240px); /* 240px correspond à 120px de marge de chaque côté */
+  max-width: 100%; /* Empêche le dépassement de la largeur de l'écran */
+  margin: 0 auto;
 }
 
 .container-presentation {
@@ -25,8 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 120px;
-  background-color: bisque;
+  // background-color: bisque;
 
   .presentation {
     display: flex;
@@ -53,16 +58,16 @@ body {
 
 .section-skills {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
-  margin: 0 120px;
-  background-color: bisque;
+  // background-color: bisque;
+  // background-color: antiquewhite;
 
   .skills-content {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     margin: 8px;
     padding: 8px;
@@ -71,7 +76,7 @@ body {
     .front-end,
     .back-end {
       // width: -webkit-fill-available;
-      width: 33.33%;
+      width: 33%;
       justify-content: center;
       display: flex;
       flex-direction: column;
@@ -124,11 +129,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 120px;
-  background-color: bisque;
+  // background-color: bisque;
+  margin-bottom: 50px;
 
   .container-portfolio {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -184,6 +190,13 @@ body {
       }
     }
   }
+
+  @media (max-width: 1395px) {
+    .container-portfolio {
+      grid-template-columns: 1fr; /* Passe à une seule colonne sur les petits écrans */
+    }
+  }
+
   .link-container {
     display: flex;
     padding-right: 20px;

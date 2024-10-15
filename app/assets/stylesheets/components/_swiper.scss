@@ -1,5 +1,5 @@
 .section-swiper {
-  width: 52%;
+  // width: 52%;
   height: 580px;
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@
   padding: 14px;
   // box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.26);
   // background-color: steelblue;
+  // background-color: bisque;
 
   .swiper-container {
     display: flex;
@@ -139,9 +140,9 @@
 }
 
 .btn-carousel-next {
-  right: -30px; /* Ajuste la distance par rapport au bord droit */
+  right: -20px; /* Ajuste la distance par rapport au bord droit */
 }
 
 .btn-carousel-prev {
-  left: -30px; /* Ajuste la distance par rapport au bord gauche */
+  left: -20px; /* Ajuste la distance par rapport au bord gauche */
 }

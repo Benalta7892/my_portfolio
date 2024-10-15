@@ -14,8 +14,7 @@ legend ~ div.form-check:first-of-type {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 120px;
-  background-color: bisque;
+  // background-color: bisque;
   position: relative;
   z-index: 2;
   margin-bottom: -50px;
@@ -37,7 +36,7 @@ legend ~ div.form-check:first-of-type {
   justify-content: space-evenly;
   margin-top: 28px;
   padding: 28px;
-  background-color: #8ecae6;
+  background-color: #282828;
   border-radius: 24px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
 }
