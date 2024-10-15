@@ -209,3 +209,32 @@ main {
     align-self: center;
   }
 }
+
+// contribution github graphique
+
+.contributions {
+  margin: 0 auto 40px;
+}
+
+.ghThumbNail {
+  display: none;
+}
+
+.ghCalendarTable {
+  color: #000000 !important;
+}
+
+.ghCalendarCard {
+  background-color: #ffffff !important;
+  border: none !important;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+  border-radius: 24px !important;
+}
+
+.ghCalendarDayCell[data-level="NONE"] {
+  background-color: #ececec !important;
+}
+
+.ghCalendarHeader span {
+  color: black !important;
+}
