@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-// * {
-//   box-shadow: 0 0 0 3px red inset;
-// }
+* {
+  box-shadow: 0 0 0 3px red inset;
+}
 
 *,
 ::before,
@@ -21,38 +21,25 @@ body {
 }
 
 main {
-  width: calc(100% - 240px); /* 240px correspond à 120px de marge de chaque côté */
-  max-width: 100%; /* Empêche le dépassement de la largeur de l'écran */
+  width: calc(100% - 240px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.container-presentation {
-  // width: 100%;
+.section-presentation {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  // background-color: bisque;
+  margin: 8px;
+  padding: 8px;
 
-  .presentation {
+  .text-content-presentation {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin: 8px;
     padding: 8px;
-
-    .text-presentation {
-      width: 68%;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin: 8px;
-      padding: 14px;
-      position: relative;
-      // box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
-    }
   }
 }
 
@@ -213,7 +200,7 @@ main {
 // contribution github graphique
 
 .contributions {
-  margin: 0 auto 40px;
+  margin: 90px auto;
 }
 
 .ghThumbNail {
