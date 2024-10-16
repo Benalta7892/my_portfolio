@@ -86,14 +86,16 @@
 .box.left h2,
 .box.left p,
 .box.left a {
-  text-align: right; /* Le texte est aligné à droite */
+  text-align: right !important;
+  align-self: end;
 }
 
 /* Pour les boîtes alignées à droite, on aligne le texte à gauche */
 .box.right h2,
 .box.right p,
 .box.right a {
-  text-align: left; /* Le texte est aligné à gauche */
+  text-align: left !important;
+  align-self: start;
 }
 
 .ligne {
@@ -210,7 +212,8 @@
   .box.left h2,
   .box.left p,
   .box.left a {
-    text-align: left; /* Le texte est aligné à droite */
+    text-align: left !important; /* Le texte est aligné à droite */
+    align-self: start !important;
   }
 }
 
