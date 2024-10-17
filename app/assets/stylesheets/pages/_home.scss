@@ -197,7 +197,7 @@ main {
 // contribution github graphique
 
 .contributions {
-  margin: 90px auto;
+  margin: 60px auto;
 }
 
 .ghThumbNail {
@@ -221,4 +221,13 @@ main {
 
 .ghCalendarHeader span {
   color: black !important;
+}
+
+#gh a {
+  margin: 0;
+  display: none;
+}
+
+#gh img {
+  display: none;
 }

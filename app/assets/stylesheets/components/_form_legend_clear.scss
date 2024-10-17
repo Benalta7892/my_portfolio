@@ -10,14 +10,13 @@ legend ~ div.form-check:first-of-type {
 }
 
 .section-contact {
-  // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: bisque;
   position: relative;
   z-index: 2;
   margin-bottom: -50px;
+  margin-top: 90px;
 }
 
 .form-contact {
