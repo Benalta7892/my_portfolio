@@ -1,28 +1,23 @@
 .cv-container {
   display: flex;
   justify-content: center;
-  // background-color: bisque;
+  gap: 4%;
 }
 
 .cv-description {
+  max-width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   align-items: center;
   margin: 50px 0;
   padding: 8px;
-  // height: fit-content;
-
-  p {
-    font-size: 1.5em;
-    text-indent: 80px;
-    text-align: left;
-  }
+  gap: 50px;
 }
 
 .cv-description p::first-letter {
-  font-size: 2em; /* Taille plus grande */
-  font-weight: bold; /* Mettre en gras */
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .cv-download {

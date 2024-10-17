@@ -27,6 +27,9 @@ nav .logo img {
   margin: 0 15px;
   position: relative;
   font-weight: bold;
+  border: 2px solid;
+  border-radius: 24px;
+  padding: 8px;
 }
 
 .nav-links a::before {

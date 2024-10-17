@@ -7,12 +7,13 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin: 0;
 }
 
 h2 {
   font-family: source code pro, sans-serif;
-  font-size: clamp(10px, 2vw, 28px);
-  margin: 40px;
+  font-size: clamp(10px, 2vw, 16px);
+  margin: 24px;
   font-weight: bold;
   color: #023047;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
@@ -33,14 +34,19 @@ h4 {
   font-size: clamp(6px, 3vw, 24px);
   color: #cf995f;
   margin: 0;
+  padding: 0;
   display: inline-block;
   font-weight: 400;
+  text-indent: 0;
 }
 
 p {
-  text-align: center;
-  font-size: clamp(12px, 2vw, 28px);
-  // margin: 0;
+  text-align: justify;
+  font-size: clamp(12px, 2vw, 18px);
+  margin: 0;
+  padding: 12px;
+  width: fit-content;
+  text-indent: 80px;
 
   span {
     font-weight: 800;
@@ -54,4 +60,9 @@ a {
   font-weight: bold;
   font-size: 18px;
   height: fit-content;
+  margin: 18px;
+}
+
+#gh a {
+  margin: 0;
 }

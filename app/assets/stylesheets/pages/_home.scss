@@ -28,11 +28,8 @@ main {
 
 .section-presentation {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px;
-  padding: 8px;
+  justify-content: center;
+  margin: 70px 0;
 
   .text-content-presentation {
     display: flex;
@@ -40,53 +37,53 @@ main {
     align-items: center;
     margin: 8px;
     padding: 8px;
+    max-width: 650px;
   }
 }
 
 .section-skills {
   display: flex;
-  // flex-direction: column;
-  align-items: center;
-  // background-color: bisque;
-  // background-color: antiquewhite;
+  justify-content: center;
+  margin: 70px 0;
 
   .skills-content {
-    width: 100%;
+    width: 75%;
+    min-width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     margin: 8px;
     padding: 8px;
     z-index: 2;
+    gap: 18px;
 
     .front-end,
     .back-end {
-      // width: -webkit-fill-available;
-      width: 33%;
       justify-content: center;
       display: flex;
       flex-direction: column;
-      // align-items: center;
       margin: 8px;
-      padding: 8px;
+      padding: 0;
       transition: transform 0.3s ease-in-out;
+
+      h2 {
+        box-shadow: none;
+        margin: 8px;
+      }
 
       &:hover {
         transform: scale(1.1);
       }
 
       .logos {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-evenly;
-        // align-items: flex-start;
-        // flex-wrap: wrap;
-
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         place-items: center;
         width: 100%;
+        border-top: 2px solid;
+        border-radius: 24px;
+        padding: 12px;
 
         img {
           width: 80px;
