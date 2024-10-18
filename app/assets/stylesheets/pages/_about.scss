@@ -11,14 +11,17 @@
   // justify-content: space-evenly;
   align-items: center;
   margin: 50px 0;
-  padding: 8px;
+  padding: 24px;
   gap: 50px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 24px;
+  height: fit-content;
 }
 
-.cv-description p::first-letter {
-  font-size: 2em;
-  font-weight: bold;
-}
+// .cv-description p::first-letter {
+//   font-size: 2em;
+//   font-weight: bold;
+// }
 
 .cv-download {
   display: flex;
@@ -29,11 +32,13 @@
   padding: 8px;
   position: relative;
   top: -99px;
+  gap: 24px;
 
   img {
     height: 435px;
     margin: 8px;
-    padding: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
   }
 }
 
