@@ -16,6 +16,7 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
   height: fit-content;
+  border: 2px solid #f1f1f1;
 }
 
 // .cv-description p::first-letter {
@@ -39,6 +40,7 @@
     margin: 8px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     border-radius: 24px;
+    border: 2px solid #f1f1f1;
   }
 }
 
@@ -54,9 +56,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: bisque;
-  // position: relative;
-  // top: -80px;
+  position: relative;
+  top: -80px;
 }
 
 .box-timeline {
@@ -79,6 +80,15 @@
     background: none;
     line-height: normal;
     box-shadow: none;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  p:last-of-type {
+    opacity: 0.5; /* Ajustez la valeur d'opacité selon vos besoins */
   }
 }
 
@@ -120,6 +130,7 @@
   align-items: center;
   font-size: 40px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid #f1f1f1;
 }
 
 .r1 {
@@ -151,6 +162,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid #f1f1f1;
 
   p {
     line-height: 20px;
