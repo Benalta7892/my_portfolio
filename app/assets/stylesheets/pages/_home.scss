@@ -28,15 +28,19 @@ main {
 
 .section-presentation {
   display: flex;
-  justify-content: center;
-  margin: 70px 0;
+  justify-content: space-between;
+  margin: 54px 0;
+  align-items: center;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
 
   .text-content-presentation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8px;
+    // margin: 8px;
     padding: 24px;
+    margin: 54px;
     max-width: 650px;
     border: 2px solid #f1f1f1;
     border-radius: 24px;
@@ -53,7 +57,9 @@ main {
 .section-skills {
   display: flex;
   justify-content: center;
-  margin: 70px 0;
+  margin: 54px 0;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
 
   .skills-content {
     width: 75%;
@@ -86,7 +92,7 @@ main {
         grid-template-columns: repeat(4, 1fr);
         place-items: center;
         width: 100%;
-        border-top: 2px solid;
+        border-top: 2px solid #d5d5d5;
         // border-radius: 24px;
         padding: 12px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
