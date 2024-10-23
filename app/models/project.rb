@@ -6,10 +6,10 @@ class Project < ApplicationRecord
   validates :description, presence: true
   # validates :pictures, presence: true
 
-  serialize :features, JSON
-  serialize :frontend_technologies, JSON
-  serialize :backend_technologies, JSON
-  serialize :tools, JSON
+  serialize :features, coder: JSON
+  serialize :frontend_technologies, coder: JSON
+  serialize :backend_technologies, coder: JSON
+  serialize :tools, coder: JSON
 
   validates :technologies, presence: true
   validates :link, presence: true

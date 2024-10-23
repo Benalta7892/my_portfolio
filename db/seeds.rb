@@ -60,27 +60,27 @@ projects = [
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
     frontend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png", name: "Stimulus Logo", link: "https://stimulus.hotwired.dev/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass Logo", link: "https://sass-lang.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
     ],
     backend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails Logo", link: "https://rubyonrails.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise Logo", link: "https://github.com/heartcombo/devise" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary Logo", link: "https://cloudinary.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman Logo", link: "https://www.postman.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku Logo", link: "https://www.heroku.com/" }
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCode Logo", link: "https://code.visualstudio.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "Git Logo", link: "https://git-scm.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub Logo", link: "https://github.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello Logo", link: "https://trello.com/fr" }
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
@@ -113,26 +113,26 @@ projects = [
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
     frontend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass Logo", link: "https://sass-lang.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
     ],
     backend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails Logo", link: "https://rubyonrails.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise Logo", link: "https://github.com/heartcombo/devise" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary Logo", link: "https://cloudinary.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman Logo", link: "https://www.postman.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku Logo", link: "https://www.heroku.com/" }
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCODE Logo", link: "https://code.visualstudio.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "GIT Logo", link: "https://git-scm.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub Logo", link: "https://github.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello Logo", link: "https://trello.com/fr" }
     ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
@@ -155,27 +155,27 @@ projects = [
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
     frontend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png", name: "Stimulus Logo", link: "https://stimulus.hotwired.dev/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass Logo", link: "https://sass-lang.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
     ],
     backend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails Logo", link: "https://rubyonrails.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise Logo", link: "https://github.com/heartcombo/devise" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary Logo", link: "https://cloudinary.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman Logo", link: "https://www.postman.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku Logo", link: "https://www.heroku.com/" }
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCode Logo", link: "https://code.visualstudio.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "Git Logo", link: "https://git-scm.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub Logo", link: "https://github.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello Logo", link: "https://trello.com/fr" }
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
@@ -208,26 +208,26 @@ projects = [
     ],
     technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
     frontend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass Logo", link: "https://sass-lang.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
     ],
     backend_technologies: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails Logo", link: "https://rubyonrails.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise Logo", link: "https://github.com/heartcombo/devise" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary Logo", link: "https://cloudinary.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman Logo", link: "https://www.postman.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku Logo", link: "https://www.heroku.com/" }
     ],
     tools: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCODE Logo", link: "https://code.visualstudio.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "GIT Logo", link: "https://git-scm.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub Logo", link: "https://github.com/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
+      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello Logo", link: "https://trello.com/fr" }
     ],
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
