@@ -5,13 +5,11 @@
 
 <section class="section-presentation">
 
-  <%= link_to about_path, data: { turbo: false } do %>
-    <div class="text-content-presentation">
-      <h2>Bienvenue</h2>
-      <p>Je suis <span>développeur web full stack</span> avec une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours, mes réalisations et discutons pour concretiser vos idées.</p>
-      <span>➡️ Plus d'infos</span>
-    </div>
-  <% end %>
+  <div class="text-content-presentation">
+    <h2>Bienvenue</h2>
+    <p>Je suis <span>développeur web full stack</span> avec une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours, mes réalisations et discutons pour concretiser vos idées.</p>
+    <%= link_to "➡️ Plus d'infos", about_path, data: { turbo: false } %>
+  </div>
 
   <div class="avatar-presentation">
     <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
@@ -96,11 +94,12 @@
 
 
   </div>
+
   <%= link_to '➡️ En voir plus', projects_path, data: { turbo: false } %>
+
+  <div id="gh" data-login="Benalta7892" class="contributions"></div>
 
 </section>
 
 
 <%# <img src="http://ghchart.rshah.org/Benalta7892" alt="Benalta's Github chart" class="contributions" /> %>
-
-<div id="gh" data-login="Benalta7892" class="contributions"></div>

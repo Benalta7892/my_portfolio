@@ -33,6 +33,7 @@ main {
   align-items: center;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   .text-content-presentation {
     display: flex;
@@ -42,14 +43,18 @@ main {
     padding: 24px;
     margin: 54px;
     max-width: 650px;
-    border: 2px solid #f1f1f1;
-    border-radius: 24px;
+    // border: 2px solid #f1f1f1;
+    // border-radius: 24px;
     height: fit-content;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    // &:hover {
+    //   transform: scale(1.1);
+    //   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    // }
+
+    a {
+      margin: 30px;
     }
   }
 }
@@ -60,6 +65,7 @@ main {
   margin: 54px 0;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   .skills-content {
     width: 75%;
@@ -133,8 +139,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: bisque;
   margin-bottom: 50px;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   .container-portfolio {
     display: grid;
@@ -193,6 +201,10 @@ main {
         border-radius: 24px;
       }
     }
+  }
+
+  a {
+    margin: 30px;
   }
 
   @media (max-width: 1395px) {
