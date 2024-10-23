@@ -1,50 +1,51 @@
 <section class="section-swiper">
 
+  <div class="carousel-swiper">
+    <div class="btn-carousel-prev">
+      <%= cl_image_tag "arrowL_y08p76", class: "custom-arrow",  alt: 'Flèche de gauche' %>
+    </div>
 
-  <div class="btn-carousel-prev">
-    <%= cl_image_tag "arrowL_y08p76", class: "custom-arrow",  alt: 'Flèche de gauche' %>
-  </div>
+
+    <div class="swiper-container">
+      <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <% @project.pictures.each do |picture| %>
+            <div class="swiper-slide">
+              <%= image_tag picture %>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
 
-  <div class="swiper-container">
-    <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-      <div class="swiper-wrapper">
-        <% @project.pictures.each do |picture| %>
-          <div class="swiper-slide">
-            <%= image_tag picture %>
-          </div>
-        <% end %>
+      <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <% @project.pictures.each do |picture| %>
+            <div class="swiper-slide">
+              <%= image_tag picture %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
 
 
-    <div thumbsSlider="" class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <% @project.pictures.each do |picture| %>
-          <div class="swiper-slide">
-            <%= image_tag picture %>
-          </div>
-        <% end %>
-      </div>
+    <div class="btn-carousel-next">
+      <%= cl_image_tag "arrowR_v3vouj", class: "custom-arrow",  alt: 'Flèche de droite' %>
     </div>
   </div>
 
 
-  <div class="btn-carousel-next">
-    <%= cl_image_tag "arrowR_v3vouj", class: "custom-arrow",  alt: 'Flèche de droite' %>
+  <div class="link-github">
+    <% if @project.link.present? %>
+      <%= link_to "🔗 Lien GitHub.", @project.link, target: "_blank" %>
+    <% end %>
   </div>
-
 
 </section>
 
-<div class="link-github">
-  <% if @project.link.present? %>
-    🔗 <%= link_to "Lien GitHub", @project.link, target: "_blank" %>
-  <% end %>
-</div>
 
-
-<div class="details-container">
+<section class="section-details-container">
   <%# <h2>Détails du projet</h2> %>
 
   <div class="details-items">
@@ -67,12 +68,12 @@
 
   </div>
 
+  <div class="dev-count">
+    <p>Projet d'équipe de  <%= @project.dev_count %> développeurs.</p>
+  </div>
 
-</div>
+</section>
 
-<div class="dev-count">
-  <p>Projet d'équipe de  <%= @project.dev_count %> développeurs.</p>
-</div>
 
 <%# <h2>Technologies utilisées</h2> %>
 

@@ -30,6 +30,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin: 54px 0;
+  padding: 28px;
   align-items: center;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
@@ -41,7 +42,7 @@ main {
     align-items: center;
     // margin: 8px;
     padding: 24px;
-    margin: 54px;
+    margin: 24px;
     max-width: 650px;
     // border: 2px solid #f1f1f1;
     // border-radius: 24px;
@@ -52,6 +53,10 @@ main {
     //   transform: scale(1.1);
     //   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     // }
+
+    p {
+      text-indent: 54px;
+    }
 
     a {
       border: 2px solid #f1f1f1;
@@ -72,6 +77,7 @@ main {
   display: flex;
   justify-content: center;
   margin: 54px 0;
+  padding: 28px;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -148,7 +154,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
+  padding: 28px;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -170,8 +177,8 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 8px;
-      padding: 8px;
+      // margin: 8px;
+      // padding: 8px;
 
       img {
         height: 280px;
@@ -189,7 +196,7 @@ main {
       }
 
       .project-title {
-        font-family: source code pro, sans-serif;
+        font-family: "Raleway", sans-serif;
         position: absolute;
         top: 40%;
         color: white;
@@ -213,16 +220,20 @@ main {
   }
 
   a {
-    border: 2px solid #f1f1f1;
     border-radius: 24px;
     margin: 30px;
-    padding: 14px;
+    // padding: 14px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:hover {
       transform: scale(1.1);
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     }
+  }
+
+  .link-more {
+    border: 2px solid #f1f1f1;
+    padding: 14px;
   }
 
   @media (max-width: 1395px) {
