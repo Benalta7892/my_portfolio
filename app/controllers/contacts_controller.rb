@@ -7,9 +7,10 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
-
+    @admin_user = User.find_by(admin: true)
     @title = "Contactez-moi"
     @subtitle = "Contactez-moi pour toute demande ou collaboration."
+    @resume = Resume.find_by(user: @admin_user)
   end
 
   def create

@@ -71,12 +71,15 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
@@ -120,12 +123,15 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",
@@ -160,12 +166,15 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Chorusgrey/zero_to_heroes",
@@ -209,12 +218,15 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png"
     ],
     tools: [
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png"
     ],
     link: "https://github.com/Benalta7892/pokeswype",

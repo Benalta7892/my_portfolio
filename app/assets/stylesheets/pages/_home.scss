@@ -95,7 +95,8 @@ main {
     gap: 18px;
 
     .front-end,
-    .back-end {
+    .back-end,
+    .outils {
       justify-content: center;
       display: flex;
       flex-direction: column;
@@ -115,19 +116,24 @@ main {
         width: 100%;
         border-top: 2px solid #d5d5d5;
         // border-radius: 24px;
-        padding: 12px;
+        padding: 18px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         border-radius: 24px;
+        gap: 16px;
 
         &:hover {
           transform: scale(1.1);
           // box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
 
+        a {
+          border-radius: 24px;
+        }
+
         img {
           width: 70px;
           height: 70px;
-          margin: 8px;
+          // margin: 8px;
           padding: 8px;
           border-radius: 24px;
           transition: transform 0.3s ease-in-out;
