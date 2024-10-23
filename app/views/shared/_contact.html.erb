@@ -1,8 +1,10 @@
 <section class="section-contact">
-  <h2>Formulaire de contact</h2>
+
 
   <div class="form-contact">
     <%= form_with model: @contact, url: contacts_path, local: true, html: { class: "custom-form" } do |form| %>
+      <h2>Formulaire de contact</h2>
+
       <div class="contact-row">
         <div class="contact-input">
           <%#= form.label :last_name, "Nom" %>
@@ -22,7 +24,7 @@
       </div>
 
       <div class="btn">
-        <%= form.submit "Envoyer" %>
+        <%= form.submit "Envoyer", class: "button-submit" %>
       </div>
     <% end %>
   </div>
