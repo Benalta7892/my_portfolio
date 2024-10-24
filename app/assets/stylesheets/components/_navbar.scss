@@ -43,21 +43,8 @@ nav .logo {
   }
 }
 
-// .nav-links a::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   background: #cf995f;
-//   width: 100%;
-//   height: 1px;
-//   bottom: -2px;
-//   left: 0;
-//   transform-origin: left;
-//   transform: scaleX(0%);
-//   transition: transform 0.2s ease-out;
-// }
-
-// .nav-links a:hover::before {
-//   transform: scaleX(100%);
-//   background: #cf995f;
-// }
+/* Media Query pour écrans de 320px de large */
+@media screen and (max-width: 320px) {
+  .hero {
+  }
+}
