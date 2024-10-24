@@ -4,14 +4,14 @@
 
 import { application } from "./application";
 
-import CarouselController from "./carousel_controller";
+import CarouselController from "carousel_controller";
 application.register("carousel", CarouselController);
 
-import HelloController from "./hello_controller";
+import HelloController from "hello_controller";
 application.register("hello", HelloController);
 
-import SwiperController from "./swiper_controller";
+import SwiperController from "swiper_controller";
 application.register("swiper", SwiperController);
 
-import PopoverController from "./popover_controller";
+import PopoverController from "popover_controller";
 application.register("popover", PopoverController);
