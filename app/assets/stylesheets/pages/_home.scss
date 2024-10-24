@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-* {
-  box-shadow: 0 0 0 3px red inset;
-}
+// * {
+//   box-shadow: 0 0 0 3px red inset;
+// }
 
 *,
 ::before,
@@ -166,6 +166,31 @@ main {
   transition: opacity 0.3s ease-in-out; /* Transition douce sur l'opacité */
   pointer-events: none; /* Empêche les interactions tant que l'élément est invisible */
 }
+
+// .popover-content:after,
+// .popover-content:before {
+//   bottom: 100%;
+//   left: 40%;
+//   border: solid transparent;
+//   content: "";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+// }
+
+// .popover-content:after {
+//   border-color: rgba(255, 255, 255, 0);
+//   border-bottom-color: #fff;
+//   border-width: 20px;
+//   margin-left: -20px;
+// }
+// .popover-content:before {
+//   border-color: rgba(241, 241, 241, 0);
+//   border-bottom-color: #f1f1f1;
+//   border-width: 23px;
+//   margin-left: -23px;
+// }
 
 .popover-visible {
   opacity: 1; /* Visible avec une opacité de 1 */

@@ -25,46 +25,81 @@
     <div class="front-end">
       <h2>Skills Front-End</h2>
       <div class="logos">
-        <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-          <%= link_to cl_image_tag("html5_kf7hmz.png", alt: "HTML5 Logo", width: 100, height: 100), "https://developer.mozilla.org/fr/docs/Web/HTML", target: "_blank", data: { turbo: false } %>
-          <template data-popover-target="content"> <!-- Utilisation du template -->
-            <div data-popover-target="card" class="popover-content">
-              <p>HTML5 Logo</p>
-            </div>
-          </template>
-        </div>
+        <% logos = [
+          { name: "HTML5", img: "html5_kf7hmz.png", alt: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
+          { name: "CSS3", img: "css3_q9lv1h.png", alt: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+          { name: "JavaScript", img: "js_qh6ndw.png", alt: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+          { name: "Stimulus", img: "stimulus_byehql.png", alt: "Stimulus Logo", link: "https://stimulus.hotwired.dev/" },
+          { name: "Sass", img: "sass_lfse0e.png", alt: "Sass Logo", link: "https://sass-lang.com/" },
+          { name: "Figma", img: "figma_d7mc4z.png", alt: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
+        ] %>
 
+        <% logos.each do |logo| %>
+          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
+            <template data-popover-target="content">
+              <div data-popover-target="card" class="popover-content">
+                <p><%= logo[:name] %></p>
+              </div>
+            </template>
+          </div>
+        <% end %>
 
-        <%= link_to cl_image_tag("css3_q9lv1h.png", alt: "CSS3 Logo", width: 100, height: 100), "https://developer.mozilla.org/fr/docs/Web/CSS", target: "_blank" %>
-        <%= link_to cl_image_tag("js_qh6ndw.png", alt: "Javascript Logo", width: 100, height: 100), "https://developer.mozilla.org/fr/docs/Web/JavaScript", target: "_blank" %>
-        <%= link_to cl_image_tag("stimulus_byehql.png", alt: "Stimulus Logo", width: 100, height: 100), "https://stimulus.hotwired.dev/", target: "_blank" %>
-        <%= link_to cl_image_tag("sass_lfse0e.png", alt: "Sass Logo", width: 100, height: 100), "https://sass-lang.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("figma_d7mc4z.png", alt: "Figma Logo", width: 100, height: 100), "https://www.figma.com/fr-fr/", target: "_blank" %>
       </div>
     </div>
 
     <div class="back-end">
       <h2>Skills Back-End</h2>
       <div class="logos">
-        <%= link_to cl_image_tag("ruby_u4fzgi.png", alt: "Ruby Logo", width: 100, height: 100), "https://www.ruby-lang.org/fr/", target: "_blank" %>
-        <%= link_to cl_image_tag("rails_w8dl1x.png", alt: "Ruby On Rails Logo", width: 100, height: 100), "https://rubyonrails.org/", target: "_blank" %>
-        <%= link_to cl_image_tag("php_ehpiwx.png", alt: "PHP Logo", width: 100, height: 100), "https://www.php.net/", target: "_blank" %>
-        <%= link_to cl_image_tag("devise_p8bflb.png", alt: "Devise Logo", width: 100, height: 100), "https://github.com/heartcombo/devise", target: "_blank" %>
-        <%= link_to cl_image_tag("cloudinary_mrktzt.png", alt: "Cloudinary Logo", width: 100, height: 100), "https://cloudinary.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("postman_y3zgpe.png", alt: "Postman Logo", width: 100, height: 100), "https://www.postman.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("postgresql_czwsff.png", alt: "PostgreSQL Logo", width: 100, height: 100), "https://www.postgresql.org/", target: "_blank" %>
-        <%= link_to cl_image_tag("heroku_vqw6qd.png", alt: "Heroku Logo", width: 100, height: 100), "https://www.heroku.com/", target: "_blank" %>
+        <% backend_logos = [
+          { name: "Ruby", img: "ruby_u4fzgi.png", alt: "Ruby Logo", link: "https://www.ruby-lang.org/fr/" },
+          { name: "Rails", img: "rails_w8dl1x.png", alt: "Ruby On Rails Logo", link: "https://rubyonrails.org/" },
+          { name: "PHP", img: "php_ehpiwx.png", alt: "PHP Logo", link: "https://www.php.net/" },
+          { name: "Devise", img: "devise_p8bflb.png", alt: "Devise Logo", link: "https://github.com/heartcombo/devise" },
+          { name: "Cloudinary", img: "cloudinary_mrktzt.png", alt: "Cloudinary Logo", link: "https://cloudinary.com/" },
+          { name: "Postman", img: "postman_y3zgpe.png", alt: "Postman Logo", link: "https://www.postman.com/" },
+          { name: "PostgreSQL", img: "postgresql_czwsff.png", alt: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
+          { name: "Heroku", img: "heroku_vqw6qd.png", alt: "Heroku Logo", link: "https://www.heroku.com/" }
+        ] %>
+
+        <% backend_logos.each do |logo| %>
+          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
+            <template data-popover-target="content">
+              <div data-popover-target="card" class="popover-content">
+                <p><%= logo[:name] %></p>
+              </div>
+            </template>
+          </div>
+        <% end %>
+
+
       </div>
     </div>
 
     <div class="outils">
       <h2>Outils</h2>
       <div class="logos">
-        <%= link_to cl_image_tag("vscode_aio2rn.png", alt: "VSCODE Logo", width: 100, height:100), "https://code.visualstudio.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("git_h8j6pt.png", alt: "GIT Logo", width: 100, height: 100), "https://git-scm.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("github_hjj2ba.png", alt: "GitHub Logo", width: 100, height: 100), "https://github.com/", target: "_blank" %>
-        <%= link_to cl_image_tag("slack_ft3jeu.png", alt: "Slack Logo", width: 100, height: 100), "https://slack.com/intl/fr-fr/", target: "_blank" %>
-        <%= link_to cl_image_tag("trello_zsnis6.png", alt: "Trello Logo", width: 100, height: 100), "https://trello.com/fr", target: "_blank" %>
+        <% tools_logos = [
+          { name: "VSCODE", img: "vscode_aio2rn.png", alt: "VSCODE Logo", link: "https://code.visualstudio.com/" },
+          { name: "GIT", img: "git_h8j6pt.png", alt: "GIT Logo", link: "https://git-scm.com/" },
+          { name: "GitHub", img: "github_hjj2ba.png", alt: "GitHub Logo", link: "https://github.com/" },
+          { name: "Slack", img: "slack_ft3jeu.png", alt: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
+          { name: "Trello", img: "trello_zsnis6.png", alt: "Trello Logo", link: "https://trello.com/fr" }
+        ] %>
+
+        <% tools_logos.each do |logo| %>
+          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
+            <template data-popover-target="content">
+              <div data-popover-target="card" class="popover-content">
+                <p><%= logo[:name] %></p>
+              </div>
+            </template>
+          </div>
+        <% end %>
+
+
       </div>
     </div>
 
