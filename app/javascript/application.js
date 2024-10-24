@@ -4,5 +4,5 @@ import "controllers";
 import "@popperjs/core";
 import "bootstrap";
 
-import "./scroll";
-import "./slide";
+import "scroll";
+import "slide";
