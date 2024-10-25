@@ -1,11 +1,23 @@
 <nav>
-  <div class="logo">
-    <%= link_to "BA", root_path, class: 'logo', aria: { label: 'visit homepage' } %>
+
+  <div class="logo-container">
+    <%= link_to "BA", root_path, class: "logo", aria: { label: "visit homepage", current: "page" } %>
   </div>
+
+
   <div class="nav-links">
-    <%= link_to 'Accueil.', root_path %>
+    <%= link_to 'Accueil.', root_path, aria: { current: "page" } %>
     <%= link_to 'À propos.', about_path %>
     <%= link_to 'Portfolio.', projects_path %>
     <%= link_to 'Contact.', new_contact_path %>
   </div>
+
+  <div class="main-navlinks">
+    <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
 </nav>
