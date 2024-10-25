@@ -1,15 +1,11 @@
 <nav>
   <div class="logo">
-    <%= link_to "{BA}", root_path, :class => 'logo' %>
+    <%= link_to "BA", root_path, class: 'logo', aria: { label: 'visit homepage' } %>
   </div>
   <div class="nav-links">
     <%= link_to 'Accueil.', root_path %>
     <%= link_to 'À propos.', about_path %>
-    <%#= link_to 'CV', resumes_path %>
     <%= link_to 'Portfolio.', projects_path %>
     <%= link_to 'Contact.', new_contact_path %>
-    <%# <a href="#">CV</a> %>
-    <%# <a href="#">Portfolio</a> %>
-    <%# <a href="#">Contact</a> %>
   </div>
 </nav>
