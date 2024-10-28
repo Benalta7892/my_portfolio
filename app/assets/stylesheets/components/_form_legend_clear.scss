@@ -80,7 +80,7 @@ input {
   padding: 14px;
   background: none;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: #000;
+  color: #000;
 
   &:hover {
     transform: scale(1.1);
@@ -107,9 +107,9 @@ input {
     flex-direction: column;
   }
 
-  // .button-submit {
-  //   margin: 8px;
-  //   padding: 10px;
-  //   font-size: 31px;
-  // }
+  .button-submit {
+    margin: 8px;
+    padding: 10px;
+    font-size: 12px;
+  }
 }
