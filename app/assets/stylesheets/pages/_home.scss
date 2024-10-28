@@ -78,7 +78,7 @@ main {
   .section-presentation {
     flex-direction: column;
     align-items: center;
-    margin: 14px 0;
+    margin: 24px 0;
     padding: 18px;
 
     .text-content-presentation {
@@ -164,6 +164,12 @@ main {
         }
       }
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .section-skills {
+    margin: 24px 0;
   }
 }
 
@@ -341,6 +347,43 @@ main {
 
   a {
     align-self: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-portolio {
+    padding: 4px;
+    margin: 24px 0;
+  }
+
+  .section-portolio .link-more {
+    margin: 8px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .section-portolio a {
+    margin: 0;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-portfolio .btn-carousel {
+    padding: 4px;
+    margin: 4px;
+  }
+
+  .btn-carousel .custom-arrow {
+    height: 16px;
+    width: 6px;
+  }
+
+  .carousel-portfolio .carousel-items-portfolio {
+    padding: 0;
+    margin: 0;
   }
 }
 
