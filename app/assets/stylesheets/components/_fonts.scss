@@ -43,9 +43,10 @@ h4 {
 p {
   text-align: justify;
   font-size: clamp(12px, 2vw, 24px);
-  margin: 0;
+  // margin: 0;
   padding: 12px;
   width: fit-content;
+  line-height: 1.6;
   // text-indent: 50px;
 
   span {
@@ -59,4 +60,16 @@ a {
   font-weight: bold;
   font-size: 18px;
   height: fit-content;
+}
+
+@media (max-width: 425px) {
+  h2 {
+    margin: 4px;
+    padding: 8px;
+  }
+
+  p {
+    margin: 0;
+    padding: 8px;
+  }
 }

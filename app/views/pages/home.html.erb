@@ -6,14 +6,18 @@
 <section class="section-presentation">
 
   <div class="text-content-presentation">
+
+    <%# <div class="avatar-presentation"> %>
+    <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
+    <%# </div> %>
+
     <h2>Bienvenue</h2>
     <p>Je suis <span>développeur web full stack</span> avec une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours, mes réalisations et discutons pour concretiser vos idées.</p>
-    <%= link_to "Plus d'infos.", about_path, data: { turbo: false } %>
+
   </div>
 
-  <div class="avatar-presentation">
-    <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
-  </div>
+  <%= link_to "Plus d'infos.", about_path, data: { turbo: false } %>
+
 
 </section>
 
@@ -146,7 +150,7 @@
 
   <%= link_to 'En voir plus.', projects_path, data: { turbo: false }, class: "link-more" %>
 
-  <div id="gh" data-login="Benalta7892" class="contributions"></div>
+  <%# <div id="gh" data-login="Benalta7892" class="contributions"></div> %>
 
 </section>
 

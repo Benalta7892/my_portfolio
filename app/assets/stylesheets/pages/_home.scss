@@ -28,7 +28,8 @@ main {
 
 .section-presentation {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   margin: 54px 0;
   padding: 14px;
   align-items: center;
@@ -37,37 +38,77 @@ main {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   .text-content-presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // margin: 8px;
-    padding: 24px;
-    margin: 24px;
-    max-width: 650px;
-    // border: 2px solid #f1f1f1;
-    // border-radius: 24px;
-    height: fit-content;
-    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // padding: 24px;
+    // margin: 24px;
+    max-width: 1000px;
+    // height: fit-content;
 
-    // &:hover {
-    //   transform: scale(1.1);
-    //   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-    // }
-
-    p {
-      text-indent: 54px;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+      float: left;
+      shape-outside: margin-box;
+      margin: 28px 34px 9px 0;
     }
 
-    a {
-      border: 2px solid #f1f1f1;
-      border-radius: 24px;
-      margin: 30px;
-      padding: 14px;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    h2 {
+      padding: 0;
+      width: auto;
+    }
 
-      &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    p {
+      padding: 12px 24px;
+    }
+  }
+
+  a {
+    border: 2px solid #f1f1f1;
+    border-radius: 24px;
+    // margin-bottom: 30px;
+    padding: 14px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    width: calc(100% - 34px);
+  }
+
+  .section-presentation {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 14px 0;
+    padding: 8px;
+    position: relative;
+
+    .text-content-presentation {
+      margin: 0;
+      padding: 0;
+
+      h2 {
+        align-self: flex-start;
+        margin: 4px;
+        padding: 8px;
+      }
+
+      a {
+        border-radius: 18px;
+        margin: 8px;
+        padding: 10px;
+        font-size: 12px;
       }
     }
   }

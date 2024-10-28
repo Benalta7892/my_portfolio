@@ -20,7 +20,7 @@
 }
 
 .avatar-presentation {
-  width: 34%;
+  // width: 34%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,5 +33,20 @@
     border-radius: 30% 70% 62% 38% / 30% 30% 70% 70%;
     border: 4px solid;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 425px) {
+  .avatar-presentation {
+    margin: 4px;
+    padding: 4px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+
+    img {
+      width: clamp(90px, 1vw, 322px);
+      margin: 4px;
+    }
   }
 }
