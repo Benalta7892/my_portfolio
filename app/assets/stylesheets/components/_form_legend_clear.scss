@@ -82,7 +82,7 @@ input {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
-    // transform: scale(1.1);
+    transform: scale(1.1);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   }
 }
@@ -106,9 +106,9 @@ input {
     flex-direction: column;
   }
 
-  .button-submit {
-    margin: 8px;
-    padding: 10px;
-    font-size: 31px;
-  }
+  // .button-submit {
+  //   margin: 8px;
+  //   padding: 10px;
+  //   font-size: 31px;
+  // }
 }
