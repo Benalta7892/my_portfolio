@@ -38,13 +38,7 @@ main {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   .text-content-presentation {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // padding: 24px;
-    // margin: 24px;
     max-width: 1000px;
-    // height: fit-content;
 
     img {
       width: 200px;
@@ -88,15 +82,20 @@ main {
   }
 
   .section-presentation {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     margin: 14px 0;
-    padding: 8px;
-    position: relative;
+    padding: 18px;
+    // position: relative;
 
     .text-content-presentation {
-      margin: 0;
-      padding: 0;
+      //   margin: 0;
+      //   padding: 0;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
 
       h2 {
         align-self: flex-start;
@@ -104,12 +103,16 @@ main {
         padding: 8px;
       }
 
-      a {
-        border-radius: 18px;
-        margin: 8px;
-        padding: 10px;
-        font-size: 12px;
+      p {
+        padding: 0;
       }
+    }
+
+    a {
+      border-radius: 18px;
+      margin: 8px;
+      padding: 10px;
+      font-size: 12px;
     }
   }
 }
