@@ -37,3 +37,10 @@
 .footer .fa-heart {
   color: #d23333;
 }
+
+@media (max-width: 425px) {
+  .footer {
+    align-items: flex-end;
+    padding: 0 20px 20px;
+  }
+}

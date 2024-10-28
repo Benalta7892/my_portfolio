@@ -86,3 +86,27 @@ input {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   }
 }
+
+@media (max-width: 425px) {
+  .section-contact {
+    margin-top: 24px;
+  }
+
+  .custom-form {
+    width: 100%;
+    padding: 14px;
+    margin-top: 0;
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .contact-input {
+    flex-direction: column;
+  }
+
+  .button-submit {
+    width: auto;
+  }
+}
