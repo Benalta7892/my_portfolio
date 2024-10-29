@@ -67,6 +67,24 @@
   }
 }
 
+@media (min-width: 425px) {
+  .hero-top-content {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 650px) {
+  .hero-top-content {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-top-content {
+    margin-left: 130px;
+  }
+}
+
 @media (max-width: 425px) {
   .hero {
     .hero-content {
