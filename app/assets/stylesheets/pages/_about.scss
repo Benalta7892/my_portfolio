@@ -289,3 +289,18 @@
 //     background-color: transparent;
 //   }
 // }
+
+@media (max-width: 425px) {
+  .cv-container {
+    flex-direction: column-reverse;
+  }
+
+  .cv-download {
+    top: -66px;
+
+    img {
+      height: 300px;
+      width: auto;
+    }
+  }
+}

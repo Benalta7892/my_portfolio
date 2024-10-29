@@ -6,7 +6,10 @@
   <div class="cv-download">
     <%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
     <%# bouton pour telecharger cv %>
-    <%= link_to "Télécharger/Imprimer mon CV.", url_for(@resume.pdf), class: "button-download", target: "_blank" %>
+    <%= link_to url_for(@resume.pdf), class: "button-download", target: "_blank" do %>
+      <i class="fa-solid fa-download" style="color: #000000;"></i>
+    <% end %>
+
   </div>
 </div>
 
