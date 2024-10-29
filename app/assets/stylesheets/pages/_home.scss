@@ -30,7 +30,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 54px 0;
-  padding: 14px;
+  padding: 44px;
   align-items: center;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
@@ -62,7 +62,6 @@ main {
     border-radius: 24px;
     padding: 14px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-size: 12px;
 
     &:hover {
       transform: scale(1.1);
@@ -295,11 +294,11 @@ main {
     padding: 20px;
   }
 
-  .section-portolio .link-more {
-    margin: 8px;
-    padding: 10px;
-    font-size: 12px;
-  }
+  // .section-portolio .link-more {
+  //   margin: 8px;
+  //   padding: 10px;
+  //   font-size: 12px;
+  // }
 
   .section-portolio a {
     margin: 0;
@@ -410,10 +409,22 @@ main {
       //   height: 120px;
       // }
     }
+
+    a {
+      margin: 8px;
+      padding: 10px;
+      font-size: 12px;
+    }
   }
 
   .section-skills {
     margin: 24px 0;
+  }
+
+  .section-portolio .link-more {
+    margin: 8px;
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
