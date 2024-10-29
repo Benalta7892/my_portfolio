@@ -19,7 +19,7 @@
   border: 2px solid #f1f1f1;
 
   p {
-    text-indent: 54px;
+    text-indent: 30px;
   }
 }
 
@@ -37,7 +37,7 @@
   padding: 8px;
   position: relative;
   top: -99px;
-  gap: 24px;
+  gap: 16px;
 
   img {
     height: 435px;
@@ -52,7 +52,7 @@
   border: 2px solid #f1f1f1;
   border-radius: 24px;
   margin: 0;
-  padding: 14px;
+  padding: 14px 24px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
@@ -290,17 +290,74 @@
 //   }
 // }
 
-@media (max-width: 425px) {
+@media (max-width: 320px) {
   .cv-container {
     flex-direction: column-reverse;
+    margin: 28px 0;
   }
 
   .cv-download {
-    top: -66px;
+    top: -60px;
+    height: 310px;
 
     img {
       height: 300px;
       width: auto;
     }
   }
+
+  .cv-description {
+    margin: 0;
+    padding: 14px;
+    // position: relative;
+    // top: -66px;
+  }
+
+  .section-parcours {
+    position: static;
+    padding: 10px 0;
+  }
+
+  .box-timeline {
+    width: 50%;
+  }
+
+  .ligne {
+    height: 940px;
+    left: -120px;
+    width: 6px;
+  }
+
+  .rond {
+    left: calc(50% - 120px);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .box-timeline {
+    h2 {
+      font-size: 12px;
+      margin: 0 0 6px 0;
+    }
+  }
+
+  .box {
+    width: 200px;
+    padding: 10px;
+    min-height: 170px;
+
+    .date {
+      font-size: 10px;
+      margin: 0 0 14px 0;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
 }
