@@ -159,8 +159,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
-  padding: 14px;
+  margin: 54px 0;
+  padding: 40px;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -288,6 +288,60 @@ main {
 #gh img {
   display: none;
 }
+@media (min-width: 530px) and (max-width: 870px) {
+  .section-portolio {
+    // padding: 4px;
+    margin: 24px 0;
+    padding: 20px;
+  }
+
+  .section-portolio .link-more {
+    margin: 8px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .section-portolio a {
+    margin: 0;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-carousel .custom-arrow {
+    height: 60px;
+    width: 30px;
+  }
+}
+
+// @media (min-width: 700px) (max-width: 700px) {
+//   .section-portolio {
+//     padding: 4px;
+//     margin: 24px 0;
+//   }
+
+//   .section-portolio .link-more {
+//     margin: 8px;
+//     padding: 10px;
+//     font-size: 12px;
+//   }
+
+//   .section-portolio a {
+//     margin: 0;
+//   }
+
+//   .carousel-slide {
+//     width: 100%;
+//     height: auto;
+//   }
+
+//   .btn-carousel .custom-arrow {
+//     height: 70px;
+//     width: 40px;
+//   }
+// }
 
 @media (max-width: 1395px) {
   .container-portfolio {
@@ -335,6 +389,10 @@ main {
   .section-skills {
     margin: 24px 0;
   }
+
+  .section-portolio {
+    margin: 24px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -359,7 +417,7 @@ main {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 530px) {
   .section-portolio {
     padding: 4px;
     margin: 24px 0;
