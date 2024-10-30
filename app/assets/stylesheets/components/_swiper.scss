@@ -219,6 +219,56 @@
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
+  .section-swiper {
+    margin: 24px auto;
+    padding: 4px;
+
+    .carousel-swiper {
+      position: relative;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: auto;
+
+      .little-img-carousel {
+        border-radius: 10px;
+      }
+    }
+
+    .btn-carousel-prev,
+    .btn-carousel-next {
+      width: fit-content;
+      position: absolute;
+      padding: 4px;
+      margin: 4px;
+      top: 102%;
+    }
+
+    .btn-carousel-prev {
+      left: 36%;
+    }
+
+    .btn-carousel-next {
+      right: 36%;
+    }
+
+    .custom-arrow {
+      height: 30px;
+      width: 16px;
+    }
+
+    .link-github {
+      padding: 8px;
+      margin: 70px auto 0;
+      display: flex;
+      align-items: center;
+
+      a {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 @media (min-width: 425px) and (max-width: 500px) {
