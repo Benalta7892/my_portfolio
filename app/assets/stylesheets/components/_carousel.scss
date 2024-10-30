@@ -28,19 +28,21 @@
   justify-content: center;
   align-items: center;
   border-radius: 24px;
-  background: linear-gradient(rgba(0, 0, 0, 20), rgba(0, 0, 0, 20));
+  background: white;
   width: 100%;
   // height: 420px;
   overflow: hidden;
-  border: 4px solid black;
+  border: 2px solid #f1f1f1;
 
   img {
     position: relative;
-    border-radius: 24px;
+    // border-radius: 24px;
     width: 100%; /* Adapter l'image à la largeur du parent */
     height: 100%; /* Adapter l'image à la hauteur du parent */
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
+    padding: 4px;
+    border-radius: 24px;
   }
 
   .project-title {
@@ -67,12 +69,13 @@
 
 .btn-carousel {
   border: none;
-  background: none;
+  background: white;
+  border: 2px solid #f1f1f1;
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {

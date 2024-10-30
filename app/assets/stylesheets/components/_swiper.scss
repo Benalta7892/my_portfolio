@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 580px;
+    height: auto;
     gap: 10px;
     max-width: 940px;
   }
@@ -46,12 +46,13 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   object-position: center;
   border-radius: 24px;
-  border: 4px solid black;
-  background-color: black;
+  border: 2px solid #f1f1f1;
+  background-color: #ffffff;
+  padding: 4px;
 }
 
 .swiper {
@@ -177,10 +178,6 @@
       width: 100%;
       height: auto;
 
-      img {
-        border: 1px solid black;
-      }
-
       .little-img-carousel {
         border-radius: 10px;
       }
@@ -196,11 +193,11 @@
     }
 
     .btn-carousel-prev {
-      left: 100px;
+      left: 36%;
     }
 
     .btn-carousel-next {
-      right: 100px;
+      right: 36%;
     }
 
     .custom-arrow {

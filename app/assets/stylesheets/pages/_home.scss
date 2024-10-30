@@ -300,11 +300,11 @@ main {
     padding: 20px;
   }
 
-  // .section-portolio .link-more {
-  //   margin: 8px;
-  //   padding: 10px;
-  //   font-size: 12px;
-  // }
+  .section-portolio .link-more {
+    margin: 120px 8px 8px 8px;
+    padding: 10px;
+    font-size: 12px;
+  }
 
   .section-portolio a {
     margin: 0;
@@ -313,6 +313,23 @@ main {
   .carousel-slide {
     width: 100%;
     height: auto;
+  }
+
+  .carousel-portfolio .btn-carousel {
+    padding: 4px;
+    margin: 4px;
+    position: absolute;
+    top: 102%;
+  }
+
+  .carousel-portfolio .btn-carousel.left {
+    left: 36%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 36%;
+    z-index: 1;
   }
 
   .btn-carousel .custom-arrow {
@@ -495,7 +512,7 @@ main {
   }
 
   .section-portolio .link-more {
-    margin: 8px;
+    margin: 120px 8px 8px 8px;
     padding: 10px;
     font-size: 12px;
   }
@@ -524,7 +541,7 @@ main {
   }
 
   .section-portolio .link-more {
-    margin: 8px;
+    margin: 80px 8px 8px 8px;
     padding: 10px;
     font-size: 12px;
   }
@@ -541,6 +558,18 @@ main {
   .carousel-portfolio .btn-carousel {
     padding: 4px;
     margin: 4px;
+    position: absolute;
+    top: 102%;
+  }
+
+  .carousel-portfolio .btn-carousel.left {
+    left: 36%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 36%;
+    z-index: 1;
   }
 
   .btn-carousel .custom-arrow {

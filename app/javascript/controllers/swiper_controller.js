@@ -24,5 +24,20 @@ export default class extends Controller {
         swiper: swiper,
       },
     });
+    // Ajuster la hauteur du conteneur Swiper en fonction de l'image active
+    swiper2.on("slideChange", function () {
+      const activeSlide = swiper2.slides[swiper2.activeIndex].querySelector("img");
+      if (activeSlide) {
+        const container = document.querySelector(".mySwiper2");
+        container.style.height = `${activeSlide.offsetHeight}px`;
+      }
+    });
+
+    // Définir la hauteur initiale
+    const initialSlide = swiper2.slides[swiper2.activeIndex].querySelector("img");
+    if (initialSlide) {
+      const container = document.querySelector(".mySwiper2");
+      container.style.height = `${initialSlide.offsetHeight}px`;
+    }
   }
 }
