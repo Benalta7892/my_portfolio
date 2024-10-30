@@ -206,9 +206,9 @@ main {
       .project-title {
         font-family: "Raleway", sans-serif;
         position: absolute;
-        top: 40%;
+        top: 38%;
         color: white;
-        font-size: 44px;
+        font-size: 42px;
         font-weight: 800;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -436,6 +436,11 @@ main {
         img {
           height: 190px;
         }
+
+        .project-title {
+          font-size: 38px;
+          top: 36%;
+        }
       }
     }
   }
@@ -451,6 +456,11 @@ main {
 
         img {
           height: 166px;
+        }
+
+        .project-title {
+          font-size: 36px;
+          top: 34%;
         }
       }
     }
@@ -497,6 +507,10 @@ main {
       .card-portfolio {
         img {
           height: 220px;
+        }
+
+        .project-title {
+          top: 36%;
         }
       }
     }
@@ -546,6 +560,11 @@ main {
       .card-portfolio {
         img {
           height: 150px;
+        }
+
+        .project-title {
+          font-size: 32px;
+          top: 36%;
         }
       }
     }
@@ -597,6 +616,11 @@ main {
         img {
           height: 150px;
         }
+
+        .project-title {
+          font-size: 32px;
+          top: 36%;
+        }
       }
     }
   }
@@ -610,6 +634,11 @@ main {
       .card-portfolio {
         img {
           height: 144px;
+        }
+
+        .project-title {
+          font-size: 28px;
+          top: 36%;
         }
       }
     }
