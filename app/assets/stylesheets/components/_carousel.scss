@@ -89,3 +89,48 @@
 .hidden {
   display: none;
 }
+
+@media (max-width: 320px) {
+  .carousel-slide {
+    .project-title {
+      top: 30%;
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .carousel-slide {
+    .project-title {
+      top: 35%;
+      font-size: 26px;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .carousel-slide {
+    .project-title {
+      top: 34%;
+      font-size: 32px;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 530px) {
+  .carousel-slide {
+    .project-title {
+      top: 36%;
+      font-size: 35px;
+    }
+  }
+}
+
+@media (min-width: 530px) and (max-width: 600px) {
+  .carousel-slide {
+    .project-title {
+      top: 36%;
+      font-size: 36px;
+    }
+  }
+}
