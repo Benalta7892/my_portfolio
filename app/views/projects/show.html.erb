@@ -22,7 +22,7 @@
         <div class="swiper-wrapper">
           <% @project.pictures.each do |picture| %>
             <div class="swiper-slide">
-              <%= image_tag picture %>
+              <%= image_tag picture, class: "little-img-carousel" %>
             </div>
           <% end %>
         </div>
