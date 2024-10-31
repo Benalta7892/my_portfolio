@@ -116,7 +116,7 @@
 .btn-carousel-next,
 .btn-carousel-prev {
   height: fit-content;
-  margin: 8px;
+  margin: 20px;
   padding: 8px;
   border: none;
   background: none;
@@ -187,9 +187,11 @@
     }
 
     .mySwiper2 {
+      height: 200px;
+
       .swiper-slide {
         img {
-          object-fit: fill; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
         }
       }
     }
@@ -200,7 +202,7 @@
       position: absolute;
       padding: 4px;
       margin: 4px;
-      top: 102%;
+      top: 92%;
       border-radius: 8px;
     }
 
@@ -219,7 +221,7 @@
 
     .link-github {
       padding: 8px;
-      margin: 100px auto 14px;
+      margin: 50px auto 14px;
       display: flex;
       align-items: center;
 
@@ -251,9 +253,11 @@
     }
 
     .mySwiper2 {
+      height: 200px;
+
       .swiper-slide {
         img {
-          object-fit: fill; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
         }
       }
     }
@@ -294,7 +298,7 @@
   }
 }
 
-@media (min-width: 425px) and (max-width: 500px) {
+@media (min-width: 426px) and (max-width: 500px) {
   .section-swiper {
     margin: 24px auto;
     padding: 4px;
@@ -315,9 +319,11 @@
     }
 
     .mySwiper2 {
+      height: 250px;
+
       .swiper-slide {
         img {
-          object-fit: fill; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
         }
       }
     }
@@ -379,13 +385,15 @@
     }
 
     .mySwiper2 {
+      height: 300px;
+
       .swiper-slide {
         img {
           object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
         }
 
         &:first-of-type img {
-          object-fit: fill; // Pour la première image de .mySwiper2
+          object-fit: contain; // Pour la première image de .mySwiper2
         }
       }
     }
@@ -453,13 +461,15 @@
     }
 
     .mySwiper2 {
+      height: 330px;
+
       .swiper-slide {
         img {
           object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
         }
 
         &:first-of-type img {
-          object-fit: fill; // Pour la première image de .mySwiper2
+          object-fit: contain; // Pour la première image de .mySwiper2
         }
       }
     }
@@ -500,7 +510,7 @@
   }
 }
 
-@media (min-width: 700px) and (max-width: 800px) {
+@media (min-width: 701px) and (max-width: 800px) {
   .swiper-slide {
     img {
       object-fit: contain;
@@ -513,6 +523,20 @@
         border-radius: 16px;
       }
     }
+
+    .mySwiper2 {
+      height: 234px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
   }
 
   .mySwiper {
@@ -523,5 +547,111 @@
 @media (min-width: 800px) and (max-width: 900px) {
   .mySwiper {
     height: 80px;
+  }
+
+  .section-swiper {
+    .mySwiper2 {
+      height: 276px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 901px) and (max-width: 960px) {
+  .section-swiper {
+    .mySwiper2 {
+      height: 324px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1016px) {
+  .section-swiper {
+    .mySwiper2 {
+      height: 354px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1017px) and (max-width: 1100px) {
+  .section-swiper {
+    .mySwiper2 {
+      height: 384px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1200px) {
+  .section-swiper {
+    .mySwiper2 {
+      height: 390px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1201px) {
+  .section-swiper {
+    .mySwiper2 {
+      height: 464px;
+
+      .swiper-slide {
+        img {
+          object-fit: contain; // Applique 'object-fit: fill' uniquement aux images de .mySwiper2
+        }
+
+        &:first-of-type img {
+          object-fit: contain; // Pour la première image de .mySwiper2
+        }
+      }
+    }
   }
 }
