@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   def about
     @admin_user = User.find_by(admin: true)
     @resume = Resume.find_by(user: @admin_user)
+    @contact = Contact.new
 
     return unless @resume
 

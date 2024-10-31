@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
     @title = "Portfolio"
     @subtitle = "Découvrez tous mes projets"
     @resume = Resume.find_by(user: @admin_user)
+    @contact = Contact.new
   end
 
   def show
@@ -14,6 +15,7 @@ class ProjectsController < ApplicationController
     @title = @project.title
     @subtitle = @project.subtitle
     @resume = Resume.find_by(user: @admin_user)
+    @contact = Contact.new
   end
 
   def new
