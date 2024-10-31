@@ -41,6 +41,7 @@
   p {
     height: 100%;
     text-indent: 54px;
+    font-size: 24px;
   }
 }
 
@@ -71,12 +72,14 @@
   li {
     font-size: 1.1em;
     text-align: center;
-    border-left: 2px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
     padding-left: 4px;
 
     p {
       text-indent: 0;
       padding: 0;
+      font-size: 16px;
+      margin: 0;
     }
   }
 }
@@ -249,7 +252,7 @@
 
   .description {
     p {
-      font-size: 14px;
+      font-size: 16px;
       margin: 0;
     }
   }
@@ -269,13 +272,159 @@
       margin: 0;
     }
   }
+
+  .dev-count {
+    p {
+      font-size: 16px;
+      // margin: 0;
+    }
+  }
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
+  .details-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description {
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  .barre {
+    width: 10px;
+    margin: 0 2px;
+  }
+
+  .features {
+    li {
+      border-left: 1px solid #c2c2c2;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .dev-count {
+    p {
+      font-size: 18px;
+      // margin: 0;
+    }
+  }
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
+  .details-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description {
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  .barre {
+    width: 10px;
+    margin: 0 2px;
+  }
+
+  .features {
+    li {
+      border-left: 1px solid #c2c2c2;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .dev-count {
+    p {
+      font-size: 20px;
+      // margin: 0;
+    }
+  }
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
+  .details-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description {
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  .barre {
+    width: 10px;
+    margin: 0 2px;
+  }
+
+  .features {
+    li {
+      border-left: 1px solid #c2c2c2;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .dev-count {
+    p {
+      font-size: 20px;
+      // margin: 0;
+    }
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .details-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description {
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  .barre {
+    width: 10px;
+    margin: 0 2px;
+  }
+
+  .features {
+    li {
+      border-left: 1px solid #c2c2c2;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .dev-count {
+    p {
+      font-size: 20px;
+      // margin: 0;
+    }
+  }
 }

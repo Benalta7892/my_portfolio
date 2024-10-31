@@ -75,7 +75,7 @@
 }
 
 .mySwiper {
-  height: 112px;
+  height: 109px;
   box-sizing: border-box;
   padding: 10px 0;
 }
@@ -514,7 +514,14 @@
       }
     }
   }
+
+  .mySwiper {
+    height: 60px;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
+  .mySwiper {
+    height: 80px;
+  }
 }
