@@ -482,6 +482,25 @@ main {
       }
     }
   }
+
+  .carousel-portfolio .btn-carousel {
+    border-radius: 8px;
+  }
+
+  .btn-carousel .custom-arrow {
+    height: 60px;
+    width: 40px;
+  }
+
+  .carousel-portfolio .btn-carousel.left {
+    left: 34%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 34%;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -517,6 +536,16 @@ main {
     font-size: 12px;
   }
 
+  // .carousel-portfolio .btn-carousel.left {
+  //   left: 34%;
+  //   z-index: 1;
+  // }
+
+  // .carousel-portfolio .btn-carousel.right {
+  //   right: 34%;
+  //   z-index: 1;
+  // }
+
   .section-portolio {
     .container-portfolio {
       grid-template-columns: repeat(1, 1fr);
@@ -532,6 +561,25 @@ main {
       }
     }
   }
+
+  .carousel-portfolio .btn-carousel {
+    border-radius: 8px;
+  }
+
+  .btn-carousel .custom-arrow {
+    height: 60px;
+    width: 40px;
+  }
+
+  .carousel-portfolio .btn-carousel.left {
+    left: 34%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 34%;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 530px) {
@@ -541,7 +589,7 @@ main {
   }
 
   .section-portolio .link-more {
-    margin: 80px 8px 8px 8px;
+    margin: 114px 8px 8px 8px;
     padding: 10px;
     font-size: 12px;
   }
@@ -560,21 +608,22 @@ main {
     margin: 4px;
     position: absolute;
     top: 102%;
+    border-radius: 8px;
   }
 
   .carousel-portfolio .btn-carousel.left {
-    left: 36%;
+    left: 34%;
     z-index: 1;
   }
 
   .carousel-portfolio .btn-carousel.right {
-    right: 36%;
+    right: 34%;
     z-index: 1;
   }
 
   .btn-carousel .custom-arrow {
-    height: 30px;
-    width: 16px;
+    height: 50px;
+    width: 30px;
   }
 
   .carousel-portfolio .carousel-items-portfolio {
@@ -637,6 +686,16 @@ main {
     }
   }
 
+  .carousel-portfolio .btn-carousel.left {
+    left: 34%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 34%;
+    z-index: 1;
+  }
+
   .section-portolio {
     .container-portfolio {
       grid-template-columns: repeat(1, 1fr);
@@ -656,6 +715,16 @@ main {
 }
 
 @media (max-width: 375px) {
+  .carousel-portfolio .btn-carousel.left {
+    left: 32%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 32%;
+    z-index: 1;
+  }
+
   .section-portolio {
     .container-portfolio {
       grid-template-columns: repeat(1, 1fr);
@@ -675,6 +744,16 @@ main {
 }
 
 @media (max-width: 320px) {
+  .carousel-portfolio .btn-carousel.left {
+    left: 30%;
+    z-index: 1;
+  }
+
+  .carousel-portfolio .btn-carousel.right {
+    right: 30%;
+    z-index: 1;
+  }
+
   .section-portolio {
     .container-portfolio {
       grid-template-columns: repeat(1, 1fr);

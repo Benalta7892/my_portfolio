@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 580px;
+    // height: 580px;
     gap: 10px;
     max-width: 940px;
   }
@@ -48,7 +48,7 @@
   border-radius: 24px;
   border: 2px solid #f1f1f1;
   background-color: #ffffff;
-  padding: 4px;
+  // padding: 4px;
 }
 
 .mySwiper2 img {
@@ -75,7 +75,7 @@
 }
 
 .mySwiper {
-  height: 20%;
+  height: 112px;
   box-sizing: border-box;
   padding: 10px 0;
 }
@@ -130,8 +130,8 @@
   z-index: 100;
 
   .custom-arrow {
-    height: 100px;
-    width: 70px;
+    height: 80px;
+    width: 50px;
   }
 }
 
@@ -144,7 +144,7 @@
 }
 
 .btn-carousel-next {
-  right: -20px; /* Ajuste la distance par rapport au bord droit */
+  // right: -20px; /* Ajuste la distance par rapport au bord droit */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
@@ -154,7 +154,7 @@
 }
 
 .btn-carousel-prev {
-  left: -20px; /* Ajuste la distance par rapport au bord gauche */
+  // left: -20px; /* Ajuste la distance par rapport au bord gauche */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
@@ -182,7 +182,7 @@
       .little-img-carousel {
         border-radius: 10px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -246,7 +246,7 @@
       .little-img-carousel {
         border-radius: 10px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -310,7 +310,7 @@
       .little-img-carousel {
         border-radius: 10px;
         height: 58px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -372,9 +372,9 @@
       height: auto;
 
       .little-img-carousel {
-        border-radius: 10px;
+        border-radius: 16px;
         height: 68px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -415,7 +415,7 @@
 
     .link-github {
       padding: 8px;
-      margin: 100px auto 14px;
+      margin: 120px auto 14px;
       display: flex;
       align-items: center;
 
@@ -440,9 +440,9 @@
       height: auto;
 
       .little-img-carousel {
-        border-radius: 10px;
+        border-radius: 16px;
         height: 80px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -489,7 +489,7 @@
 
     .link-github {
       padding: 8px;
-      margin: 100px auto 14px;
+      margin: 140px auto 14px;
       display: flex;
       align-items: center;
 
@@ -504,6 +504,14 @@
   .swiper-slide {
     img {
       object-fit: contain;
+    }
+  }
+
+  .section-swiper {
+    .swiper-container {
+      .little-img-carousel {
+        border-radius: 16px;
+      }
     }
   }
 }
