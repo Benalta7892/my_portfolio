@@ -81,7 +81,7 @@ export default class extends Controller {
   applyObjectFit() {
     const images = document.querySelectorAll(".mySwiper2 img");
     images.forEach((img) => {
-      if (window.innerWidth > 500 && img.offsetHeight > 290) {
+      if (window.innerWidth > 365 && img.offsetHeight > 290) {
         // Utiliser 'contain' si la largeur de l'écran est supérieure à 500 et que l'image est grande
         img.style.objectFit = "contain";
       } else {
