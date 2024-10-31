@@ -3,14 +3,25 @@
     <p><%= @resume.description[0] %></p>
     <p><%= @resume.description[1] %></p>
   </div>
+
   <div class="cv-download">
     <%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
-    <%# bouton pour telecharger cv %>
-    <%= link_to url_for(@resume.pdf), class: "button-download", target: "_blank" do %>
-      <i class="fa-solid fa-download" style="color: #000000;"></i>
-    <% end %>
 
+    <!-- bouton de téléchargement avec popover -->
+    <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+      <%= link_to url_for(@resume.pdf), class: "button-download", target: "_blank" do %>
+        <i class="fa-solid fa-download" style="color: #000000;"></i>
+      <% end %>
+
+      <!-- Contenu du popover pour le bouton de téléchargement -->
+      <template data-popover-target="content">
+        <div data-popover-target="card" class="popover-content">
+          <p>Mon CV</p>
+        </div>
+      </template>
+    </div>
   </div>
+
 </div>
 
 <div class="section-parcours">
