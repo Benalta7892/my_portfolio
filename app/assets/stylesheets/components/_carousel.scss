@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  // margin: 0 80px;
 
   .carousel-items-portfolio,
   .btn-carousel {
@@ -33,12 +34,13 @@
   // height: 420px;
   overflow: hidden;
   border: 2px solid #f1f1f1;
+  // width: 700px;
 
   img {
     position: relative;
     // border-radius: 24px;
     width: 100%; /* Adapter l'image à la largeur du parent */
-    height: 100%; /* Adapter l'image à la hauteur du parent */
+    height: 390px; /* Adapter l'image à la hauteur du parent */
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     // padding: 4px;
@@ -104,6 +106,12 @@
       font-size: 24px;
     }
   }
+
+  .carousel-slide {
+    img {
+      height: 142px;
+    }
+  }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -113,6 +121,12 @@
       font-size: 26px;
     }
   }
+
+  .carousel-slide {
+    img {
+      height: 170px;
+    }
+  }
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
@@ -120,6 +134,12 @@
     .project-title {
       top: 34%;
       font-size: 32px;
+    }
+  }
+
+  .carousel-slide {
+    img {
+      height: 204px;
     }
   }
 }
@@ -138,6 +158,78 @@
     .project-title {
       top: 36%;
       font-size: 36px;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 515px) {
+  .carousel-slide {
+    img {
+      height: 234px;
+    }
+  }
+}
+
+@media (min-width: 516px) and (max-width: 591px) {
+  .carousel-slide {
+    img {
+      height: 262px;
+    }
+  }
+}
+
+@media (min-width: 592px) and (max-width: 650px) {
+  .carousel-slide {
+    img {
+      height: 294px;
+    }
+  }
+}
+
+@media (min-width: 651px) and (max-width: 700px) {
+  .carousel-slide {
+    img {
+      height: 324px;
+    }
+  }
+}
+
+@media (min-width: 871px) and (max-width: 900px) {
+  .carousel-slide {
+    img {
+      height: 292px;
+    }
+  }
+}
+
+@media (min-width: 901px) and (max-width: 960px) {
+  .carousel-slide {
+    img {
+      height: 324px;
+    }
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1016px) {
+  .carousel-slide {
+    img {
+      height: 354px;
+    }
+  }
+}
+
+@media (min-width: 1017px) and (max-width: 1068px) {
+  .carousel-slide {
+    img {
+      height: 384px;
+    }
+  }
+}
+
+@media (min-width: 1069px) and (max-width: 1126px) {
+  .carousel-slide {
+    img {
+      height: 414px;
     }
   }
 }
