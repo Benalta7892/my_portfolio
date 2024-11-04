@@ -1,7 +1,9 @@
 <nav>
 
   <div class="logo-container">
-    <%= link_to "BA", root_path, class: "logo", aria: { label: "visit homepage", current: "page" } %>
+    <%= link_to root_path, class: "logo", aria: { label: "visit homepage", current: "page" } do %>
+      <%= cl_image_tag "BenoitAlexandreLogo_ci6r6n.png", alt: "Logo de Benoit Alexandre", class: "logo-img" %>
+    <% end %>
   </div>
 
 
