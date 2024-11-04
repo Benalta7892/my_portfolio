@@ -9,7 +9,7 @@
 
     <!-- bouton de téléchargement avec popover -->
     <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-      <%= link_to url_for(@resume.pdf), class: "button-download", target: "_blank", rel: "noopener noreferrer" do %>
+      <%= link_to download_resume_path(@resume), class: "button-download", target: "_blank", rel: "noopener noreferrer" do %> <!-- Lien de téléchargement -->
         <i class="fa-solid fa-download" style="color: #000000;"></i>
       <% end %>
 

@@ -19,4 +19,14 @@ class ResumesController < ApplicationController
 
   def destroy
   end
+
+  def download_resume
+    @resume = Resume.find(params[:id]) # Assurez-vous que l'ID du CV est passé
+    if @resume.pdf.attached?
+      # Utilisez `@resume.pdf` pour obtenir le fichier si vous utilisez ActiveStorage
+      send_data @resume.pdf.download, filename: "CV.pdf", type: 'application/pdf', disposition: 'inline'
+    else
+      redirect_to root_path, alert: "Le CV n'est pas disponible."
+    end
+  end
 end

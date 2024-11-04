@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   #
   resources :projects
   resources :resumes do
+    member do
+      get 'download', to: 'resumes#download_resume'
+    end
+
     resources :educations
     resources :experiences
   end
