@@ -23,7 +23,9 @@
   </head>
   <body>
     <!-- Définition de la classe du header en fonction de la page -->
-    <header class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %>">
+    <header id="vantajs" class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %>">
+      <div class="overlay"></div>
+
       <!-- Inclure la navbar -->
       <%= render "shared/navbar" %>
 

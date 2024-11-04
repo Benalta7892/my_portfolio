@@ -7,3 +7,4 @@ import "bootstrap";
 import "./scroll";
 import "./slide";
 import "./navbar";
+import "./vanta";
