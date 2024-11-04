@@ -4,7 +4,7 @@
   <div class="small-hero-top-content">
     <h1 aria-label="Porsche, set free."><%= title %></h1>
     <p class="subtitle"><%= subtitle %></p>
-    <%= link_to "Mon CV.", url_for(@resume.pdf), class: "button-download", target: "_blank" %>
+    <%= link_to "Mon CV.", download_resume_path(@resume), class: "button-download", target: "_blank" %>
   </div>
   <div class="links">
     <%= link_to "https://www.linkedin.com/in/benalta7892", class: "link", target: "_blank" do %>
