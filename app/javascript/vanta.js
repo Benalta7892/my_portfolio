@@ -1,9 +1,15 @@
 import "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js";
 import "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.clouds.min.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  VANTA.CLOUDS({
-    el: "#vantajs", // Remplace avec le sélecteur de l'élément où tu veux l'animation
+let vantaEffectClouds;
+
+document.addEventListener("turbo:load", function () {
+  // Détruire l'instance Vanta existante s'il y en a une
+  if (vantaEffectClouds) vantaEffectClouds.destroy();
+
+  // Initialiser l'animation des nuages
+  vantaEffectClouds = VANTA.CLOUDS({
+    el: "#vantajs", // Sélecteur de l'élément cible pour les nuages
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
