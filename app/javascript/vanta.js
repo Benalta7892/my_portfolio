@@ -22,6 +22,6 @@ document.addEventListener("turbo:load", function () {
     sunColor: 0xff9919, // Couleur du soleil
     sunGlareColor: 0xff6633, // Couleur de l'éclat du soleil
     sunlightColor: 0xff9933, // Couleur de la lumière solaire
-    speed: 1, // Vitesse de l'animation
+    speed: 0.42, // Vitesse de l'animation
   });
 });
