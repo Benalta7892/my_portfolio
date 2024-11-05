@@ -21,31 +21,36 @@
     <%# <link rel="stylesheet" href="https://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/gh.css"> %>
 
   </head>
-  <body>
+  <body id="top-page" <%= 'data-controller="about"' if current_page?(about_path) %>>
     <!-- Définition de la classe du header en fonction de la page -->
     <header id="vantajs" class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %>">
-      <%# <div class="overlay"></div> %>
+    <%# <div class="overlay"></div> %>
 
-      <!-- Inclure la navbar -->
-      <%= render "shared/navbar" %>
+    <!-- Inclure la navbar -->
+    <%= render "shared/navbar" %>
 
-      <!-- Afficher le contenu du header en fonction de la page -->
-      <% if current_page?(root_path) %>
-        <%= render "shared/hero" %> <!-- Pour la page d'accueil -->
-      <% else %>
-        <%= render "shared/smallbanner", title: @title, subtitle: @subtitle %> <!-- Pour les autres pages -->
-      <% end %>
-    </header>
+    <!-- Afficher le contenu du header en fonction de la page -->
+    <% if current_page?(root_path) %>
+      <%= render "shared/hero" %> <!-- Pour la page d'accueil -->
+    <% else %>
+      <%= render "shared/smallbanner", title: @title, subtitle: @subtitle %> <!-- Pour les autres pages -->
+    <% end %>
+  </header>
 
-    <main>
-      <%= render "shared/flashes" %>
-      <%= yield %>
-      <%= render "shared/contact" %>
-    </main>
+  <main>
+    <%= link_to '#top-page', id: 'scroll-up', class: 'hidden' do %>
+      <i class="fa-solid fa-caret-up"></i>
+    <% end %>
 
-    <%= render "shared/footer" %>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <%# <script src="https://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/gh.js"></script> %>
-  </body>
+    <%= render "shared/flashes" %>
+    <%= yield %>
+    <%= render "shared/contact" %>
+  </main>
+
+  <%= render "shared/footer" %>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <%# <script src="https://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/gh.js"></script> %>
+</body>
 </html>

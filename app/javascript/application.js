@@ -8,3 +8,4 @@ import "./scroll";
 import "./slide";
 import "./navbar";
 import "./vanta";
+import "./smooth_scroll";
