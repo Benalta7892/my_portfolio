@@ -1,8 +1,8 @@
 .small-hero {
   width: 100%;
-  height: 60vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
+  height: 100vh;
+  // background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  //   url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -21,7 +21,7 @@
       flex-direction: column;
       align-items: flex-start;
       position: relative;
-      top: 50px;
+      // top: 50px;
       left: 12%;
       gap: 8px;
       text-shadow: 1px 1px 4px #1a2c37;
@@ -46,7 +46,7 @@
     .links {
       position: relative;
       left: 4%;
-      top: -24px;
+      top: -38px;
       height: fit-content;
       width: fit-content;
       display: flex;

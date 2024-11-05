@@ -62,6 +62,7 @@
   margin: 0;
   padding: 14px 24px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #fff;
 
   &:hover {
     transform: scale(1.1);
@@ -87,7 +88,7 @@
   width: 25%;
   height: fit-content;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, #fafafa 0%, #fafafa 21%, #ebebeb 100%);
+  background: linear-gradient(0deg, #fafafa 0%, #fafafa 21%, #38b6ff 100%);
   position: relative;
   padding: 80px 0 250px 0;
   // margin-bottom: 100px;
@@ -186,6 +187,12 @@
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid #f1f1f1;
+
+  h2::first-letter {
+    font-family: "Blanka", sans-serif;
+    color: #38b6ff;
+    font-size: 1.5em;
+  }
 
   p {
     line-height: 20px;
