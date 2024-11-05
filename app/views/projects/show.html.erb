@@ -1,4 +1,6 @@
 <section class="section-swiper" id="first-section">
+  <h2><%= @project.title %></h2>
+
 
   <div class="carousel-swiper">
     <div class="btn-carousel-prev">
@@ -82,7 +84,7 @@
   <div class="skills-content">
 
     <div class="front-end">
-      <h2>Stack Front-End</h2>
+      <h2><span>S</span>tack Front-End</h2>
       <div class="logos">
         <% @project.frontend_technologies.each do |tech| %>
           <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
@@ -98,7 +100,7 @@
     </div>
 
     <div class="back-end">
-      <h2>Stack Back-End</h2>
+      <h2><span>S</span>tack Back-End</h2>
       <div class="logos">
         <% @project.backend_technologies.each do |tech| %>
           <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
@@ -114,7 +116,7 @@
     </div>
 
     <div class="outils">
-      <h2>Outils</h2>
+      <h2><span>O</span>utils</h2>
       <div class="logos">
         <% @project.tools.each do |tech| %>
           <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
