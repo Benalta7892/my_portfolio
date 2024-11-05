@@ -4,7 +4,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 12px;
-  background: #fafafa;
+  background: #ebebeb;
   // box-shadow: inset 0px -1px 0px #c5c5c6;
   justify-content: space-between;
   z-index: 1000;
@@ -12,6 +12,7 @@ nav {
   border-radius: 24px;
   margin: 25px auto;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.28);
 
   // &:hover {
   //   transform: scale(1.1);
@@ -62,7 +63,7 @@ nav {
       border-radius: 24px;
       padding: 14px;
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      background: #fff;
+      background-color: #fff;
       text-align: center;
 
       &:hover {
