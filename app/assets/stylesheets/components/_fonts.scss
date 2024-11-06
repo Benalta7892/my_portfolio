@@ -36,6 +36,7 @@ h4 {
 .subtitle {
   font-weight: 200;
   font-size: clamp(6px, 3vw, 24px);
+  max-width: clamp(120px, 47vw, 468px);
   color: #1a2c37;
   margin: 0;
   padding: 0;
@@ -43,6 +44,7 @@ h4 {
   font-weight: 400;
   text-indent: 0;
   text-shadow: none;
+  text-align: left;
 }
 
 p {

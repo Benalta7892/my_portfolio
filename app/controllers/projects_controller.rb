@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
     @admin_user = User.find_by(admin: true)
     @projects = Project.order(created_at: :asc)
     @title = "Portfolio"
-    @subtitle = "Découvrez tous mes projets"
+    @subtitle = "Conception, développement, déploiement : Un projet bien pensé."
     @resume = Resume.find_by(user: @admin_user)
     @contact = Contact.new
   end
