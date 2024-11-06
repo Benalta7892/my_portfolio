@@ -83,17 +83,15 @@
   }
 }
 
-// @media (max-width: 768px) {
-//   .small-hero {
-//     .small-hero-content {
-//       .small-hero-top-content {
-//         .subtitle {
-//           max-width: 175px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 650px) {
+  .small-hero {
+    .small-hero-content {
+      .small-hero-top-content {
+        left: 0;
+      }
+    }
+  }
+}
 
 // @media (max-width: 425px) {
 //   .small-hero {
