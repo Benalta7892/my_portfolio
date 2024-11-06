@@ -88,7 +88,7 @@
   width: 25%;
   height: fit-content;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, #fafafa 0%, #fafafa 21%, #38b6ff 100%);
+  background: linear-gradient(0deg, #fafafa 0%, #fafafa 6%, #38b6ff 100%);
   position: relative;
   padding: 80px 0 250px 0;
   // margin-bottom: 100px;
@@ -133,7 +133,7 @@
 }
 
 .ligne {
-  height: 1000px;
+  height: 1306px;
   width: 8px;
   margin: 0 auto;
   background: #fff;
@@ -168,6 +168,9 @@
 }
 .r4 {
   top: 1000px;
+}
+.r5 {
+  top: 1306px;
 }
 
 .box {
@@ -222,6 +225,19 @@
   left: calc(50% - 270px);
 }
 
+.b1 h2,
+.b1 p,
+.b1 p.date {
+  display: none; /* Masque tous les h2 et p, y compris ceux avec la classe "date" */
+}
+
+.b1::after {
+  content: "Bientot une prochaine poursuite d'etudes..."; /* Texte à afficher */
+  color: #000; /* Couleur du texte (changez-la selon vos préférences) */
+  font-size: clamp(18px, 2vw, 24px);
+  text-align: center; /* Centre le texte à l'intérieur de l'élément */
+}
+
 .b2 {
   top: 386px;
   left: calc(50% + 270px);
@@ -235,6 +251,11 @@
 .b4 {
   top: 1000px;
   left: calc(50% + 270px);
+}
+
+.b5 {
+  top: 1306px;
+  left: calc(50% - 270px);
 }
 
 @media (max-width: 1360px) {
