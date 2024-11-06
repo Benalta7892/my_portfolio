@@ -4,8 +4,8 @@
     <p><%= @resume.description[1] %></p>
   </div>
 
-  <div class="cv-download" id="first-section">
-    <%= image_tag url_for(@resume.picture), alt: "Image du CV" %>
+  <div class="cv-download" >
+    <%= image_tag url_for(@resume.picture), alt: "Image du CV", id: "first-section" %>
 
     <!-- bouton de téléchargement avec popover -->
     <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
