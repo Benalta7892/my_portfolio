@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     @educations = @resume.educations.order(order_position: :asc)
     @experiences = @resume.experiences.order(order_position: :asc)
 
-    @title = "À propos de moi"
-    @subtitle = "Découvrez mon parcours professionnel"
+    @title = "Un chemin de progrès"
+    @subtitle = "Tourné vers l'appel du developpement web, vers une passion."
   end
 end

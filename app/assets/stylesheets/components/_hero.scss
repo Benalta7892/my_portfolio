@@ -49,11 +49,13 @@
         span:first-of-type {
           font-family: "Blanka", sans-serif;
           color: #38b6ff; // Couleur bleue pour le premier <span> (B)
+          font-size: clamp(23px, 8.6vw, 120px);
         }
 
         span:last-of-type {
           font-family: "Blanka", sans-serif;
           color: black; // Couleur noire pour le deuxième <span> (A)
+          font-size: clamp(23px, 8.6vw, 120px);
         }
       }
     }

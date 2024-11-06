@@ -42,6 +42,12 @@
           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
       }
+
+      h1::first-letter {
+        font-family: "Blanka", sans-serif;
+        color: #38b6ff;
+        font-size: clamp(23px, 8.6vw, 120px);
+      }
     }
 
     .links {
