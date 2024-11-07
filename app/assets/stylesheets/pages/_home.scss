@@ -103,12 +103,12 @@ main {
     max-width: 1000px;
 
     img {
-      width: clamp(106px, 18vw, 210px);
-      height: clamp(106px, 18vw, 210px);
+      width: clamp(110px, 18vw, 210px);
+      height: clamp(110px, 18vw, 210px);
       object-fit: cover;
       border-radius: 50%;
       border: 2px solid #f1f1f1;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
       float: left;
       shape-outside: margin-box;
       margin: clamp(16px, 3vw, 28px) clamp(24px, 5vw, 34px) clamp(24px, 3vw, 9px) 8px;
