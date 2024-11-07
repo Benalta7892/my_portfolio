@@ -6,6 +6,13 @@ document.addEventListener("turbo:load", function () {
   function updateTimeline() {
     const initialTop = 80; // Position top de la première boîte/rond
     const spacing = 306; // Espace total (hauteur de la boîte + hauteur du rond)
+    const boxTimelinePaddingTop = 80; // Padding supérieur de .box-timeline
+
+    // Vérifier la largeur de l'écran
+    if (window.innerWidth < 374) {
+      // Ne rien faire si l'écran est en dessous de 374px
+      return;
+    }
 
     // Ajustement des boîtes et de leur positionnement
     allBoxes.forEach((box, index) => {
@@ -36,20 +43,20 @@ document.addEventListener("turbo:load", function () {
     const lastRond = allRonds[allRonds.length - 1]; // Dernier rond
 
     if (firstRond && lastRond) {
-      const firstRondTop = firstRond.offsetTop; // Top du premier rond
-      const lastRondTop = lastRond.offsetTop; // Top du dernier rond
+      const firstRondTop = firstRond.offsetTop + firstRond.offsetHeight / 2; // Centre du premier rond
+      const lastRondTop = lastRond.offsetTop + lastRond.offsetHeight / 2; // Centre du dernier rond
 
       // Ajuste la hauteur de la ligne pour qu'elle soit égale au dernier rond
-      ligne.style.height = `${lastRondTop}px`; // Met à jour la hauteur à celle du dernier rond
-
-      // Vérification de la largeur de l'écran pour ajuster la hauteur
-      if (window.innerWidth < 550) {
-        ligne.style.height = `${lastRondTop - 20}px`; // Réduit de 20px si inférieur à 550px
-      }
+      ligne.style.height = `${lastRondTop - boxTimelinePaddingTop}px`; // Met à jour la hauteur à celle du dernier rond
 
       // Si le top du dernier rond est inférieur à celui du premier rond, le conserver à cette valeur
       if (lastRondTop < firstRondTop) {
         ligne.style.height = `${firstRondTop}px`; // Force la hauteur à celle du premier rond si nécessaire
+      }
+
+      // Assurer que la hauteur de la ligne est suffisante
+      if (parseInt(ligne.style.height) < 230) {
+        ligne.style.height = "230px"; // Définit une hauteur minimale de 230px
       }
     }
   }
@@ -77,4 +84,4 @@ document.addEventListener("turbo:load", function () {
   });
 
   console.log("Hello from scroll.js");
-});
+}); ///
