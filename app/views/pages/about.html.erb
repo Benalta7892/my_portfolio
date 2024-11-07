@@ -26,6 +26,12 @@
 
 <div class="section-parcours">
   <h2><span>C</span>onfirmé par des diplômes</h2>
+
+  <% if user_signed_in? && current_user.admin? %>
+    <%= link_to "Ajouter une nouvelle éducation", new_resume_education_path(@resume.id), class: "btn btn-primary" %>
+  <% end %>
+
+
   <div class="box-timeline">
 
 

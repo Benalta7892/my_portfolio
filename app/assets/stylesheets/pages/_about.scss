@@ -225,18 +225,18 @@
   left: calc(50% - 270px);
 }
 
-.b1 h2,
-.b1 p,
-.b1 p.date {
-  display: none; /* Masque tous les h2 et p, y compris ceux avec la classe "date" */
-}
+// .b1 h2,
+// .b1 p,
+// .b1 p.date {
+//   display: none; /* Masque tous les h2 et p, y compris ceux avec la classe "date" */
+// }
 
-.b1::after {
-  content: "Bientot une prochaine poursuite d'etudes..."; /* Texte à afficher */
-  color: #000; /* Couleur du texte (changez-la selon vos préférences) */
-  font-size: clamp(18px, 2vw, 24px);
-  text-align: center; /* Centre le texte à l'intérieur de l'élément */
-}
+// .b1::after {
+//   content: "Bientot une prochaine poursuite d'etudes..."; /* Texte à afficher */
+//   color: #000; /* Couleur du texte (changez-la selon vos préférences) */
+//   font-size: clamp(18px, 2vw, 24px);
+//   text-align: center; /* Centre le texte à l'intérieur de l'élément */
+// }
 
 .b2 {
   top: 386px;
