@@ -333,6 +333,22 @@ educations = [
     order_position: 1
   },
   {
+    diploma_name: "Web Development Bootcamp",
+    institution_name: "Le Wagon",
+    location: "Paris, France",
+    start_date: Date.new(2023, 10),
+    end_date: Date.new(2024, 4),
+    description: [
+      "Bootcamp intensif de codage (6 mois).",
+      "Langages et technologies : Ruby on Rails, HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub, Heroku.",
+      "Conceptions Logicielles : Architecture MVC, conception et gestion de bases de données.",
+      "Projets Phares : Clone d'Airbnb et PokéSwype",
+      "Développement en équipe depuis la conception jusqu'au déploiement."
+    ],
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/development/pngwing.com_rflqgf.png",
+    order_position: 1
+  },
+  {
     diploma_name: "Bachelor Gestion et Transaction Immobilière",
     institution_name: "Institut du Management des Services Immobiliers (IMSI) - Groupe IGS",
     location: "Paris, France",
