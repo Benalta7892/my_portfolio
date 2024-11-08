@@ -9,14 +9,23 @@ require "open-uri"
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+
 # Clear the database
 puts "Clearing the database..."
-User.destroy_all
-Contact.destroy_all
+
+# Supprimer les dépendances directes d'abord
+ProjectTechnology.destroy_all
+Experience.destroy_all
+Education.destroy_all
 Project.destroy_all
 Resume.destroy_all
-Education.destroy_all
-Experience.destroy_all
+TechnologyItem.destroy_all
+Contact.destroy_all
+
+# Supprimer l'utilisateur à la fin
+User.destroy_all
+
+puts "Database cleared!"
 
 
 # Create a user
@@ -38,6 +47,65 @@ end
 
 puts "User created!"
 
+
+puts "Creating TechnologyItems"
+
+frontend_technologies = [
+  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "figma_d7mc4z.png", alt: "Figma logo", order_position: 1 },
+  { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", logo: "html5_kf7hmz.png", alt: "HTML5 logo", order_position: 2 },
+  { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", logo: "css3_q9lv1h.png", alt: "CSS3 logo", order_position: 3 },
+  { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", logo: "js_qh6ndw.png", alt: "JavaScript logo", order_position: 4 },
+  { name: "Stimulus", link: "https://stimulus.hotwired.dev/", logo: "stimulus_byehql.png", alt: "Stimulus logo", order_position: 5 },
+  { name: "Sass", link: "https://sass-lang.com/", logo: "sass_lfse0e.png", alt: "Sass logo", order_position: 6 },
+]
+
+backend_technologies = [
+  { name: "Ruby", link: "https://www.ruby-lang.org/fr/", logo: "ruby_u4fzgi.png", alt: "Ruby logo", order_position: 1 },
+  { name: "Rails", link: "https://rubyonrails.org/", logo: "rails_w8dl1x.png", alt: "Rails logo", order_position: 2 },
+  { name: "PHP", link: "https://www.php.net/", logo: "php_ehpiwx.png", alt: "PHP logo", order_position: 3 },
+  { name: "Devise", link: "https://github.com/heartcombo/devise", logo: "devise_p8bflb.png", alt: "Devise logo", order_position: 4 },
+  { name: "Cloudinary", link: "https://cloudinary.com/", logo: "cloudinary_mrktzt.png", alt: "Cloudinary logo", order_position: 5 },
+  { name: "Postman", link: "https://www.postman.com/", logo: "postman_y3zgpe.png", alt: "Postman logo", order_position: 6 },
+  { name: "PostgreSQL", link: "https://www.postgresql.org/", logo: "postgresql_czwsff.png", alt: "PostgreSQL logo", order_position: 7 },
+  { name: "Heroku", link: "https://www.heroku.com/", logo: "heroku_vqw6qd.png", alt: "Heroku logo", order_position: 8 },
+]
+
+tools = [
+  { name: "VSCode", link: "https://code.visualstudio.com/", logo: "vscode_aio2rn.png", alt: "VSCode logo", order_position: 1 },
+  { name: "Git", link: "https://git-scm.com/", logo: "git_h8j6pt.png", alt: "Git logo", order_position: 2 },
+  { name: "GitHub", link: "https://github.com/", logo: "github_hjj2ba.png", alt: "GitHub logo", order_position: 3 },
+  { name: "Slack", link: "https://slack.com/intl/fr-fr/", logo: "slack_ft3jeu.png", alt: "Slack logo", order_position: 4 },
+  { name: "Trello", link: "https://trello.com/fr", logo: "trello_zsnis6.png", alt: "Trello logo", order_position: 5 },
+]
+
+def create_technology_items(technologies, category)
+  technologies.each do |tech|
+    # Création de la technologie avec les champs 'name', 'link', et 'category'
+    technology = TechnologyItem.create!(
+      name: tech[:name],
+      link: tech[:link],
+      category: category,
+      order_position: tech[:order_position]
+    )
+
+    # Attacher le logo via l'URL Cloudinary générée à partir de l'identifiant
+    if tech[:logo].present?
+      # Construire l'URL de l'image à partir de l'identifiant de Cloudinary
+      logo_url = logo_url = "https://res.cloudinary.com/djgk65kdl/image/upload/development/#{tech[:logo]}"
+      file = URI.open(logo_url)
+      # Attacher le fichier à la technologie en utilisant Active Storage
+      technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
+    end
+  end
+end
+
+create_technology_items(frontend_technologies, 'frontend')
+create_technology_items(backend_technologies, 'backend')
+create_technology_items(tools, 'tools')
+
+puts "TechnologyItems created!"
+
+
 # Create projects
 puts "Creating projects..."
 
@@ -58,30 +126,11 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
-    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
-    frontend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png", name: "Stimulus", link: "https://stimulus.hotwired.dev/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass", link: "https://sass-lang.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma", link: "https://www.figma.com/fr-fr/" }
-    ],
-    backend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails", link: "https://rubyonrails.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise", link: "https://github.com/heartcombo/devise" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary", link: "https://cloudinary.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman", link: "https://www.postman.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL", link: "https://www.postgresql.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku", link: "https://www.heroku.com/" }
-    ],
-    tools: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCode", link: "https://code.visualstudio.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "Git", link: "https://git-scm.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub", link: "https://github.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack", link: "https://slack.com/intl/fr-fr/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello", link: "https://trello.com/fr" }
-    ],
+    # Référence aux objets TechnologyItem par catégorie
+    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
+    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
+    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
+
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
@@ -111,29 +160,10 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
-    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
-    frontend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass", link: "https://sass-lang.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma", link: "https://www.figma.com/fr-fr/" }
-    ],
-    backend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails", link: "https://rubyonrails.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise", link: "https://github.com/heartcombo/devise" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary", link: "https://cloudinary.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman", link: "https://www.postman.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL", link: "https://www.postgresql.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku", link: "https://www.heroku.com/" }
-    ],
-    tools: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCODE", link: "https://code.visualstudio.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "GIT", link: "https://git-scm.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub", link: "https://github.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack", link: "https://slack.com/intl/fr-fr/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello", link: "https://trello.com/fr" }
-    ],
+    # Référence aux objets TechnologyItem par catégorie
+    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
+    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
+    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
   },
@@ -153,30 +183,11 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
-    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku",
-    frontend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728895436/development/stimulus_byehql.png", name: "Stimulus", link: "https://stimulus.hotwired.dev/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass", link: "https://sass-lang.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma", link: "https://www.figma.com/fr-fr/" }
-    ],
-    backend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails", link: "https://rubyonrails.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise", link: "https://github.com/heartcombo/devise" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary", link: "https://cloudinary.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman", link: "https://www.postman.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL", link: "https://www.postgresql.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku", link: "https://www.heroku.com/" }
-    ],
-    tools: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCode", link: "https://code.visualstudio.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "Git", link: "https://git-scm.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub", link: "https://github.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack", link: "https://slack.com/intl/fr-fr/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello", link: "https://trello.com/fr" }
-    ],
+    # Référence aux objets TechnologyItem par catégorie
+    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
+    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
+    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
+
     link: "https://github.com/Chorusgrey/zero_to_heroes",
     dev_count: 5
   },
@@ -206,32 +217,13 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
-    technologies: "Ruby on Rails, HTML, CSS, JavaScript, PostgreSQL, Heroku, QRcode, PokeAPI, messenger",
-    frontend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/html5_kf7hmz.png", name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/css3_q9lv1h.png", name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/js_qh6ndw.png", name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894867/development/sass_lfse0e.png", name: "Sass", link: "https://sass-lang.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/figma_d7mc4z.png", name: "Figma", link: "https://www.figma.com/fr-fr/" }
-    ],
-    backend_technologies: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/rails_w8dl1x.png", name: "Rails", link: "https://rubyonrails.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894338/development/devise_p8bflb.png", name: "Devise", link: "https://github.com/heartcombo/devise" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894646/development/cloudinary_mrktzt.png", name: "Cloudinary", link: "https://cloudinary.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721156/development/postman_y3zgpe.png", name: "Postman", link: "https://www.postman.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700624/development/postgresql_czwsff.png", name: "PostgreSQL", link: "https://www.postgresql.org/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1727700623/development/heroku_vqw6qd.png", name: "Heroku", link: "https://www.heroku.com/" }
-    ],
-    tools: [
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729717392/development/vscode_aio2rn.png", name: "VSCODE", link: "https://code.visualstudio.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900994/development/git_h8j6pt.png", name: "GIT", link: "https://git-scm.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728900778/development/github_hjj2ba.png", name: "GitHub", link: "https://github.com/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1729721553/development/slack_ft3jeu.png", name: "Slack", link: "https://slack.com/intl/fr-fr/" },
-      { url: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728894156/development/trello_zsnis6.png", name: "Trello", link: "https://trello.com/fr" }
-    ],
+    # Référence aux objets TechnologyItem par catégorie
+    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
+    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
+    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
-  }
+  },
 
 ]
 
@@ -241,10 +233,6 @@ projects.each do |project_data|
     subtitle: project_data[:subtitle],
     description: project_data[:description],
     features: project_data[:features],
-    technologies: project_data[:technologies],
-    frontend_technologies: project_data[:frontend_technologies],
-    backend_technologies: project_data[:backend_technologies],
-    tools: project_data[:tools],
     link: project_data[:link],
     dev_count: project_data[:dev_count]
   )
@@ -254,9 +242,19 @@ projects.each do |project_data|
       project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
     end
   end
+
+  # Associer les technologies front-end
+  project.frontend_technologies << project_data[:frontend_technologies].to_a
+
+  # Associer les technologies back-end
+  project.backend_technologies << project_data[:backend_technologies].to_a
+
+  # Associer les outils
+  project.tools << project_data[:tools].to_a
 end
 
 puts "Projects created!"
+
 
 puts "Creating a resume..."
 
@@ -280,6 +278,7 @@ unless resume.pdf.attached?
 end
 
 puts "Resume created: #{resume.title}"
+
 
 puts "Creating educations..."
 
@@ -346,6 +345,7 @@ educations.each do |education_data|
 end
 
 puts "Educations created!"
+
 
 puts "Creating experiences..."
 

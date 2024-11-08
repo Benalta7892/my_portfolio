@@ -14,6 +14,11 @@ class ProjectsController < ApplicationController
 
     @title = @project.title
     @subtitle = @project.subtitle
+
+    @frontend_technologies = @project.frontend_technologies.order(:order_position)
+    @backend_technologies = @project.backend_technologies.order(:order_position)
+    @tools = @project.tools.order(:order_position)
+
     @resume = Resume.find_by(user: @admin_user)
     @contact = Contact.new
   end
