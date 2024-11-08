@@ -3,6 +3,11 @@ class PagesController < ApplicationController
 
   def home
     @admin_user = User.find_by(admin: true)
+
+    @frontend_technologies = TechnologyItem.where(category: "frontend")
+    @backend_technologies = TechnologyItem.where(category: "backend")
+    @tools = TechnologyItem.where(category: "tools")
+
     @projects = Project.order(created_at: :asc)
     @contact = Contact.new
     @resume = Resume.find_by(user: @admin_user)

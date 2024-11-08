@@ -7,7 +7,7 @@
   <div class="text-content-presentation">
 
     <%# <div class="avatar-presentation"> %>
-    <%= cl_image_tag @admin_user.avatar.key, alt: "Avatar" %>
+    <%= cl_image_tag @admin_user.avatar.key, alt: "Photo de profil" %>
     <%# </div> %>
 
     <h2><span>B</span>ienvenue</h2>
@@ -28,81 +28,62 @@
     <div class="front-end">
       <h2><span>S</span>kills Front-End</h2>
       <div class="logos">
-        <% logos = [
-          { name: "HTML5", img: "html5_kf7hmz.png", alt: "HTML5 Logo", link: "https://developer.mozilla.org/fr/docs/Web/HTML" },
-          { name: "CSS3", img: "css3_q9lv1h.png", alt: "CSS3 Logo", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-          { name: "JavaScript", img: "js_qh6ndw.png", alt: "JavaScript Logo", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-          { name: "Stimulus", img: "stimulus_byehql.png", alt: "Stimulus Logo", link: "https://stimulus.hotwired.dev/" },
-          { name: "Sass", img: "sass_lfse0e.png", alt: "Sass Logo", link: "https://sass-lang.com/" },
-          { name: "Figma", img: "figma_d7mc4z.png", alt: "Figma Logo", link: "https://www.figma.com/fr-fr/" }
-        ] %>
-
-        <% logos.each do |logo| %>
-          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
-            <template data-popover-target="content">
-              <div data-popover-target="card" class="popover-content">
-                <p><%= logo[:name] %></p>
-              </div>
-            </template>
-          </div>
+        <% @frontend_technologies.each do |tech| %>
+          <% if tech.logo.attached? && tech.link.present? %>
+            <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <template data-popover-target="content">
+                <div data-popover-target="card" class="popover-content">
+                  <p><%= tech.name %></p>
+                </div>
+              </template>
+            </div>
+          <% else %>
+            <p>Information manquante pour la technologie <%= tech.name %>.</p>
+          <% end %>
         <% end %>
-
       </div>
     </div>
+
 
     <div class="back-end">
       <h2><span>S</span>kills Back-End</h2>
       <div class="logos">
-        <% backend_logos = [
-          { name: "Ruby", img: "ruby_u4fzgi.png", alt: "Ruby Logo", link: "https://www.ruby-lang.org/fr/" },
-          { name: "Rails", img: "rails_w8dl1x.png", alt: "Ruby On Rails Logo", link: "https://rubyonrails.org/" },
-          { name: "PHP", img: "php_ehpiwx.png", alt: "PHP Logo", link: "https://www.php.net/" },
-          { name: "Devise", img: "devise_p8bflb.png", alt: "Devise Logo", link: "https://github.com/heartcombo/devise" },
-          { name: "Cloudinary", img: "cloudinary_mrktzt.png", alt: "Cloudinary Logo", link: "https://cloudinary.com/" },
-          { name: "Postman", img: "postman_y3zgpe.png", alt: "Postman Logo", link: "https://www.postman.com/" },
-          { name: "PostgreSQL", img: "postgresql_czwsff.png", alt: "PostgreSQL Logo", link: "https://www.postgresql.org/" },
-          { name: "Heroku", img: "heroku_vqw6qd.png", alt: "Heroku Logo", link: "https://www.heroku.com/" }
-        ] %>
-
-        <% backend_logos.each do |logo| %>
-          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
-            <template data-popover-target="content">
-              <div data-popover-target="card" class="popover-content">
-                <p><%= logo[:name] %></p>
-              </div>
-            </template>
-          </div>
+        <% @backend_technologies.each do |tech| %>
+          <% if tech.logo.attached? && tech.link.present? %>
+            <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <template data-popover-target="content">
+                <div data-popover-target="card" class="popover-content">
+                  <p><%= tech.name %></p>
+                </div>
+              </template>
+            </div>
+          <% else %>
+            <p>Information manquante pour la technologie <%= tech.name %>.</p>
+          <% end %>
         <% end %>
-
-
       </div>
     </div>
+
 
     <div class="outils">
       <h2><span>O</span>utils</h2>
       <div class="logos">
-        <% tools_logos = [
-          { name: "VSCODE", img: "vscode_aio2rn.png", alt: "VSCODE Logo", link: "https://code.visualstudio.com/" },
-          { name: "GIT", img: "git_h8j6pt.png", alt: "GIT Logo", link: "https://git-scm.com/" },
-          { name: "GitHub", img: "github_hjj2ba.png", alt: "GitHub Logo", link: "https://github.com/" },
-          { name: "Slack", img: "slack_ft3jeu.png", alt: "Slack Logo", link: "https://slack.com/intl/fr-fr/" },
-          { name: "Trello", img: "trello_zsnis6.png", alt: "Trello Logo", link: "https://trello.com/fr" }
-        ] %>
-
-        <% tools_logos.each do |logo| %>
-          <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-            <%= link_to cl_image_tag(logo[:img], alt: logo[:alt], width: 100, height: 100), logo[:link], target: "_blank", data: { turbo: false } %>
-            <template data-popover-target="content">
-              <div data-popover-target="card" class="popover-content">
-                <p><%= logo[:name] %></p>
-              </div>
-            </template>
-          </div>
+        <% @tools.each do |tool| %>
+          <% if tool.logo.attached? && tool.link.present? %>
+            <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
+              <%= link_to cl_image_tag(tool.logo.key, alt: tool.name, width: 100, height: 100), tool.link, target: "_blank", data: { turbo: false } %>
+              <template data-popover-target="content">
+                <div data-popover-target="card" class="popover-content">
+                  <p><%= tool.name %></p>
+                </div>
+              </template>
+            </div>
+          <% else %>
+            <p>Information manquante pour l'outil <%= tool.name %>.</p>
+          <% end %>
         <% end %>
-
-
       </div>
     </div>
 
