@@ -5,7 +5,7 @@
   </div>
 
   <div class="cv-download" >
-    <%= image_tag url_for(@resume.picture), alt: "Image du CV", id: "first-section" %>
+    <%= cl_image_tag @resume.picture.key, alt: "Image du CV", id: "first-section" %>
 
     <!-- bouton de téléchargement avec popover -->
     <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">

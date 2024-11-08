@@ -8,7 +8,7 @@
 
         <div class="project-picture">
           <% if project.pictures.attached? %>
-            <%= image_tag url_for(project.pictures.first) %>
+            <%= cl_image_tag project.pictures.first.key, alt: project.title %>
           <% else %>
             <p>Aucune image disponible pour ce projet.</p>
           <% end %>

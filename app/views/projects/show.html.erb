@@ -7,49 +7,45 @@
 <section class="section-swiper">
   <h2><span>V</span>ue d'ensemble</h2>
 
-
   <div class="carousel-swiper">
     <div class="btn-carousel-prev">
-      <%= cl_image_tag "arrowL_y08p76", class: "custom-arrow",  alt: 'Flèche de gauche' %>
+      <%= cl_image_tag "arrowL_y08p76", class: "custom-arrow", alt: 'Flèche de gauche' %>
     </div>
-
 
     <div class="swiper-container">
       <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
         <div class="swiper-wrapper">
           <% @project.pictures.each do |picture| %>
             <div class="swiper-slide">
-              <%= image_tag picture %>
+              <% # Utiliser l'URL Cloudinary directement pour les images du projet %>
+              <%= cl_image_tag(picture.key, class: "swiper-slide-img", alt: "Image du projet") %>
             </div>
           <% end %>
         </div>
       </div>
-
 
       <div thumbsSlider="" class="swiper mySwiper">
         <div class="swiper-wrapper">
           <% @project.pictures.each do |picture| %>
             <div class="swiper-slide">
-              <%= image_tag picture, class: "little-img-carousel" %>
+              <% # Utiliser l'URL Cloudinary directement pour les images du projet (vignettes) %>
+              <%= cl_image_tag(picture.key, class: "little-img-carousel", alt: "Image vignette du projet") %>
             </div>
           <% end %>
         </div>
       </div>
     </div>
 
-
     <div class="btn-carousel-next">
-      <%= cl_image_tag "arrowR_v3vouj", class: "custom-arrow",  alt: 'Flèche de droite' %>
+      <%= cl_image_tag "arrowR_v3vouj", class: "custom-arrow", alt: 'Flèche de droite' %>
     </div>
   </div>
-
 
   <div class="link-github">
     <% if @project.link.present? %>
       <%= link_to "🔗 Lien GitHub.", @project.link, target: "_blank" %>
     <% end %>
   </div>
-
 </section>
 
 
@@ -96,7 +92,8 @@
         <% @frontend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to image_tag(tech.logo, alt: tech.name, class: "tech-logo", width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <% # Utiliser la clé Cloudinary pour générer l'URL %>
+              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, class: "tech-logo", width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content">
                   <p><%= tech.name %></p>
@@ -117,7 +114,8 @@
         <% @backend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to image_tag(tech.logo, alt: tech.name, class: "tech-logo", width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <% # Utiliser la clé Cloudinary pour générer l'URL de l'image %>
+              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, class: "tech-logo", width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content">
                   <p><%= tech.name %></p>
@@ -135,18 +133,19 @@
     <div class="outils">
       <h2><span>O</span>utils</h2>
       <div class="logos">
-        <% @tools.each do |tech| %>
-          <% if tech.logo.attached? && tech.link.present? %>
+        <% @tools.each do |tool| %>
+          <% if tool.logo.attached? && tool.link.present? %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to image_tag(tech.logo, alt: tech.name, class: "tech-logo", width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <% # Utiliser la clé Cloudinary pour générer l'URL de l'image %>
+              <%= link_to cl_image_tag(tool.logo.key, alt: tool.name, class: "tech-logo", width: 100, height: 100), tool.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content">
-                  <p><%= tech.name %></p>
+                  <p><%= tool.name %></p>
                 </div>
               </template>
             </div>
           <% else %>
-            <p>Information manquante pour l'outil <%= tech.name %>.</p>
+            <p>Information manquante pour l'outil <%= tool.name %>.</p>
           <% end %>
         <% end %>
       </div>

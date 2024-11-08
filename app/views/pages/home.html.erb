@@ -127,7 +127,7 @@
         <%= link_to project_path(project), class: "carousel-slide #{'hidden' unless index == 0}", data: { action: "click->carousel#saveCurrentIndex", carousel_target: "slide", turbo: false } do %>
           <div class="carousel-image-container">
             <% if project.pictures.attached? %>
-              <%= image_tag url_for(project.pictures.first), class: "carousel-image" %>
+              <%= cl_image_tag project.pictures.first.key, class: "carousel-image" %>
             <% else %>
               <p>Aucune image disponible pour ce projet.</p>
             <% end %>
