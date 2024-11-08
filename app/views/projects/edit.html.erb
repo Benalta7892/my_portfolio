@@ -1,2 +1,117 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<%= form_with model: @project, local: true do |form| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "erreur") %> empêchent ce projet d'être sauvegardé :</h2>
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, "Titre du projet" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subtitle, "Sous-titre du projet" %>
+    <%= form.text_field :subtitle, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pictures, "Images du projet" %>
+    <%= form.file_field :pictures, multiple: true, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :link, "Lien vers le projet (ex: GitHub)" %>
+    <%= form.text_field :link, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, "Description du projet" %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <!-- Fonctionnalités -->
+  <div class="form-group">
+    <%= form.label :features, "Fonctionnalités" %>
+
+    <!-- Champs pour les fonctionnalités déjà présentes -->
+    <div id="features-list">
+      <% if @project.features.present? %>
+        <% @project.features.each_with_index do |feature, index| %>
+          <div class="feature-field" data-index="<%= index %>">
+            <%= form.text_field "project[features][]", value: feature, class: "form-control", placeholder: "Fonctionnalité #{index + 1}" %>
+            <!-- Champ caché pour marquer la fonctionnalité comme supprimée -->
+            <%= hidden_field_tag "project[features_to_delete][]", feature, class: "delete-feature", disabled: true %>
+            <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
+          </div>
+        <% end %>
+      <% else %>
+        <!-- Ajoute un premier champ si aucune fonctionnalité n'est présente -->
+        <div class="feature-field" data-index="0">
+          <input type="text" name="project[features][]" class="form-control" placeholder="Fonctionnalité 1">
+          <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Bouton pour ajouter une nouvelle fonctionnalité -->
+    <button type="button" id="add-feature-btn">Ajouter une fonctionnalité</button>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :dev_count, "Nombre de développeurs" %>
+    <%= form.number_field :dev_count, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :frontend_technologies, "Technologies Frontend" %>
+    <%= form.collection_select :frontend_technology_ids, TechnologyItem.frontend, :id, :name, {}, { multiple: true, class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :backend_technologies, "Technologies Backend" %>
+    <%= form.collection_select :backend_technology_ids, TechnologyItem.backend, :id, :name, {}, { multiple: true, class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tools, "Outils utilisés" %>
+    <%= form.collection_select :tool_ids, TechnologyItem.tools, :id, :name, {}, { multiple: true, class: "form-control" } %>
+  </div>
+
+  <%= form.submit "Mettre à jour le projet", class: "btn btn-primary" %>
+<% end %>
+
+<!-- JavaScript pour ajouter des fonctionnalités dynamiques -->
+<script>
+  document.getElementById('add-feature-btn').addEventListener('click', function() {
+  const featuresList = document.getElementById('features-list');
+  const index = featuresList.children.length;
+  const featureField = document.createElement('div');
+  featureField.className = 'feature-field';
+  featureField.dataset.index = index;
+
+  featureField.innerHTML = `
+  <input type="text" name="project[features][]" class="form-control" placeholder="Fonctionnalité ${index + 1}">
+  <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
+  `;
+
+  featuresList.appendChild(featureField);
+  });
+
+  function removeFeature(button) {
+  const featureField = button.parentElement;
+  featureField.style.display = 'none';
+
+  // Active le champ caché pour indiquer la suppression
+  const hiddenInput = featureField.querySelector('.delete-feature');
+  if (hiddenInput) {
+  hiddenInput.disabled = false;
+  }
+  }
+</script>

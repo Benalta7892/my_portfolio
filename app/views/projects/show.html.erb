@@ -4,6 +4,14 @@
 <%# </div> %>
 
 
+<%# Affichage du bouton Modifier si l'utilisateur est admin %>
+<% if user_signed_in? && current_user.admin? %>
+  <div class="edit-project-button">
+    <%= link_to 'Modifier', edit_project_path(@project), class: 'btn btn-secondary' %>
+  </div>
+<% end %>
+
+
 <section class="section-swiper">
   <h2><span>V</span>ue d'ensemble</h2>
 

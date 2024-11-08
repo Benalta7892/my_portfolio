@@ -1,26 +1,36 @@
 <section class="section-portolio" id="first-section">
   <h2><span>P</span>rojets réalisés</h2>
 
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="add-project-button">
+      <%= link_to 'Ajouter un nouveau projet', new_project_path, class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
   <div class="container-portfolio">
 
     <% @projects.each do |project| %>
-      <%= link_to project_path(project), class: "card-portfolio", data: { turbo: false} do %>
+      <div class="card-portfolio-container">
+        <%= link_to project_path(project), class: "card-portfolio", data: { turbo: false } do %>
+          <div class="project-picture">
+            <% if project.pictures.attached? %>
+              <%= cl_image_tag project.pictures.first.key, alt: project.title %>
+            <% else %>
+              <p>Aucune image disponible pour ce projet.</p>
+            <% end %>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+          <div class="project-title"><%= project.title %></div>
+        <% end %>
 
-        <div class="project-picture">
-          <% if project.pictures.attached? %>
-            <%= cl_image_tag project.pictures.first.key, alt: project.title %>
-          <% else %>
-            <p>Aucune image disponible pour ce projet.</p>
-          <% end %>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-        </div>
-        <div class="project-title"><%= project.title %></div>
-
-      <% end %>
+        <!-- Affichage du bouton Modifier si l'utilisateur est admin -->
+        <% if user_signed_in? && current_user.admin? %>
+          <div class="edit-project-button">
+            <%= link_to 'Modifier', edit_project_path(project), class: 'btn btn-secondary' %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
 
   </div>
-
-
 </section>

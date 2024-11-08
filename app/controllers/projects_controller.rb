@@ -24,17 +24,61 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @project = current_user.projects.build
   end
 
   def create
+    @project = current_user.projects.build(project_params)
+
+    if @project.save
+      redirect_to projects_path, notice: "Projet créé avec succès."
+    else
+      render 'new', status: :unprocessable_entity
+    end
   end
 
   def edit
+    @project = Project.find(params[:id])
   end
 
   def update
+    @project = Project.find(params[:id])
+
+    # Récupération des fonctionnalités actuelles, des ajouts et suppressions
+    features_to_delete = params[:project][:features_to_delete] || []
+    new_features = Array(params[:project][:features]).reject(&:blank?) # Élimine les champs vides
+
+    # Retire les fonctionnalités marquées pour suppression
+    updated_features = @project.features - features_to_delete
+
+    # Ajoute les nouvelles fonctionnalités restantes
+    updated_features += new_features
+
+    # Mise à jour des fonctionnalités
+    if @project.update(project_params.merge(features: updated_features))
+      redirect_to project_path(@project), notice: "Projet mis à jour avec succès."
+    else
+      render 'edit', status: :unprocessable_entity
+    end
   end
 
   def destroy
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(
+      :title,
+      :subtitle,
+      :description,
+      :link,
+      :dev_count,
+      features: [],
+      pictures: [],
+      frontend_technology_ids: [],
+      backend_technology_ids: [],
+      tool_ids: []
+    )
   end
 end
