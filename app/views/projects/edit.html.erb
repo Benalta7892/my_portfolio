@@ -87,6 +87,8 @@
   </div>
 
   <%= form.submit "Mettre à jour le projet", class: "botton button-edit" %>
+
+  <%= link_to "Annuler", projects_path, class: "button button-cancel", onclick: "window.history.back();" %>
 <% end %>
 
 <!-- Bouton de suppression avec confirmation -->

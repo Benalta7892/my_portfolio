@@ -40,4 +40,6 @@
   </div>
 
   <%= form.submit "Ajouter cette expérience", class: "btn btn-primary" %>
+
+  <%= link_to "Annuler", about_path(@resume), class: "btn btn-secondary", onclick: "window.history.back(); return false;", data: { turbo: false } %>
 <% end %>

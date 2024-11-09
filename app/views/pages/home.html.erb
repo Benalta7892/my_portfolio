@@ -26,7 +26,7 @@
   <%# Lien pour ajouter une nouvelle technologie si l'utilisateur est administrateur %>
   <% if user_signed_in? && current_user.admin? %>
     <div class="add-tech-link">
-      <%= link_to "Ajouter une nouvelle technologie", new_technology_item_path, class: "button button-add-tech" %>
+      <%= link_to "Ajouter une nouvelle technologie", new_technology_item_path, class: "button button-add-tech", data: { turbo: false } %>
     </div>
   <% end %>
 
@@ -41,14 +41,33 @@
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
               <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
-                <div data-popover-target="card" class="popover-content">
+                <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tech.name %></p>
                 </div>
               </template>
+
+              <%# Boutons d'administration %>
+              <% if user_signed_in? && current_user.admin? %>
+                <div class="admin-buttons">
+                  <%= link_to edit_technology_item_path(tech), class: "button button-edit", data: { turbo: false } do %>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  <% end %>
+
+                  <%= link_to technology_item_path(tech),
+                        data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette technologie ?" },
+                        class: "button button-delete" do %>
+                    <i class="fa-regular fa-trash-can"></i>
+                  <% end %>
+
+                </div>
+              <% end %>
+
             </div>
           <% else %>
             <p>Information manquante pour la technologie <%= tech.name %>.</p>
           <% end %>
+
+
         <% end %>
       </div>
     </div>
@@ -62,10 +81,26 @@
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
               <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
-                <div data-popover-target="card" class="popover-content">
+                <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tech.name %></p>
                 </div>
               </template>
+
+              <%# Boutons d'administration %>
+              <% if user_signed_in? && current_user.admin? %>
+                <div class="admin-buttons">
+                  <%= link_to edit_technology_item_path(tech), class: "button button-edit", data: { turbo: false } do %>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  <% end %>
+
+                  <%= link_to technology_item_path(tech),
+                    data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette technologie ?" },
+                    class: "button button-delete" do %>
+                    <i class="fa-regular fa-trash-can"></i>
+                  <% end %>
+                </div>
+              <% end %>
+
             </div>
           <% else %>
             <p>Information manquante pour la technologie <%= tech.name %>.</p>
@@ -83,10 +118,26 @@
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
               <%= link_to cl_image_tag(tool.logo.key, alt: tool.name, width: 100, height: 100), tool.link, target: "_blank", data: { turbo: false } %>
               <template data-popover-target="content">
-                <div data-popover-target="card" class="popover-content">
+                <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tool.name %></p>
                 </div>
               </template>
+
+              <%# Boutons d'administration %>
+              <% if user_signed_in? && current_user.admin? %>
+                <div class="admin-buttons">
+                  <%= link_to edit_technology_item_path(tool), class: "button button-edit", data: { turbo: false } do %>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  <% end %>
+
+                  <%= link_to technology_item_path(tool),
+                    data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cet outil ?" },
+                    class: "button button-delete" do %>
+                    <i class="fa-regular fa-trash-can"></i>
+                  <% end %>
+                </div>
+              <% end %>
+
             </div>
           <% else %>
             <p>Information manquante pour l'outil <%= tool.name %>.</p>

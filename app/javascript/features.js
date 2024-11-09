@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
   // Vérifie si le bouton "add-feature-btn" et la liste "features-list" existent
   const addFeatureBtn = document.getElementById("add-feature-btn");
   const featuresList = document.getElementById("features-list");

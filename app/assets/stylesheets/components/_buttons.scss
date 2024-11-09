@@ -92,3 +92,53 @@
   font-size: clamp(14px, 1.5vw, 16px);
   padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 18px);
 }
+
+.add-tech-link {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: fit-content;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.admin-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+
+  .button {
+    display: inline-block;
+    border: 2px solid #f1f1f1;
+    border-radius: clamp(8px, 1.5vw, 20px);
+    padding: clamp(2px, 1vw, 2px) clamp(2px, 1vw, 2px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    // background-color: #ddf3f4;
+    color: #000;
+    font-weight: bold;
+    font-size: clamp(14px, 1.5vw, 16px);
+    margin: 2px 0 clamp(2px, 1vw, 2px) !important;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: auto;
+    font-family: lato, sans-serif;
+
+    .button-edit {
+      background-color: #ffeed3;
+      // width: 100%;
+      // font-family: lato, sans-serif;
+      color: #000;
+      font-weight: bold;
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-family: "Lato", sans-serif;
+      width: 100%;
+    }
+  }
+}
+
+.popover-content.admin-visible {
+  margin: -6px; /* Appliquer margin: 0 uniquement si l'admin est connecté */
+}

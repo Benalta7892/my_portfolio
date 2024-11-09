@@ -84,26 +84,6 @@
   </div>
 
   <%= form.submit "Créer le projet", class: "btn btn-primary" %>
+
+  <%= link_to "Annuler", projects_path, class: "btn btn-secondary", onclick: "window.history.back();" %>
 <% end %>
-
-<!-- JavaScript pour ajouter des fonctionnalités dynamiques -->
-<script>
-  document.getElementById('add-feature-btn').addEventListener('click', function() {
-    const featuresList = document.getElementById('features-list');
-    const index = featuresList.children.length;
-    const featureField = document.createElement('div');
-    featureField.className = 'feature-field';
-    featureField.dataset.index = index;
-
-    featureField.innerHTML = `
-      <input type="text" name="project[features][]" class="form-control" placeholder="Fonctionnalité ${index + 1}">
-      <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
-    `;
-
-    featuresList.appendChild(featureField);
-  });
-
-  function removeFeature(button) {
-    button.parentElement.remove();
-  }
-</script>
