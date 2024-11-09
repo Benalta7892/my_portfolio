@@ -1,4 +1,5 @@
 require "open-uri"
+require 'cloudinary'
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -51,31 +52,31 @@ puts "User created!"
 puts "Creating TechnologyItems"
 
 frontend_technologies = [
-  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "figma_d7mc4z.png", alt: "Figma logo", order_position: 1 },
-  { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", logo: "html5_kf7hmz.png", alt: "HTML5 logo", order_position: 2 },
-  { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", logo: "css3_q9lv1h.png", alt: "CSS3 logo", order_position: 3 },
-  { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", logo: "js_qh6ndw.png", alt: "JavaScript logo", order_position: 4 },
-  { name: "Stimulus", link: "https://stimulus.hotwired.dev/", logo: "stimulus_byehql.png", alt: "Stimulus logo", order_position: 5 },
-  { name: "Sass", link: "https://sass-lang.com/", logo: "sass_lfse0e.png", alt: "Sass logo", order_position: 6 },
+  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "figma_d7mc4z.png", version: "v1727700623", alt: "Figma logo", order_position: 1 },
+  { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", logo: "html5_kf7hmz.png", version: "v1727700623", alt: "HTML5 logo", order_position: 2 },
+  { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", logo: "css3_q9lv1h.png", version: "v1727700623", alt: "CSS3 logo", order_position: 3 },
+  { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", logo: "js_qh6ndw.png", version: "v1727700623", alt: "JavaScript logo", order_position: 4 },
+  { name: "Stimulus", link: "https://stimulus.hotwired.dev/", logo: "stimulus_byehql.png", version: "v1728895436", alt: "Stimulus logo", order_position: 5 },
+  { name: "Sass", link: "https://sass-lang.com/", logo: "sass_lfse0e.png", version: "v1728894867", alt: "Sass logo", order_position: 6 },
 ]
 
 backend_technologies = [
-  { name: "Ruby", link: "https://www.ruby-lang.org/fr/", logo: "ruby_u4fzgi.png", alt: "Ruby logo", order_position: 1 },
-  { name: "Rails", link: "https://rubyonrails.org/", logo: "rails_w8dl1x.png", alt: "Rails logo", order_position: 2 },
-  { name: "PHP", link: "https://www.php.net/", logo: "php_ehpiwx.png", alt: "PHP logo", order_position: 3 },
-  { name: "Devise", link: "https://github.com/heartcombo/devise", logo: "devise_p8bflb.png", alt: "Devise logo", order_position: 4 },
-  { name: "Cloudinary", link: "https://cloudinary.com/", logo: "cloudinary_mrktzt.png", alt: "Cloudinary logo", order_position: 5 },
-  { name: "Postman", link: "https://www.postman.com/", logo: "postman_y3zgpe.png", alt: "Postman logo", order_position: 6 },
-  { name: "PostgreSQL", link: "https://www.postgresql.org/", logo: "postgresql_czwsff.png", alt: "PostgreSQL logo", order_position: 7 },
-  { name: "Heroku", link: "https://www.heroku.com/", logo: "heroku_vqw6qd.png", alt: "Heroku logo", order_position: 8 },
+  { name: "Ruby", link: "https://www.ruby-lang.org/fr/", logo: "ruby_u4fzgi.png", version: "v1727700624", alt: "Ruby logo", order_position: 1 },
+  { name: "Rails", link: "https://rubyonrails.org/", logo: "rails_w8dl1x.png", version: "v1727700624", alt: "Rails logo", order_position: 2 },
+  { name: "PHP", link: "https://www.php.net/", logo: "php_ehpiwx.png", version: "v1727700623", alt: "PHP logo", order_position: 3 },
+  { name: "Devise", link: "https://github.com/heartcombo/devise", logo: "devise_p8bflb.png", version: "v1728894338", alt: "Devise logo", order_position: 4 },
+  { name: "Cloudinary", link: "https://cloudinary.com/", logo: "cloudinary_mrktzt.png", version: "v1728894646", alt: "Cloudinary logo", order_position: 5 },
+  { name: "Postman", link: "https://www.postman.com/", logo: "postman_y3zgpe.png", version: "v1729721156", alt: "Postman logo", order_position: 6 },
+  { name: "PostgreSQL", link: "https://www.postgresql.org/", logo: "postgresql_czwsff.png", version: "v1727700624", alt: "PostgreSQL logo", order_position: 7 },
+  { name: "Heroku", link: "https://www.heroku.com/", logo: "heroku_vqw6qd.png", version: "v1727700623", alt: "Heroku logo", order_position: 8 },
 ]
 
 tools = [
-  { name: "VSCode", link: "https://code.visualstudio.com/", logo: "vscode_aio2rn.png", alt: "VSCode logo", order_position: 1 },
-  { name: "Git", link: "https://git-scm.com/", logo: "git_h8j6pt.png", alt: "Git logo", order_position: 2 },
-  { name: "GitHub", link: "https://github.com/", logo: "github_hjj2ba.png", alt: "GitHub logo", order_position: 3 },
-  { name: "Slack", link: "https://slack.com/intl/fr-fr/", logo: "slack_ft3jeu.png", alt: "Slack logo", order_position: 4 },
-  { name: "Trello", link: "https://trello.com/fr", logo: "trello_zsnis6.png", alt: "Trello logo", order_position: 5 },
+  { name: "VSCode", link: "https://code.visualstudio.com/", logo: "vscode_aio2rn.png", version: "v1729717392", alt: "VSCode logo", order_position: 1 },
+  { name: "Git", link: "https://git-scm.com/", logo: "git_h8j6pt.png", version: "v1728900994", alt: "Git logo", order_position: 2 },
+  { name: "GitHub", link: "https://github.com/", logo: "github_hjj2ba.png", version: "v1728900778", alt: "GitHub logo", order_position: 3 },
+  { name: "Slack", link: "https://slack.com/intl/fr-fr/", logo: "slack_ft3jeu.png", version: "v1729721553", alt: "Slack logo", order_position: 4 },
+  { name: "Trello", link: "https://trello.com/fr", logo: "trello_zsnis6.png", version: "v1728894156", alt: "Trello logo", order_position: 5 },
 ]
 
 def create_technology_items(technologies, category)
@@ -89,9 +90,9 @@ def create_technology_items(technologies, category)
     )
 
     # Attacher le logo via l'URL Cloudinary générée à partir de l'identifiant
-    if tech[:logo].present?
+    if tech[:logo].present? && !technology.logo.attached?
       # Construire l'URL de l'image à partir de l'identifiant de Cloudinary
-      logo_url = logo_url = "https://res.cloudinary.com/djgk65kdl/image/upload/development/#{tech[:logo]}"
+      logo_url = logo_url = "https://res.cloudinary.com/djgk65kdl/image/upload/#{tech[:version]}/#{tech[:logo]}"
       file = URI.open(logo_url)
       # Attacher le fichier à la technologie en utilisant Active Storage
       technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
@@ -121,10 +122,10 @@ projects = [
       "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/development/zerotohero1_ntkhgr.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
@@ -148,17 +149,17 @@ projects = [
       "Système de notation pour renforcer la confiance."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
@@ -178,10 +179,10 @@ projects = [
       "Réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/development/zerotohero1_ntkhgr.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
@@ -205,17 +206,17 @@ projects = [
       "Système de notation pour renforcer la confiance."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/development/pokeswype_copie_ymvvv7.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/development/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
@@ -270,11 +271,11 @@ resume = user.create_resume!(
 )
 
 unless resume.picture.attached?
-  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311478/development/cv_w47x6j.png"), filename: "cv.jpg")
+  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311478/cv_w47x6j.png"), filename: "cv.jpg")
 end
 
 unless resume.pdf.attached?
-  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311466/development/BenoitAlexandreCV_rcioqa.pdf"), filename: "BenoitAlexandreCV.pdf")
+  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311466/BenoitAlexandreCV_rcioqa.pdf"), filename: "BenoitAlexandreCV.pdf")
 end
 
 puts "Resume created: #{resume.title}"
@@ -296,7 +297,7 @@ educations = [
       "Projets Phares : Clone d'Airbnb et PokéSwype",
       "Développement en équipe depuis la conception jusqu'au déploiement."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/development/pngwing.com_rflqgf.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306056/pngwing.com_rflqgf.png",
     order_position: 1
   },
   {
@@ -305,7 +306,7 @@ educations = [
     location: "Paris, France",
     start_date: Date.new(2016, 2),
     end_date: Date.new(2016, 10),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306069/development/logo_zhk3sf.webp",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306069/logo_zhk3sf.webp",
     order_position: 2
   },
   {
@@ -314,7 +315,7 @@ educations = [
     location: "Paris, France",
     start_date: Date.new(2013, 2),
     end_date: Date.new(2014, 11),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/Novancia_Business_School_logo_ujzhry.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/Novancia_Business_School_logo_ujzhry.png",
     order_position: 3
   },
   {
@@ -323,7 +324,7 @@ educations = [
     location: "Arpajon, France",
     start_date: Date.new(2010, 9),
     end_date: Date.new(2011, 6),
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/development/academyversailles_msrk7l.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306115/academyversailles_msrk7l.png",
     order_position: 4
   }
 ]
@@ -360,7 +361,7 @@ experiences = [
       "Autonome dans la gestion complète de la boutique : Ouverture/fermeture, conseils/ventes,
         encaissement, stocks, merchandising, suivi du CA."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/noduslogo_gihmsr.jpg",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/noduslogo_gihmsr.jpg",
     order_position: 1
   },
   {
@@ -373,7 +374,7 @@ experiences = [
       "Amélioration continue en compétences organisationnelles à travers diverses tâches :
       Réassortiments des articles, merchandising, encaissement et entretien général."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/Zara_Logo_curxt1.png",
     order_position: 2
   },
   {
@@ -389,7 +390,7 @@ experiences = [
       "Compétences validées en résolution de problèmes : Réclamations locataires et services
       généraux."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306118/development/resideetudes_ysx4tv.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306118/resideetudes_ysx4tv.png",
     order_position: 3
   },
   {
@@ -403,7 +404,7 @@ experiences = [
       objectifs et de confier des tâches, favorisant ainsi l'esprit d'équipe.",
       "Vision commerciale consolidée : Stratégies d'optimisation des ventes et de promotions."
     ],
-    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/Zara_Logo_curxt1.png",
+    logo: "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/Zara_Logo_curxt1.png",
     order_position: 4
   },
   {
@@ -417,9 +418,9 @@ experiences = [
       objectifs commerciaux."
     ],
     logo: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/development/jules_klblcd.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306116/development/casa_acroll.webp",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/development/logo_totalenergies_sim0jr.webp"
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306117/jules_klblcd.png",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306116/casa_acroll.webp",
+      "https://res.cloudinary.com/djgk65kdl/image/upload/v1728306119/logo_totalenergies_sim0jr.webp"
     ],
     order_position: 5
   }
