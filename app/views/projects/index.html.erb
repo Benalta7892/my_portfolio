@@ -30,11 +30,12 @@
               <%= link_to 'Modifier', edit_project_path(project), class: 'button button-edit' %>
             </div>
 
+
             <%= link_to 'Supprimer', project_path(project),
                 data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
                 class: "button button-delete" %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
 
       </div>
     <% end %>
