@@ -40,3 +40,7 @@
 
   <%= form.submit "Mettre à jour l'éducation", class: "btn btn-primary" %>
 <% end %>
+
+<%= link_to 'Supprimer', resume_education_path(@resume, @education),
+                data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette éducation ?" },
+                class: "button button-delete" %>
