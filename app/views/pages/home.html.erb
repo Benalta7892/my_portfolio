@@ -23,6 +23,14 @@
 
 <section class="section-skills">
 
+  <%# Lien pour ajouter une nouvelle technologie si l'utilisateur est administrateur %>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="add-tech-link">
+      <%= link_to "Ajouter une nouvelle technologie", new_technology_item_path, class: "button button-add-tech" %>
+    </div>
+  <% end %>
+
+
   <div class="skills-content">
 
     <div class="front-end">

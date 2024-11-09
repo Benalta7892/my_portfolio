@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'technology_items/new'
+  get 'technology_items/create'
+  get 'technology_items/edit'
+  get 'technology_items/update'
+  get 'technology_items/destroy'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'projects/index'
   get 'projects/show'
@@ -25,9 +30,10 @@ Rails.application.routes.draw do
       get 'download', to: 'resumes#download_resume'
     end
 
+
     resources :educations
     resources :experiences
   end
-
+  resources :technology_items, only: [:new, :create, :edit, :update, :destroy]
   resources :contacts, only: [:index, :show, :new, :create, :destroy]
 end
