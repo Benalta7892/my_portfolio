@@ -4,9 +4,9 @@ class PagesController < ApplicationController
   def home
     @admin_user = User.find_by(admin: true)
 
-    @frontend_technologies = TechnologyItem.where(category: "frontend")
-    @backend_technologies = TechnologyItem.where(category: "backend")
-    @tools = TechnologyItem.where(category: "tools")
+    @frontend_technologies = TechnologyItem.where(category: "frontend").order(:order_position)
+    @backend_technologies = TechnologyItem.where(category: "backend").order(:order_position)
+    @tools = TechnologyItem.where(category: "tools").order(:order_position)
 
     @projects = Project.order(created_at: :asc)
     @contact = Contact.new
