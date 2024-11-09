@@ -4,70 +4,64 @@ document.addEventListener("turbo:load", function () {
   const ligne = document.querySelector(".ligne");
 
   function updateTimeline() {
-    const initialTop = 80; // Position top de la première boîte/rond
-    const spacing = 306; // Espace total (hauteur de la boîte + hauteur du rond)
-    const boxTimelinePaddingTop = 80; // Padding supérieur de .box-timeline
+    const initialTop = 80; // Initial top position for the first box/rond
+    const spacing = 306; // Total spacing (box height + rond height)
+    const boxTimelinePaddingTop = 80; // Top padding for .box-timeline
 
-    // Vérifier la largeur de l'écran
-    if (window.innerWidth < 374) {
-      // Ne rien faire si l'écran est en dessous de 374px
-      return;
+    // Position adjustments for screens above 374px
+    if (window.innerWidth >= 374) {
+      allBoxes.forEach((box, index) => {
+        const topPosition = initialTop + index * spacing;
+        box.style.top = `${topPosition}px`; // Set top position of boxes
+
+        // Apply 'left' or 'right' class based on screen width and index
+        if (window.innerWidth >= 1181) {
+          box.style.left =
+            index % 2 === 0
+              ? "calc(50% - 270px)" // Left position for even indices
+              : "calc(50% + 270px)"; // Right position for odd indices
+        } else {
+          box.style.left = ""; // Reset left property for CSS fallback
+        }
+
+        // Update the top position of the corresponding rond
+        const rond = allRonds[index];
+        if (rond) {
+          rond.style.top = `${topPosition}px`;
+        }
+      });
     }
 
-    // Ajustement des boîtes et de leur positionnement
-    allBoxes.forEach((box, index) => {
-      const topPosition = initialTop + index * spacing; // Calcul de la position top
-      box.style.top = `${topPosition}px`; // Positionne les boîtes
-
-      // Appliquer les classes 'left' ou 'right' en fonction de la largeur de l'écran
-      if (window.innerWidth >= 1181) {
-        // Positionner selon l'index
-        box.style.left =
-          index % 2 === 0 // Si l'index est pair
-            ? "calc(50% - 270px)" // Position à gauche pour les index pairs
-            : "calc(50% + 270px)"; // Position à droite pour les index impairs
-      } else {
-        // Retirer la propriété left pour que le CSS prenne le relais
-        box.style.left = "";
-      }
-
-      // Mettre à jour la position top du rond correspondant
-      const rond = allRonds[index];
-      if (rond) {
-        rond.style.top = `${topPosition}px`; // Positionne les ronds
-      }
-    });
-
-    // Ajustement de la hauteur de la ligne
-    const firstRond = allRonds[0]; // Premier rond
-    const lastRond = allRonds[allRonds.length - 1]; // Dernier rond
+    // Calculate and set the line height based on the ronds' positions
+    const firstRond = allRonds[0];
+    const lastRond = allRonds[allRonds.length - 1];
 
     if (firstRond && lastRond) {
-      const firstRondTop = firstRond.offsetTop + firstRond.offsetHeight / 2; // Centre du premier rond
-      const lastRondTop = lastRond.offsetTop + lastRond.offsetHeight / 2; // Centre du dernier rond
+      const firstRondTop = firstRond.offsetTop + firstRond.offsetHeight / 2;
+      const lastRondTop = lastRond.offsetTop + lastRond.offsetHeight / 2;
 
-      // Ajuste la hauteur de la ligne pour qu'elle soit égale au dernier rond
-      ligne.style.height = `${lastRondTop - boxTimelinePaddingTop}px`; // Met à jour la hauteur à celle du dernier rond
+      // Update ligne height based on the last rond's position
+      ligne.style.height = `${lastRondTop - boxTimelinePaddingTop}px`;
 
-      // Si le top du dernier rond est inférieur à celui du premier rond, le conserver à cette valeur
+      // Ensure the line height is not smaller than the first rond's top position
       if (lastRondTop < firstRondTop) {
-        ligne.style.height = `${firstRondTop}px`; // Force la hauteur à celle du premier rond si nécessaire
+        ligne.style.height = `${firstRondTop}px`;
       }
 
-      // Assurer que la hauteur de la ligne est suffisante
+      // Set a minimum line height of 230px
       if (parseInt(ligne.style.height) < 230) {
-        ligne.style.height = "230px"; // Définit une hauteur minimale de 230px
+        ligne.style.height = "230px";
       }
     }
   }
 
-  // Appel initial pour définir la taille
+  // Initial call to set up the timeline
   updateTimeline();
 
-  // Écouteur d'événements pour gérer les changements de taille de la fenêtre
+  // Event listener for window resize
   window.addEventListener("resize", updateTimeline);
 
-  // Contrôleur ScrollMagic
+  // ScrollMagic controller setup
   const controller = new ScrollMagic.Controller();
 
   allBoxes.forEach((box, index) => {
@@ -84,4 +78,4 @@ document.addEventListener("turbo:load", function () {
   });
 
   console.log("Hello from scroll.js");
-}); ///
+});

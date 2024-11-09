@@ -12,22 +12,24 @@
   justify-content: space-between !important;
   align-items: center !important;
   align-self: center !important;
-  // padding: 14px 20px; // Ajuste si besoin
+  gap: clamp(4px, 1vw, 16px); /* Smaller minimum gap */
   margin: 0;
 
   .button-edit {
     background-color: #ffeed3;
     border: 2px solid #f1f1f1;
-    border-radius: 24px;
-    padding: 14px 20px; // Ajuste si besoin
+    border-radius: clamp(8px, 1.5vw, 20px); /* Smaller minimum border radius */
+    padding: clamp(6px, 0.8vw, 12px) clamp(10px, 1.5vw, 16px); /* Smaller padding */
+    font-size: clamp(12px, 1vw, 15px); /* Smaller minimum font size */
     margin: 0 !important;
   }
 
   .button-delete {
     background-color: #ffd9de;
     border: 2px solid #f1f1f1;
-    border-radius: 24px;
-    padding: 14px 20px; // Ajuste si besoin
+    border-radius: clamp(8px, 1.5vw, 20px); /* Smaller minimum border radius */
+    padding: clamp(6px, 0.8vw, 12px) clamp(10px, 1.5vw, 16px); /* Smaller padding */
+    font-size: clamp(12px, 1vw, 15px); /* Smaller minimum font size */
     margin: 0 !important;
   }
 }
@@ -37,14 +39,14 @@
   // Cible à la fois le lien et le bouton généré
   display: inline-block;
   border: 2px solid #f1f1f1;
-  border-radius: 24px;
-  padding: 14px 20px; // Ajuste si besoin
+  border-radius: clamp(8px, 1.5vw, 20px); /* Responsive border radius */
+  padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 18px); /* Responsive padding */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-color: #ddf3f4;
   color: #000;
   font-weight: bold;
-  font-size: 18px;
-  margin: 0 0 18px !important;
+  font-size: clamp(14px, 1.5vw, 16px); /* Responsive font size */
+  margin: 0 0 clamp(8px, 1vw, 14px) !important; /* Responsive margin */
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -80,10 +82,13 @@
   font-family: lato, sans-serif;
   color: #000;
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(14px, 1.5vw, 16px); /* Responsive font size */
+  font-family: "Lato", sans-serif;
 }
 
 /* Couleur pour le bouton "Supprimer" */
 .button-delete {
   background-color: #ffd9de; /* Rouge */
+  font-size: clamp(14px, 1.5vw, 16px);
+  padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 18px);
 }
