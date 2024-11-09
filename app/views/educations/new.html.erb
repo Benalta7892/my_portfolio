@@ -1,2 +1,42 @@
-<h1>Educations#new</h1>
-<p>Find me in app/views/educations/new.html.erb</p>
+<h1>Nouvelle Éducation</h1>
+
+<%= form_with model: [@resume, @education], local: true do |form| %>
+  <% if @education.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@education.errors.count, "erreur") %> empêchent cette éducation d'être sauvegardée :</h2>
+      <ul>
+        <% @education.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <%= form.label :start_date, "Date de début" %>
+    <%= form.date_select :start_date, start_year: 2000, end_year: Date.today.year, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :end_date, "Date de fin" %>
+    <%= form.date_select :end_date, start_year: 2000, end_year: Date.today.year, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :diploma_name, "Nom du diplôme" %>
+    <%= form.text_field :diploma_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :institution_name, "Nom de l'institution" %>
+    <%= form.text_field :institution_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :location, "Lieu" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <%= form.submit "Ajouter cette éducation", class: "btn btn-primary" %>
+<% end %>

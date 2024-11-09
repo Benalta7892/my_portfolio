@@ -9,3 +9,4 @@ import "./slide";
 import "./navbar";
 import "./vanta";
 import "./smooth_scroll";
+import "./features";

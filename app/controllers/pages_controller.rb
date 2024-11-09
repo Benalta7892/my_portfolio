@@ -20,8 +20,8 @@ class PagesController < ApplicationController
 
     return unless @resume
 
-    @educations = @resume.educations.order(order_position: :asc)
-    @experiences = @resume.experiences.order(order_position: :asc)
+    @educations = @resume.educations.order(end_date: :desc)
+    @experiences = @resume.experiences.order(end_date: :desc)
 
     @title = "Mon chemin"
     @subtitle = "Tourné vers l'appel du developpement web, vers une passion."

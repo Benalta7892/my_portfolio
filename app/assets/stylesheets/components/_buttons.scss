@@ -1,0 +1,89 @@
+.editOrDeleteBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+  margin-bottom: 40px;
+  gap: 56px;
+}
+
+.education-btn {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  align-self: center !important;
+  // padding: 14px 20px; // Ajuste si besoin
+  margin: 0;
+
+  .button-edit {
+    background-color: #ffeed3;
+    border: 2px solid #f1f1f1;
+    border-radius: 24px;
+    padding: 14px 20px; // Ajuste si besoin
+    margin: 0 !important;
+  }
+
+  .button-delete {
+    background-color: #ffd9de;
+    border: 2px solid #f1f1f1;
+    border-radius: 24px;
+    padding: 14px 20px; // Ajuste si besoin
+    margin: 0 !important;
+  }
+}
+
+.button,
+.button input[type="submit"] {
+  // Cible à la fois le lien et le bouton généré
+  display: inline-block;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
+  padding: 14px 20px; // Ajuste si besoin
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #ddf3f4;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 18px !important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content; // Ajuste la largeur à l'intérieur de la div parente
+  box-sizing: border-box; // Pour aligner la taille du padding et des bordures
+  z-index: 1; // Pour que le bouton reste au-dessus des autres éléments
+  font-family: lato, sans-serif;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.edit-project-button,
+.delete-project-button {
+  flex: 1; // Prend toute la place disponible
+  margin-right: 10px; // Espace entre les boutons
+}
+
+.edit-project-button:last-child {
+  margin-right: 0; // Pas d'espace à droite pour le dernier bouton
+}
+
+.button-back {
+  background-color: #fff; /* Blanc */
+}
+
+/* Couleur pour le bouton "Modifier" */
+.button-edit {
+  background-color: #ffeed3; /* Orange */
+  width: 100%;
+  font-family: lato, sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Couleur pour le bouton "Supprimer" */
+.button-delete {
+  background-color: #ffd9de; /* Rouge */
+}

@@ -28,7 +28,7 @@
   <h2><span>C</span>onfirmé par des diplômes</h2>
 
   <% if user_signed_in? && current_user.admin? %>
-    <%= link_to "Ajouter une nouvelle éducation", new_resume_education_path(@resume.id), class: "btn btn-primary" %>
+    <%= link_to "Ajouter une nouvelle éducation", new_resume_education_path(@resume.id), class: "button" %>
   <% end %>
 
 
@@ -51,7 +51,20 @@
         <h2><%= education.diploma_name %></h2>
         <p><%= education.institution_name %></p>
         <p><%= education.location %></p>
+
+        <!-- Affichage des boutons Modifier et Supprimer si l'utilisateur est admin -->
+        <% if user_signed_in? && current_user.admin? %>
+          <div class="editOrDeleteBtn education-btn">
+            <%# <div class="edit-project-button"> %>
+            <%= link_to 'Modifier', edit_resume_education_path(@resume, education), class: 'button button-edit' %>
+            <%# </div> %>
+            <%= link_to 'Supprimer', resume_education_path(@resume, education),
+                data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette éducation ?" },
+                class: "button button-delete" %>
+          </div>
+        <% end %>
       </div>
+
     <% end %>
 
   </div>

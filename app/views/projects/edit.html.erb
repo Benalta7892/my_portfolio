@@ -84,34 +84,12 @@
     <%= form.collection_select :tool_ids, TechnologyItem.tools, :id, :name, {}, { multiple: true, class: "form-control" } %>
   </div>
 
-  <%= form.submit "Mettre à jour le projet", class: "btn btn-primary" %>
+  <%= form.submit "Mettre à jour le projet", class: "botton button-edit" %>
 <% end %>
 
-<!-- JavaScript pour ajouter des fonctionnalités dynamiques -->
-<script>
-  document.getElementById('add-feature-btn').addEventListener('click', function() {
-  const featuresList = document.getElementById('features-list');
-  const index = featuresList.children.length;
-  const featureField = document.createElement('div');
-  featureField.className = 'feature-field';
-  featureField.dataset.index = index;
-
-  featureField.innerHTML = `
-  <input type="text" name="project[features][]" class="form-control" placeholder="Fonctionnalité ${index + 1}">
-  <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
-  `;
-
-  featuresList.appendChild(featureField);
-  });
-
-  function removeFeature(button) {
-  const featureField = button.parentElement;
-  featureField.style.display = 'none';
-
-  // Active le champ caché pour indiquer la suppression
-  const hiddenInput = featureField.querySelector('.delete-feature');
-  if (hiddenInput) {
-  hiddenInput.disabled = false;
-  }
-  }
-</script>
+<!-- Bouton de suppression avec confirmation -->
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Supprimer', project_path(@project),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                class: "button button-delete" %>
+<% end %>

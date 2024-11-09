@@ -1,15 +1,26 @@
 <%# Ici rajouter un lien/bouton pour un retour a l'index des projets %>
 <%# <div class="back-btn" id="first-section"> %>
-<%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "back-btn", id: "first-section" %>
+<%# link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "back-btn", id: "first-section" %>
 <%# </div> %>
 
 
 <%# Affichage du bouton Modifier si l'utilisateur est admin %>
-<% if user_signed_in? && current_user.admin? %>
-  <div class="edit-project-button">
-    <%= link_to 'Modifier', edit_project_path(@project), class: 'btn btn-secondary' %>
-  </div>
-<% end %>
+<div class="editOrDeleteBtn" id="first-section">
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "button button-back" %>
+
+
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="edit-project-button">
+      <%= link_to 'Modifier', edit_project_path(@project), class: 'button button-edit' %>
+    </div>
+  <% end %>
+
+  <% if user_signed_in? && current_user.admin? %>
+    <%= link_to 'Supprimer', project_path(@project),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                class: "button button-delete" %>
+  <% end %>
+</div>
 
 
 <section class="section-swiper">
