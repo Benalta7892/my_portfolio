@@ -1,2 +1,47 @@
-<h1>Experiences#edit</h1>
-<p>Find me in app/views/experiences/edit.html.erb</p>
+<h1>Modifier l'Expérience</h1>
+
+<%= form_with model: [@resume, @experience], local: true do |form| %>
+  <% if @experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@experience.errors.count, "erreur") %> empêchent cette expérience d'être sauvegardée :</h2>
+      <ul>
+        <% @experience.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :start_date, "Date de début" %>
+    <%= form.date_select :start_date, start_year: 2000, end_year: Date.today.year, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :end_date, "Date de fin" %>
+    <%= form.date_select :end_date, start_year: 2000, end_year: Date.today.year, include_blank: true, class: "form-control" %>
+    <small>Laisser vide si vous êtes toujours dans ce poste.</small>
+    <%# Optionally, add a checkbox to mark "à ce jour" for ongoing roles %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :job_title, "Titre du poste" %>
+    <%= form.text_field :job_title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :company_name, "Nom de l'entreprise" %>
+    <%= form.text_field :company_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :location, "Lieu" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <%= form.submit "Mettre à jour l'expérience", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to 'Supprimer', resume_experience_path(@resume, @experience),
+                data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette expérience ?" },
+                class: "button button-delete" %>

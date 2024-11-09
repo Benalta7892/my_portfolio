@@ -24,30 +24,21 @@
 
 </div>
 
+<%# <div class="time-line-container"> %>
+<!-- Section Éducation -->
 <div class="section-parcours">
   <h2><span>C</span>onfirmé par des diplômes</h2>
-
   <% if user_signed_in? && current_user.admin? %>
     <%= link_to "Ajouter une nouvelle éducation", new_resume_education_path(@resume.id), class: "button" %>
   <% end %>
-
-
-  <div class="box-timeline">
-
-
-    <div class="ligne"></div>
-
-    <% icons = ["&#127891;", "&#127891;", "&#127891;", "&#127891;"] %> <!-- Définir les icônes ici -->
-
+  <div class="box-timeline parcours-timeline">
+    <div class="ligne parcours-ligne"></div>
     <% @educations.each_with_index do |education, index| %>
-      <!-- Les éléments "rond" pour chaque éducation avec une icône différente -->
-      <div class="rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
-        <%= icons[index % icons.size].html_safe %> <!-- Afficher une icône différente -->
+      <div class="rond parcours-rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
+        &#127891; <!-- Icône pour les éducations -->
       </div>
-
-      <!-- Appliquer des classes dynamiques pour alterner l'alignement des boîtes -->
-      <div class="box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
-        <p class="date"><%= education.start_date.strftime('%m/%Y') %> - <%= education.end_date.strftime('%m/%Y') %></p>
+      <div class="box parcours-box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
+        <p class="date"><%= education.start_date.strftime('%m/%Y') %> - <%= education.end_date ? education.end_date.strftime('%m/%Y') : "À ce jour" %></p>
         <h2><%= education.diploma_name %></h2>
         <p><%= education.institution_name %></p>
         <p><%= education.location %></p>
@@ -63,13 +54,49 @@
                 class: "button button-delete" %>
           </div>
         <% end %>
+
       </div>
-
     <% end %>
-
   </div>
-
 </div>
+
+<% if false %>
+  <!-- Section Expérience -->
+  <div class="section-experiences">
+    <h2><span>E</span>xperiences Professionnelles</h2>
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to "Ajouter une nouvelle expérience", new_resume_experience_path(@resume.id), class: "button" %>
+    <% end %>
+    <div class="box-timeline experience-timeline">
+      <div class="ligne experience-ligne"></div>
+      <% @experiences.each_with_index do |experience, index| %>
+        <div class="rond experience-rond r<%= index + 1 %>" data-anim="<%= index + 1 %>">
+          &#128188; <!-- Icône pour les expériences -->
+        </div>
+        <div class="box experience-box b<%= index + 1 %> <%= index.even? ? 'left' : 'right' %>" data-anim="<%= index + 1 %>">
+          <p class="date"><%= experience.start_date.strftime('%m/%Y') %> - <%= experience.end_date ? experience.end_date.strftime('%m/%Y') : "À ce jour" %></p>
+          <h2><%= experience.job_title %></h2>
+          <p><%= experience.company_name %></p>
+          <p><%= experience.location %></p>
+
+          <!-- Affichage des boutons Modifier et Supprimer si l'utilisateur est admin -->
+          <% if user_signed_in? && current_user.admin? %>
+            <div class="editOrDeleteBtn education-btn">
+              <%# <div class="edit-project-button"> %>
+              <%= link_to 'Modifier', edit_resume_experience_path(@resume, experience), class: 'button button-edit' %>
+              <%# </div> %>
+              <%= link_to 'Supprimer', resume_experience_path(@resume, experience),
+                data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette éducation ?" },
+                class: "button button-delete" %>
+            </div>
+          <% end %>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<%# </div> %>
 
 
 <section class="carousel-logos">
