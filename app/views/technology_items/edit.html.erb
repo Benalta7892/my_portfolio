@@ -1,44 +1,48 @@
-<h1 id="first-section">Modifer une tech</h1>
+<div class="formulaire-conteneur" id="first-section">
+
+  <h2><span>M</span>ettre à jour les informations de la tech</h2>
 
 
-<%= form_with(model: @technology_item, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :name, "Nom de la technologie" %>
-    <%= form.text_field :name, required: true %>
-  </div>
+  <%= form_with(model: @technology_item, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :name, "Nom de la technologie" %>
+      <%= form.text_field :name, required: true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :category, "Catégorie" %>
-    <%= form.select :category, TechnologyItem.categories.keys.map { |c| [c.humanize, c] }, prompt: "Choisir une catégorie", required: true %>
-  </div>
+    <div class="field">
+      <%= form.label :category, "Catégorie" %>
+      <%= form.select :category, TechnologyItem.categories.keys.map { |c| [c.humanize, c] }, prompt: "Choisir une catégorie", required: true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :link, "Lien vers la technologie" %>
-    <%= form.url_field :link %>
-  </div>
+    <div class="field">
+      <%= form.label :link, "Lien vers la technologie" %>
+      <%= form.url_field :link %>
+    </div>
 
-  <div class="field">
-    <%= form.label :order_position, "Position d'affichage" %>
-    <%= form.number_field :order_position, min: 1 %>
-  </div>
+    <div class="field">
+      <%= form.label :order_position, "Position d'affichage" %>
+      <%= form.number_field :order_position, min: 1 %>
+    </div>
 
-  <div class="field">
-    <%= form.label :logo, "Logo de la technologie" %>
-    <%= form.file_field :logo, accept: "image/*" %>
-  </div>
+    <div class="field">
+      <%= form.label :logo, "Logo de la technologie" %>
+      <%= form.file_field :logo, accept: "image/*" %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit "Mettre à jour", class: "button button-update" %>
+    <div class="actions">
+      <%= form.submit "Mettre à jour", class: "button button-update" %>
 
-    <%# Bouton Annuler %>
-    <%= link_to "Annuler", root_path, class: "button button-cancel", onclick: "window.history.back();", onclick: "window.history.back();" %>
+      <%# Bouton Annuler %>
+      <%= link_to "Annuler", root_path, class: "button button-cancel", onclick: "window.history.back();", onclick: "window.history.back();" %>
 
-  </div>
-<% end %>
+    </div>
+  <% end %>
 
-<!-- Bouton de suppression avec confirmation -->
-<% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'Supprimer', technology_item_path(@technology_item),
+  <!-- Bouton de suppression avec confirmation -->
+  <% if user_signed_in? && current_user.admin? %>
+    <%= link_to 'Supprimer', technology_item_path(@technology_item),
                 data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
                 class: "button button-delete" %>
-<% end %>
+  <% end %>
+
+</div>

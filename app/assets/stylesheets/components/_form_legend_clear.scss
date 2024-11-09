@@ -42,6 +42,10 @@ legend ~ div.form-check:first-of-type {
   gap: 24px;
   margin-top: 28px;
   background: #fafafa;
+
+  input {
+    border: 2px solid #f1f1f1 !important;
+  }
 }
 
 .contact-row {
@@ -137,4 +141,108 @@ input {
     padding: 10px;
     font-size: 12px;
   }
+}
+
+.formulaire-conteneur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 54px 0;
+  padding: 44px;
+  align-items: center;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  background: #fafafa;
+
+  form .actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Style de base pour le formulaire
+#first-section {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Style des champs de formulaire
+form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .field {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="number"],
+    input[type="file"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 2px solid #f1f1f1;
+      border-radius: 12px;
+      background-color: #fff;
+
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        outline: none;
+      }
+    }
+  }
+
+  // // Styles des boutons
+  // .actions {
+  //   display: flex;
+  //   justify-content: flex-start;
+
+  //   .button {
+  //     padding: 0.5rem 1rem;
+  //     font-size: 1rem;
+  //     color: #fff;
+  //     background-color: #007bff;
+  //     border: none;
+  //     border-radius: 4px;
+  //     cursor: pointer;
+  //     transition: background-color 0.2s ease;
+
+  //     &:hover {
+  //       background-color: #0056b3;
+  //     }
+  //   }
+  // }
+
+  // .button-cancel {
+  //   padding: 0.5rem 1rem;
+  //   font-size: 1rem;
+  //   color: #555;
+  //   background-color: #f0f0f0;
+  //   border: 1px solid #ccc;
+  //   border-radius: 4px;
+  //   cursor: pointer;
+  //   margin-left: 1rem;
+  //   transition: background-color 0.2s ease, color 0.2s ease;
+
+  //   &:hover {
+  //     background-color: #e0e0e0;
+  //     color: #333;
+  //   }
+  // }
 }

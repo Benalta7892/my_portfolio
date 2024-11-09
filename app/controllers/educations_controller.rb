@@ -8,6 +8,9 @@ class EducationsController < ApplicationController
   def new
     @resume = Resume.find(params[:resume_id])
     @education = @resume.educations.build
+
+    @title = "Nouveau diplôme"
+    @subtitle = "Felicitations pour cette nouvelle étape ! 🎓"
   end
 
   def create
@@ -24,6 +27,9 @@ class EducationsController < ApplicationController
   def edit
     @resume = Resume.find(params[:resume_id])
     @education = @resume.educations.find(params[:id])
+
+    @title = "Modifier un Diplôme"
+    @subtitle = "Parce que chaque information compte. 📚"
   end
 
   def update

@@ -8,6 +8,9 @@ class ExperiencesController < ApplicationController
   def new
     @resume = Resume.find(params[:resume_id])
     @experience = @resume.experiences.build
+
+    @title = "Nouveau Job"
+    @subtitle = "Félicitations pour cette nouvelle étape ! 💼"
   end
 
   def create
@@ -24,6 +27,9 @@ class ExperiencesController < ApplicationController
   def edit
     @resume = Resume.find(params[:resume_id])
     @experience = @resume.experiences.find(params[:id])
+
+    @title = "Modifier un Job"
+    @subtitle = "Parce que chaque information compte. 📝"
   end
 
   def update

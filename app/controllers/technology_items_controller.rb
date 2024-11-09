@@ -1,6 +1,9 @@
 class TechnologyItemsController < ApplicationController
   def new
     @technology_item = TechnologyItem.new
+
+    @title = "New Skills"
+    @subtitle = "On en apprend toujours. 🤓"
   end
 
   def create
@@ -15,6 +18,9 @@ class TechnologyItemsController < ApplicationController
 
   def edit
     @technology_item = TechnologyItem.find(params[:id])
+
+    @title = "Modifier une tech"
+    @subtitle = "Un correctif pour un meilleur impact ! 🔧"
   end
 
   def update

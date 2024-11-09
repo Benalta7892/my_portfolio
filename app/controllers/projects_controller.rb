@@ -25,6 +25,9 @@ class ProjectsController < ApplicationController
 
   def new
     @project = current_user.projects.build
+
+    @title = "Nouveau projet"
+    @subtitle = "Une nouvelle aventure. 🚀"
   end
 
   def create
@@ -39,6 +42,9 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+
+    @title = "Modifier un projet"
+    @subtitle = "C'est toujours mieux quand c'est à jour. 🤓"
   end
 
   def update

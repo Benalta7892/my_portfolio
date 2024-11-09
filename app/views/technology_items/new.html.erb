@@ -1,37 +1,41 @@
-<h1 id="first-section">Ajouter une nouvelle tech</h1>
+<div class="formulaire-conteneur" id="first-section">
+
+  <h2><span>E</span>nregistrer une nouvelle tech</h2>
 
 
-<%= form_with(model: @technology_item, url: technology_items_path, local: true) do |form| %>
+  <%= form_with(model: @technology_item, url: technology_items_path, local: true) do |form| %>
 
-  <div class="field">
-    <%= form.label :name, "Nom de la technologie" %>
-    <%= form.text_field :name, required: true %>
-  </div>
+    <div class="field">
+      <%= form.label :name, "Nom de la technologie" %>
+      <%= form.text_field :name, required: true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :category, "Catégorie" %>
-    <%= form.select :category, TechnologyItem.categories.keys.map { |c| [c.humanize, c] }, prompt: "Choisir une catégorie", required: true %>
-  </div>
+    <div class="field">
+      <%= form.label :category, "Catégorie" %>
+      <%= form.select :category, TechnologyItem.categories.keys.map { |c| [c.humanize, c] }, prompt: "Choisir une catégorie", required: true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :link, "Lien vers la technologie" %>
-    <%= form.url_field :link %>
-  </div>
+    <div class="field">
+      <%= form.label :link, "Lien vers la technologie" %>
+      <%= form.url_field :link %>
+    </div>
 
-  <div class="field">
-    <%= form.label :order_position, "Position d'affichage" %>
-    <%= form.number_field :order_position, min: 1 %>
-  </div>
+    <div class="field">
+      <%= form.label :order_position, "Position d'affichage" %>
+      <%= form.number_field :order_position, min: 1 %>
+    </div>
 
-  <div class="field">
-    <%= form.label :logo, "Logo de la technologie" %>
-    <%= form.file_field :logo, accept: "image/*" %>
-  </div>
+    <div class="field">
+      <%= form.label :logo, "Logo de la technologie" %>
+      <%= form.file_field :logo, accept: "image/*" %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit "Ajouter Technologie", class: "button" %>
-  </div>
+    <div class="actions">
+      <%= form.submit "Ajouter Technologie", class: "button" %>
+    </div>
 
-  <%# Bouton Annuler %>
-  <%= link_to "Annuler", root_path, class: "button button-cancel", onclick: "window.history.back();" %>
-<% end %>
+    <%# Bouton Annuler %>
+    <%= link_to "Annuler", root_path, class: "button button-cancel", onclick: "window.history.back();" %>
+  <% end %>
+
+</div>
