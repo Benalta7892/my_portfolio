@@ -8,8 +8,8 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @admin_user = User.find_by(admin: true)
-    @title = "Contactez-moi"
-    @subtitle = "Contactez-moi pour toute demande ou collaboration."
+    @title = "Contact"
+    @subtitle = "Projets, idées, demandes ou collaborations – discutons-en !"
     @resume = Resume.find_by(user: @admin_user)
   end
 

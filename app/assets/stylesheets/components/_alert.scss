@@ -3,4 +3,7 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  border: 2px solid #f1f1f1;
+  border-radius: clamp(8px, 1.5vw, 20px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }

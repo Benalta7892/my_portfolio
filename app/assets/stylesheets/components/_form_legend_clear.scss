@@ -30,7 +30,7 @@ legend ~ div.form-check:first-of-type {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 690px;
+  width: 100%;
   min-height: 355px;
   justify-content: space-evenly;
   // margin-top: 28px;
@@ -175,7 +175,7 @@ input {
 
 // Style des champs de formulaire
 form {
-  max-width: 500px;
+  max-width: 650px;
   margin: 0 auto;
 
   .field {
