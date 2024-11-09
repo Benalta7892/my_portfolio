@@ -106,25 +106,32 @@
     <div class="carousel-mask-right"></div>
 
     <div class="carousel-container" id="carouselContainer" role="list">
-      <%= cl_image_tag("html5_kf7hmz.png", alt: "html") %>
-      <%= cl_image_tag("css3_q9lv1h.png", alt: "css") %>
-      <%= cl_image_tag("js_qh6ndw.png", alt: "javascript")  %>
-      <%= cl_image_tag("figma_d7mc4z.png", alt: "figma") %>
-      <%= cl_image_tag("ruby_u4fzgi.png", alt: "ruby") %>
-      <%= cl_image_tag("rails_w8dl1x.png", alt: "rails") %>
-      <%= cl_image_tag("php_ehpiwx.png", alt: "php") %>
-      <%= cl_image_tag("heroku_vqw6qd.png", alt: "heroku") %>
-      <%= cl_image_tag("postgresql_czwsff.png", alt: "postgresql") %>
+      <!-- Logos Front-End -->
+      <% @frontend_technologies.each do |tech| %>
+        <% if tech.logo.attached? %>
+          <%= cl_image_tag tech.logo.key, alt: tech.name, width: 100, height: 100, class: "carousel-logo" %>
+        <% else %>
+          <p>Image manquante pour <%= tech.name %>.</p>
+        <% end %>
+      <% end %>
 
-      <%= cl_image_tag("html5_kf7hmz.png", alt: "html") %>
-      <%= cl_image_tag("css3_q9lv1h.png", alt: "css") %>
-      <%= cl_image_tag("js_qh6ndw.png", alt: "javascript") %>
-      <%= cl_image_tag("figma_d7mc4z.png", alt: "figma") %>
-      <%= cl_image_tag("ruby_u4fzgi.png", alt: "ruby") %>
-      <%= cl_image_tag("rails_w8dl1x.png", alt: "rails") %>
-      <%= cl_image_tag("php_ehpiwx.png", alt: "php") %>
-      <%= cl_image_tag("heroku_vqw6qd.png", alt: "heroku") %>
-      <%= cl_image_tag("postgresql_czwsff.png", alt: "postgresql") %>
+      <!-- Logos Back-End -->
+      <% @backend_technologies.each do |tech| %>
+        <% if tech.logo.attached? %>
+          <%= cl_image_tag tech.logo.key, alt: tech.name, width: 100, height: 100, class: "carousel-logo" %>
+        <% else %>
+          <p>Image manquante pour <%= tech.name %>.</p>
+        <% end %>
+      <% end %>
+
+      <!-- Logos Outils -->
+      <% @tools.each do |tool| %>
+        <% if tool.logo.attached? %>
+          <%= cl_image_tag tool.logo.key, alt: tool.name, width: 100, height: 100, class: "carousel-logo" %>
+        <% else %>
+          <p>Image manquante pour <%= tool.name %>.</p>
+        <% end %>
+      <% end %>
     </div>
 
   </div>

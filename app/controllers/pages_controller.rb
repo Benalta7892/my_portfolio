@@ -18,6 +18,11 @@ class PagesController < ApplicationController
     @resume = Resume.find_by(user: @admin_user)
     @contact = Contact.new
 
+    # Assurez-vous que ces variables sont bien initialisées
+    @frontend_technologies = TechnologyItem.where(category: "frontend")
+    @backend_technologies = TechnologyItem.where(category: "backend")
+    @tools = TechnologyItem.where(category: "tools")
+
     return unless @resume
 
     @educations = @resume.educations.order(end_date: :desc)

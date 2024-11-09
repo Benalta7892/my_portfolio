@@ -24,14 +24,12 @@
         <% end %>
 
         <!-- Affichage du bouton Modifier si l'utilisateur est admin -->
-        <div class="editOrDeleteBtn">
-          <% if user_signed_in? && current_user.admin? %>
+        <% if user_signed_in? && current_user.admin? %>
+          <div class="editOrDeleteBtn">
             <div class="edit-project-button">
               <%= link_to 'Modifier', edit_project_path(project), class: 'button button-edit' %>
             </div>
-          <% end %>
 
-          <% if user_signed_in? && current_user.admin? %>
             <%= link_to 'Supprimer', project_path(project),
                 data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
                 class: "button button-delete" %>
