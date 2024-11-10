@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :ensure_admin!, except: %i[index show]
+
   def index
     @admin_user = User.find_by(admin: true)
     @projects = Project.order(created_at: :asc)

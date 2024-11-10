@@ -14,7 +14,7 @@
     <%= link_to 'Contact.', new_contact_path %>
 
     <% if params[:admin_access] == ENV['ADMIN_ACCESS'] %>
-      <%= link_to "Accéder à l'administration", rails_admin_path %>
+      <%= link_to "Accéder à l'administration", new_user_session_path %>
     <% end %>
 
   </div>

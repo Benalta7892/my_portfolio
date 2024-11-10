@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[new create]
+  before_action :ensure_admin!, except: %i[new create]
+
   def index
   end
 

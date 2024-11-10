@@ -1,4 +1,7 @@
 class ResumesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[download_resume]
+  before_action :ensure_admin!, except: %i[download_resume]
+
   def index
   end
 

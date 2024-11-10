@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: %i[home about]
+  before_action :ensure_admin!, except: %i[home about]
 
   def home
     @admin_user = User.find_by(admin: true)
