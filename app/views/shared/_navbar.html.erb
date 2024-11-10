@@ -12,12 +12,6 @@
     <%= link_to 'À propos.', about_path %>
     <%= link_to 'Portfolio.', projects_path %>
     <%= link_to 'Contact.', new_contact_path %>
-
-    <% if user_signed_in? && current_user.admin? %>
-      <%= link_to "Accéder à l'administration", rails_admin_path %>
-    <% end %>
-
-
   </div>
 
   <div class="main-navlinks">

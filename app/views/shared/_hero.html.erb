@@ -6,6 +6,10 @@
       <span>A</span>lexandre</h1>
     <p class="subtitle">Développeur web - Full Stack</p>
     <%= link_to "Mon CV.", download_resume_path(@resume), class: "button-download", target: "_blank" %>
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to "Accéder à l'espace Admin", rails_admin_path, target: "_blank", class: "button-download" %>
+    <% end %>
+
   </div>
   <div class="links">
     <%= link_to "https://www.linkedin.com/in/benalta7892", class: "link", target: "_blank" do %>

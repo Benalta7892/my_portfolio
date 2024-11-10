@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_message(@contact).deliver_now
-      flash[:notice] = "Votre message a été envoyé avec succès."
+      flash[:notice] = "Merci pour votre message ! 📬 Je vous réponds au plus vite."
       redirect_to root_path
     else
       flash[:alert] = "Votre message n'a pas pu être envoyé."
