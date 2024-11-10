@@ -1,8 +1,10 @@
 <%# browser-sync start --proxy "localhost:3000" --files "app/views/**/*.erb, app/assets/stylesheets/**/*.css, app/assets/javascripts/**/*.js, app/models/**/*.rb, app/controllers/**/*.rb" --no-notify --watch --watch-options-ignoreInitial --watch-options-awaitWriteFinish %>
+<br>
+<a id="first-section"></a>
 
 <div class="custom-cursor"></div>
 
-<section class="section-presentation" id="first-section">
+<section class="section-presentation"  data-aos="fade-up">
 
   <div class="text-content-presentation">
 
@@ -21,7 +23,7 @@
 </section>
 
 
-<section class="section-skills">
+<section class="section-skills" data-aos="fade-up">
 
   <%# Lien pour ajouter une nouvelle technologie si l'utilisateur est administrateur %>
   <% if user_signed_in? && current_user.admin? %>
@@ -152,7 +154,7 @@
 </section>
 
 
-<section class="section-portolio">
+<section class="section-portolio" data-aos="fade-up">
   <h2><span>P</span>rojets phares</h2>
 
 

@@ -1,3 +1,6 @@
+<br>
+<a id="first-section"></a>
+
 <%# Ici rajouter un lien/bouton pour un retour a l'index des projets %>
 <%# <div class="back-btn" id="first-section"> %>
 <%# link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "back-btn", id: "first-section" %>
@@ -5,7 +8,7 @@
 
 
 <%# Affichage du bouton Modifier si l'utilisateur est admin %>
-<div class="editOrDeleteBtn" id="first-section">
+<div class="editOrDeleteBtn">
   <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "button button-back", onclick: "window.history.back();" %>
 
 
@@ -23,7 +26,7 @@
 </div>
 
 
-<section class="section-swiper">
+<section class="section-swiper" data-aos="fade-up">
   <h2><span>V</span>ue d'ensemble</h2>
 
   <div class="carousel-swiper">
@@ -68,7 +71,7 @@
 </section>
 
 
-<section class="section-details-container">
+<section class="section-details-container" data-aos="fade-up">
   <h2><span>O</span>bjectif et fonctionnalités</h2>
 
 
@@ -102,7 +105,7 @@
 <%# <h2>Technologies utilisées</h2> %>
 
 
-<section class="section-skills">
+<section class="section-skills" data-aos="fade-up">
   <div class="skills-content">
 
     <div class="front-end">

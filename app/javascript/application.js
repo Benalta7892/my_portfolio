@@ -10,3 +10,4 @@ import "./navbar";
 import "./vanta";
 import "./smooth_scroll";
 import "./features";
+import "./aos_init";

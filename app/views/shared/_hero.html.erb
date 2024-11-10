@@ -1,18 +1,18 @@
 <div class="hero-content">
 
 
-  <div class="hero-top-content">
+  <div class="hero-top-content" data-aos="zoom-in">
     <h1><span>B</span>enoit<br>
       <span>A</span>lexandre</h1>
     <p class="subtitle">Développeur web - Full Stack</p>
     <%= link_to "Mon CV.", download_resume_path(@resume), class: "button-download", target: "_blank" %>
   </div>
   <div class="links">
-    <%= link_to "https://www.linkedin.com/in/benalta7892", class: "link", target: "_blank" do %>
+    <%= link_to "https://www.linkedin.com/in/benalta7892", class: "link", target: "_blank", data: { aos: "zoom-in" } do %>
       <%= image_tag "linkedin.png", alt: "Linkedin" %>
     <% end %>
 
-    <%= link_to "https://github.com/benalta7892", class: "link", target: "_blank" do %>
+    <%= link_to "https://github.com/benalta7892", class: "link", target: "_blank", data: { aos: "zoom-in" } do %>
       <%= image_tag "github.png", alt: "Github" %>
     <% end %>
 
@@ -22,7 +22,7 @@
   </div>
 
   <%# ajouter un bouton qui scroll jusqu'a la prochaine section %>
-  <%= link_to "#first-section", id: "scroll-down" do %>
+  <%= link_to "#first-section", id: "scroll-down", data: { aos: "zoom-in" } do %>
     <i class="fa-solid fa-caret-down"></i>
   <% end %>
 

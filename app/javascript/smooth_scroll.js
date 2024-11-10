@@ -1,6 +1,7 @@
 function setupScrollButtons() {
   const scrollUpButton = document.getElementById("scroll-up");
   const scrollDownButton = document.querySelector('a[href="#first-section"]');
+  const isAboutPage = document.body.classList.contains("about-page");
 
   function toggleScrollUpButton() {
     const scrollDownPosition = scrollDownButton.getBoundingClientRect().top;
@@ -21,14 +22,19 @@ function setupScrollButtons() {
       const targetId = this.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
+      // Défilement fluide vers l'élément cible
       if (targetElement) {
         event.preventDefault();
         const targetOffsetTop = targetElement.getBoundingClientRect().top + window.scrollY;
         const computedStyle = window.getComputedStyle(targetElement);
         const marginTop = parseFloat(computedStyle.marginTop);
 
+        // Ajuste le décalage de -80 si on est sur la page "about"
+        const offset = isAboutPage ? marginTop + 100 : marginTop;
+
+        // Défilement fluide vers l'élément cible avec un décalage pour compenser la marge
         window.scrollTo({
-          top: targetOffsetTop - marginTop,
+          top: targetOffsetTop - offset,
           behavior: "smooth",
         });
       }
