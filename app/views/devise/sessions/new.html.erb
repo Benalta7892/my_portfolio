@@ -2,7 +2,7 @@
 
   <h2><span>L</span>og in</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-inputs' }) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-inputs newsessionform' }) do |f| %>
 
     <% if resource.errors.any? %>
       <div id="error_explanation">
