@@ -1,0 +1,59 @@
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  width: 100%;
+  padding: 18px;
+  border-top: 2px solid #d5d5d5;
+  border-radius: 24px;
+  gap: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.logos:hover {
+  transform: scale(1.1);
+}
+
+.logos a {
+  border-radius: 24px;
+}
+
+.logos img {
+  width: 70px;
+  height: 70px;
+  padding: 8px;
+  border-radius: 24px;
+  border: 2px solid #f1f1f1;
+  background-color: #fff;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.popover-content {
+  position: absolute;
+  opacity: 0;
+  background: #fff;
+  border: 2px solid #f1f1f1;
+  padding: 8px;
+  margin: 18px;
+  border-radius: 24px;
+  font-family: lato, sans-serif !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popover-content p {
+  margin: 4px;
+}
+
+.popover-visible {
+  opacity: 1;
+  pointer-events: auto;
+}

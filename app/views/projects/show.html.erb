@@ -106,10 +106,13 @@
 
 
 <section class="section-skills" data-aos="fade-up">
+
+  <h2><span>S</span>tack pour ce projet</h2>
+
   <div class="skills-content">
 
-    <div class="front-end">
-      <h2><span>S</span>tack Front-End</h2>
+    <div class="skill-category">
+      <h2><span>F</span>ront-End</h2>
       <div class="logos">
         <% @frontend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
@@ -130,8 +133,8 @@
     </div>
 
 
-    <div class="back-end">
-      <h2><span>S</span>tack Back-End</h2>
+    <div class="skill-category">
+      <h2><span>B</span>ack-End</h2>
       <div class="logos">
         <% @backend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
@@ -152,7 +155,7 @@
     </div>
 
 
-    <div class="outils">
+    <div class="skill-category">
       <h2><span>O</span>utils</h2>
       <div class="logos">
         <% @tools.each do |tool| %>
