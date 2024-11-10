@@ -82,7 +82,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 54px 0;
-  padding-bottom: 80px;
+  padding-bottom: 18px 0 80px;
   border: 2px solid #f1f1f1;
   border-radius: 24px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -214,10 +214,6 @@ main {
     position: relative;
     right: 2%;
   }
-
-  // a {
-  //   align-self: center;
-  // }
 }
 
 @media (min-width: 1127px) {
@@ -314,60 +310,13 @@ main {
     margin: 0;
   }
 
-  .carousel-slide {
-    // width: 100%;
-    // height: auto;
-  }
-
   .carousel-portfolio .btn-carousel {
     padding: 4px;
     margin: 4px;
     position: absolute;
     top: 106%;
   }
-
-  // .carousel-portfolio .btn-carousel.left {
-  //   left: 36%;
-  //   z-index: 1;
-  // }
-
-  // .carousel-portfolio .btn-carousel.right {
-  //   right: 36%;
-  //   z-index: 1;
-  // }
-
-  // .btn-carousel .custom-arrow {
-  //   height: 60px;
-  //   width: 30px;
-  // }
 }
-
-// @media (min-width: 700px) and (max-width: 700px) {
-//   .section-portolio {
-//     padding: 4px;
-//     margin: 24px 0;
-//   }
-
-//   .section-portolio .link-more {
-//     margin: 8px;
-//     padding: 10px;
-//     font-size: 12px;
-//   }
-
-//   .section-portolio a {
-//     margin: 0;
-//   }
-
-//   .carousel-slide {
-//     width: 100%;
-//     height: auto;
-//   }
-
-//   .btn-carousel .custom-arrow {
-//     height: 70px;
-//     width: 40px;
-//   }
-// }
 
 @media (max-width: 1395px) {
   .container-portfolio {
@@ -415,13 +364,6 @@ main {
   .section-presentation {
     margin: 24px 0;
     padding: 18px;
-
-    .text-content-presentation {
-      // img {
-      //   width: 200px;
-      //   height: 200px;
-      // }
-    }
   }
 
   .section-skills {
@@ -561,16 +503,6 @@ main {
     padding: 10px;
     font-size: 12px;
   }
-
-  // .carousel-portfolio .btn-carousel.left {
-  //   left: 34%;
-  //   z-index: 1;
-  // }
-
-  // .carousel-portfolio .btn-carousel.right {
-  //   right: 34%;
-  //   z-index: 1;
-  // }
 
   .section-portolio {
     .container-portfolio {
@@ -720,10 +652,6 @@ main {
     padding: 18px;
 
     .text-content-presentation {
-      // img {
-      //   margin: 28px 34px 28px 0;
-      // }
-
       h2 {
         align-self: flex-start;
         margin: 4px;
