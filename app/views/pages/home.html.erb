@@ -13,7 +13,12 @@
     <%# </div> %>
 
     <h2><span>B</span>ienvenue</h2>
-    <p>Je suis <span>développeur web full stack</span> avec une expertise solide dans le développement de projets complets, du back-end au front-end. Explorez mon parcours, mes réalisations et discutons pour concretiser vos idées.</p>
+    <p>
+      Je suis <span>développeur web full stack</span> avec une expertise solide
+      dans le développement de projets complets, de la conception au déploiement.
+      Explorez mon profil avec un regard sur comment je peux mettre mes compétences
+      au service de vos objectifs. 🙂
+    </p>
 
   </div>
 
@@ -25,6 +30,8 @@
 
 <section class="section-skills" data-aos="fade-up">
 
+  <h2><span>S</span>tack des technologies maîtrisées</h2>
+
   <%# Lien pour ajouter une nouvelle technologie si l'utilisateur est administrateur %>
   <% if user_signed_in? && current_user.admin? %>
     <div class="add-tech-link">
@@ -35,8 +42,9 @@
 
   <div class="skills-content">
 
+
     <div class="skill-category">
-      <h2><span>S</span>kills Front-End</h2>
+      <h2><span>F</span>ront-End</h2>
       <div class="logos">
         <% @frontend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
@@ -76,7 +84,7 @@
 
 
     <div class="skill-category">
-      <h2><span>S</span>kills Back-End</h2>
+      <h2><span>B</span>ack-End</h2>
       <div class="logos">
         <% @backend_technologies.each do |tech| %>
           <% if tech.logo.attached? && tech.link.present? %>
