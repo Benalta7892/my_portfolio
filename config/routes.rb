@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'projects/edit'
   get 'projects/update'
   get 'projects/destroy'
-  devise_for :users, skip: [:registrations, :passwords, :confirmations, :unlocks, :omniauth_callbacks]
+  devise_for :users, skip: [:registrations, :passwords, :confirmations, :unlocks, :omniauth_callbacks], controllers: {
+    sessions: 'users/sessions'
+  }
   root to: "pages#home"
   get 'about', to: 'pages#about', as: :about
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
