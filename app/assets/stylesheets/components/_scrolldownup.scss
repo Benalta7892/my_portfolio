@@ -1,0 +1,51 @@
+#scroll-down {
+  padding: 10px 15px;
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
+  text-decoration: none;
+  width: fit-content;
+  position: relative;
+  top: -134px;
+  margin: 0 auto;
+  align-self: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.fa-caret-up,
+.fa-caret-down {
+  font-size: 20px;
+}
+
+#scroll-up {
+  position: fixed;
+  bottom: 18px;
+  right: 14px;
+  padding: 10px 15px;
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #f1f1f1;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1000;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.hidden {
+  display: none;
+}
