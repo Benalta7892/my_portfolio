@@ -9,7 +9,7 @@
 
 <%# Affichage du bouton Modifier si l'utilisateur est admin %>
 <div class="editOrDeleteBtn">
-  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "button button-back", onclick: "window.history.back();" %>
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "button button-back" %>
 
 
   <% if user_signed_in? && current_user.admin? %>
