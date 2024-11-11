@@ -58,7 +58,7 @@
       width: fit-content;
       display: flex;
       flex-direction: column;
-      opacity: 0.8;
+      // opacity: 0.8;
       gap: 20px;
 
       .link {
@@ -101,38 +101,3 @@
     }
   }
 }
-
-// @media (max-width: 425px) {
-//   .small-hero {
-//     .small-hero-content {
-//       .small-hero-top-content {
-//         .subtitle {
-//           max-width: 175px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 375px) {
-//   .small-hero {
-//     .small-hero-content {
-//       .small-hero-top-content {
-//         .subtitle {
-//           max-width: 150px;
-//         }
-//       }
-//     }
-//   }
-// }
-// @media (max-width: 320px) {
-//   .small-hero {
-//     .small-hero-content {
-//       .small-hero-top-content {
-//         .subtitle {
-//           max-width: 126px;
-//         }
-//       }
-//     }
-//   }
-// }

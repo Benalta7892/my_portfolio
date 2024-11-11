@@ -24,6 +24,22 @@ body {
   background-color: #ebf8ff;
 }
 
+header {
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 200px; /* Ajuste la hauteur du fondu */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ebf8ff 100%);
+  /* Change la couleur #ffffff en fonction de la couleur de fond du main */
+  z-index: 0;
+}
+
 main {
   width: calc(100% - 240px);
   max-width: 1270px;
