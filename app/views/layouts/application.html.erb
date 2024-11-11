@@ -23,7 +23,13 @@
   </head>
   <body id="top-page" <%= 'data-controller="about"' if current_page?(about_path) %> class="<%= 'about-page' if current_page?(about_path) %>">
     <!-- Définition de la classe du header en fonction de la page -->
-    <header id="vantajs" class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %> <%= controller_name %>-page">
+    <header
+      <% if !(controller_name == "projects" && action_name == "show") %>
+        id="vantajs"
+      <% end %>
+      class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %> <%= controller_name %>-page"
+    >
+
       <%# id="= current_page?(root_path) ? 'vantajs' : ''" %>
 
 
