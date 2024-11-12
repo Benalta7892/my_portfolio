@@ -21,6 +21,7 @@ class Project < ApplicationRecord
            inverse_of: :projects
 
   has_many_attached :pictures
+  has_one_attached :background_image
 
   validates :title, presence: true
   validates :subtitle, presence: true

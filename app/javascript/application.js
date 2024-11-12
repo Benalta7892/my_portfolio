@@ -12,3 +12,4 @@ import "./smooth_scroll";
 import "./features";
 import "./aos_init";
 import "./sessionstorage";
+import "./darkmode";

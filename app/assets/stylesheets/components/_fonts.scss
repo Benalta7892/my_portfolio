@@ -1,6 +1,6 @@
 h1 {
   font-family: "Raleway", sans-serif;
-  font-size: clamp(16px, 6vw, 84px);
+  font-size: clamp(16px, 10vw, 84px);
   font-weight: 800;
   text-transform: uppercase;
   background-clip: text;
@@ -35,8 +35,8 @@ h4 {
 
 .subtitle {
   font-weight: 200;
-  font-size: clamp(6px, 3vw, 24px);
-  max-width: clamp(120px, 47vw, 468px);
+  font-size: clamp(6px, 6vw, 24px);
+  // max-width: clamp(120px, 47vw, 468px);
   color: #1a2c37;
   margin: 0;
   padding: 0;

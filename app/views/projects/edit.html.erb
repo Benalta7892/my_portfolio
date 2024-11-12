@@ -31,6 +31,11 @@
     </div>
 
     <div class="field">
+      <%= form.label :background_image, "Image de fond" %>
+      <%= form.file_field :background_image, accept: "image/*" %>
+    </div>
+
+    <div class="field">
       <%= form.label :link, "Lien vers le projet (ex: GitHub)" %>
       <%= form.text_field :link %>
     </div>

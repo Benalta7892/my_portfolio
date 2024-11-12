@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(project_params)
 
     if @project.save
-      redirect_to projects_path, notice: "Projet créé avec succès."
+      redirect_to @project, notice: "Projet créé avec succès."
     else
       render 'new', status: :unprocessable_entity
     end
@@ -90,6 +90,7 @@ class ProjectsController < ApplicationController
       :description,
       :link,
       :dev_count,
+      :background_image,
       features: [],
       pictures: [],
       frontend_technology_ids: [],

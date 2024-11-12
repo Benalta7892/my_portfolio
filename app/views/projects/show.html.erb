@@ -37,7 +37,7 @@
     <div class="swiper-container">
       <div data-controller="swiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
         <div class="swiper-wrapper">
-          <% @project.pictures.each do |picture| %>
+          <% @project.pictures.order(:created_at).each do |picture| %>
             <div class="swiper-slide">
               <% # Utiliser l'URL Cloudinary directement pour les images du projet %>
               <%= cl_image_tag(picture.key, class: "swiper-slide-img", alt: "Image du projet") %>
@@ -48,7 +48,7 @@
 
       <div thumbsSlider="" class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <% @project.pictures.each do |picture| %>
+          <% @project.pictures.order(:created_at).each do |picture| %>
             <div class="swiper-slide">
               <% # Utiliser l'URL Cloudinary directement pour les images du projet (vignettes) %>
               <%= cl_image_tag(picture.key, class: "little-img-carousel", alt: "Image vignette du projet") %>

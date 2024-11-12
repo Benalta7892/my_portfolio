@@ -21,14 +21,23 @@
     <%# <link rel="stylesheet" href="https://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/gh.css"> %>
 
   </head>
-  <body id="top-page" <%= 'data-controller="about"' if current_page?(about_path) %> class="<%= 'about-page' if current_page?(about_path) %>">
+  <body id="top-page" <%= 'data-controller="about"' if current_page?(about_path) %> <%= 'about-page' if current_page?(about_path) %>">
+
+    <div class="overlay"></div>
+
     <!-- Définition de la classe du header en fonction de la page -->
     <header
       <% if !(controller_name == "projects" && action_name == "show") %>
         id="vantajs"
       <% end %>
       class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %> <%= controller_name %>-page"
+      <% if controller_name == "projects" && action_name == "show" && @project.background_image.attached? %>
+        style="background-image: url(<%= cl_image_path(@project.background_image.key) %>);"
+      <% elsif ["new", "edit"].include?(action_name) && controller_name != "contacts" %>
+        style="background-image: url(<%= cl_image_path('neweditform_crvorp.png') %>);"
+      <% end %>
     >
+
 
       <%# id="= current_page?(root_path) ? 'vantajs' : ''" %>
 

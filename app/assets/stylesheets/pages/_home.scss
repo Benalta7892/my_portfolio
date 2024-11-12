@@ -24,6 +24,28 @@ body {
   background-color: #ebf8ff;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité selon le besoin */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5; /* Placez le z-index juste en dessous de la navbar ouverte */
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all; /* Active le clic pour fermer l'overlay */
+}
+
+.nav-links {
+  z-index: 10; /* Pour assurer que la navbar est au-dessus de l'overlay */
+}
+
 header {
   position: relative;
 }

@@ -13,7 +13,7 @@ document.addEventListener("turbo:load", () => {
 
       featureField.innerHTML = `
         <input type="text" name="project[features][]" class="form-control" placeholder="Fonctionnalité ${index + 1}">
-        <button type="button" class="remove-feature-btn" onclick="removeFeature(this)">Retirer</button>
+        <button type="button" class="remove-feature-btn button" onclick="removeFeature(this)">Retirer</button>
       `;
 
       featuresList.appendChild(featureField);

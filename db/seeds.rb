@@ -127,6 +127,7 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
+    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370314/hero1_oqudl7.jpg",
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
@@ -161,6 +162,7 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
+    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370403/poke1_jg78kt.jpg",
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
@@ -184,6 +186,7 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
+    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370314/hero1_oqudl7.jpg",
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
@@ -218,6 +221,7 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
+    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370403/poke1_jg78kt.jpg",
     # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
@@ -242,6 +246,11 @@ projects.each do |project_data|
     project_data[:pictures].each_with_index do |picture_url, index|
       project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
     end
+  end
+
+  # Attacher l'image de fond du projet si elle est présente
+  if project_data[:background_image] && !project.background_image.attached?
+    project.background_image.attach(io: URI.open(project_data[:background_image]), filename: "background_image.jpg")
   end
 
   # Associer les technologies front-end

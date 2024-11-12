@@ -52,12 +52,12 @@ document.addEventListener("turbo:load", function () {
       color1: 0x4dbfe3,
       color2: 0xff3838,
       colorMode: "lerp",
-      birdSize: 0.5,
+      birdSize: 0.8,
       wingSpan: 20,
       separation: 10,
       alignment: 20,
       cohesion: 20,
-      quantity: 6.9,
+      quantity: 3.5,
     });
   } else if (vantaElement.classList.contains("projects-page")) {
     vantaEffect = VANTA.WAVES({
@@ -85,9 +85,9 @@ document.addEventListener("turbo:load", function () {
       minWidth: 200.0,
       color: 0x5588,
       backgroundColor: 0xebf8ff,
-      points: 20,
-      maxDistance: 70,
-      spacing: 90,
+      points: 4,
+      maxDistance: 18,
+      spacing: 18,
     });
   }
 });
