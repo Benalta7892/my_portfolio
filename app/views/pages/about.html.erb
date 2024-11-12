@@ -2,13 +2,13 @@
 <a id="first-section"></a>
 
 
-<div class="cv-container" data-aos="fade-up">
-  <div class="cv-description">
+<div class="cv-container">
+  <div class="cv-description" data-aos="fade-up" data-aos-once="true">
     <p><%= @resume.description[0] %></p>
     <p><%= @resume.description[1] %></p>
   </div>
 
-  <div class="cv-download" >
+  <div class="cv-download" data-aos="fade-up">
     <%= cl_image_tag @resume.picture.key, alt: "Image du CV" %>
 
     <!-- bouton de téléchargement avec popover -->
@@ -30,7 +30,7 @@
 
 <%# <div class="time-line-container"> %>
 <!-- Section Éducation -->
-<div class="section-parcours" data-aos="fade-up">
+<div class="section-parcours" data-aos="fade-up" data-aos-once="true">
   <h2><span>C</span>onfirmé par des diplômes</h2>
   <% if user_signed_in? && current_user.admin? %>
     <%= link_to "Ajouter une nouvelle éducation", new_resume_education_path(@resume.id), class: "button", data: { turbo: false } %>
@@ -66,7 +66,7 @@
 
 <% if false %>
   <!-- Section Expérience -->
-  <div class="section-experiences" data-aos="fade-up">
+  <div class="section-experiences" data-aos="fade-up" data-aos-once="true">
     <h2><span>E</span>xperiences Professionnelles</h2>
     <% if user_signed_in? && current_user.admin? %>
       <%= link_to "Ajouter une nouvelle expérience", new_resume_experience_path(@resume.id), class: "button" %>
