@@ -30,6 +30,6 @@ class PagesController < ApplicationController
     @experiences = @resume.experiences.order(end_date: :desc)
 
     @title = "Mon chemin"
-    @subtitle = "Tourné vers l'appel du developpement web, vers une passion."
+    @subtitle = "La beauté d’une voie réside dans notre capacité à nous réinventer."
   end
 end

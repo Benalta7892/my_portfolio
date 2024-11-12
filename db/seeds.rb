@@ -110,16 +110,29 @@ puts "TechnologyItems created!"
 # Create projects
 puts "Creating projects..."
 
+
+"Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
+Avec une interface intuitive et une gestion fluide des réservations,
+elle offre une expérience utilisateur optimale.
+Le projet repose sur un concept ludique de super-héros,
+permettant d’explorer les fonctionnalités clés d’un service de réservation en ligne."
+
+
+
 projects = [
   {
     title: "Zero to Heroes1",
     subtitle: "Application web de location.",
-    description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
+    description: "Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
+      Avec une interface intuitive et une gestion fluide des réservations,
+      elle offre une expérience utilisateur optimale.
+      Le projet repose sur un concept ludique de super-héros,
+      permettant d’explorer les fonctionnalités clés d’un service de réservation en ligne.",
     features: [
-      "Espace personnel sécurisé.",
-      "Gestion des réservations.",
-      "Recherche basée sur la géolocalisation.",
-      "Réservation à la journée ou pour plusieurs jours."
+      "Un espace personnel sécurisé.",
+      "La gestion des réservations.",
+      "Une recherche basée sur la géolocalisation.",
+      "La réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
@@ -139,15 +152,18 @@ projects = [
   {
     title: "PokéSwype1",
     subtitle: "Application web de collection.",
-    description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
+    description: "PokéSwype, c’est le Tinder des cartes Pokémon :
+      une application web mobile qui connecte les passionnés pour échanger leurs cartes et gérer leurs collections.
+      Ce projet a été l’occasion de travailler sur des interfaces intuitives, la gestion de bases de données
+      et des fonctionnalités de réseau social rendant les échanges plus accessibles.",
     features: [
-      "Espace personnel sécurisé.",
-      "Gestion des échanges de cartes.",
-      "Recherche avec Swype, basée sur la géolocalisation.",
-      "Messagerie instantanée",
-      "Validation des échange par QR Code",
-      "Notifications en temps réel",
-      "Système de notation pour renforcer la confiance."
+      "Un espace personnel sécurisé.",
+      "La gestion des échanges de cartes.",
+      "Une recherche avec Swype, basée sur la géolocalisation.",
+      "Une messagerie instantanée.",
+      "La validation des échanges par QR Code.",
+      "Des notifications en temps réel.",
+      "Un système de notation pour renforcer la confiance."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
@@ -173,12 +189,16 @@ projects = [
   {
     title: "Zero to Heroes2",
     subtitle: "Application web de location.",
-    description: "Imaginez un service unique qui permet aux utilisateurs de louer des super-héros pour des événements spéciaux. Une interface intuitive combinée à une gestion fluide des réservations, conçue pour offrir une expérience inoubliable.",
+    description: "Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
+      Avec une interface intuitive et une gestion fluide des réservations,
+      elle offre une expérience utilisateur optimale.
+      Le projet repose sur un concept ludique de super-héros,
+      permettant d’explorer les fonctionnalités clés d’un service de réservation en ligne.",
     features: [
-      "Espace personnel sécurisé.",
-      "Gestion des réservations.",
-      "Recherche basée sur la géolocalisation.",
-      "Réservation à la journée ou pour plusieurs jours."
+      "Un espace personnel sécurisé.",
+      "La gestion des réservations.",
+      "Une recherche basée sur la géolocalisation.",
+      "La réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
@@ -198,15 +218,18 @@ projects = [
   {
     title: "PokéSwype2",
     subtitle: "Application web de collection.",
-    description: "PokéSwype est une application web qui vous connecte à d'autres dresseurs pour échanger des cartes Pokémon et enrichir votre collection. Profitez d'un réseau social dynamique où vous pouvez discuter et négocier vos échanges en un simple glissement.",
+    description: "PokéSwype, c’est le Tinder des cartes Pokémon :
+      une application web mobile qui connecte les passionnés pour échanger leurs cartes et gérer leurs collections.
+      Ce projet a été l’occasion de travailler sur des interfaces intuitives, la gestion de bases de données
+      et des fonctionnalités de réseau social rendant les échanges plus accessibles.",
     features: [
-      "Espace personnel sécurisé.",
-      "Gestion des échanges de cartes.",
-      "Recherche avec Swype, basée sur la géolocalisation.",
-      "Messagerie instantanée",
-      "Validation des échange par QR Code",
-      "Notifications en temps réel",
-      "Système de notation pour renforcer la confiance."
+      "Un espace personnel sécurisé.",
+      "La gestion des échanges de cartes.",
+      "Une recherche avec Swype, basée sur la géolocalisation.",
+      "Une messagerie instantanée.",
+      "La validation des échanges par QR Code.",
+      "Des notifications en temps réel.",
+      "Un système de notation pour renforcer la confiance."
     ],
     pictures: [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
@@ -271,13 +294,16 @@ puts "Creating a resume..."
 resume = user.create_resume!(
   title: "Mon CV",
   description: [
-    "Du commerce à la tech, je crée des solutions alliant simplicité,
-    esthétique et performance pour donner vie à des projets uniques.",
+    "Du commerce à la tech, je m’épanouis dans la création d’applications web
+    alliant simplicité, esthétique et performance.",
 
-    "Transformer des idées en applications concrètes et explorer de nouvelles
-    technologies est ce qui me pousse à aller toujours plus loin."
+    "Transformer des idées en solutions digitales me conduit à faire la lumière sur de nouvelles
+    technologies – un terrain de jeu et d’apprentissage qui me captive depuis longtemps,
+    stimulant ma curiosité et nourrissant mon desir d'aller toujours plus loin."
   ]
 )
+# "attisant mon désir d'aller toujours plus loin"
+# "stimulant ma curiosité à aller toujours plus loin"
 
 unless resume.picture.attached?
   resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311478/cv_w47x6j.png"), filename: "cv.jpg")
