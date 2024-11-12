@@ -84,7 +84,7 @@
 }
 
 /* Appliquer un léger zoom sur mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .small-hero {
     background-size: 120%; /* Légèrement plus grand pour un effet de zoom */
     background-position: center;
