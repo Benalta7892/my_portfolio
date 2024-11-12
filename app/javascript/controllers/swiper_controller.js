@@ -21,7 +21,6 @@ export default class extends Controller {
   }
 
   initializeSwiper() {
-    // Utiliser Swiper directement
     const swiper = new Swiper(".mySwiper", {
       loop: true,
       spaceBetween: 10,
@@ -42,52 +41,56 @@ export default class extends Controller {
       },
     });
 
-    // // Ajuster la hauteur initialement et lors des changements de slide
-    // this.swiper2.on("slideChangeTransitionEnd", () => {
-    //   this.adjustContainerHeight(this.swiper2);
-    //   this.applyObjectFit();
-    // });
+    // Ajuster la hauteur initialement après la première initialisation
+    this.adjustContainerHeight(this.swiper2);
+    this.applyObjectFit();
 
-    // // Ajuster la hauteur initialement après la première initialisation
-    // this.adjustContainerHeight(this.swiper2);
-    // this.applyObjectFit();
+    // Ajuster la hauteur lors des changements de slide
+    this.swiper2.on("slideChangeTransitionEnd", () => {
+      this.adjustContainerHeight(this.swiper2);
+      this.applyObjectFit();
+    });
   }
 
-  // // Fonction pour ajuster la hauteur du conteneur
-  // adjustContainerHeight(swiperInstance) {
-  //   const container = document.querySelector(".mySwiper2");
-  //   const activeSlide = swiperInstance.slides[swiperInstance.activeIndex]?.querySelector("img");
+  // Fonction pour ajuster la hauteur du conteneur avec min-height conditionnelle
+  adjustContainerHeight(swiperInstance) {
+    const container = document.querySelector(".mySwiper2");
+    const activeSlide = swiperInstance.slides[swiperInstance.activeIndex]?.querySelector("img");
 
-  //   if (container && activeSlide) {
-  //     // Réinitialiser la hauteur avant de définir la nouvelle
-  //     container.style.height = "";
+    if (container && activeSlide) {
+      // Réinitialiser la hauteur avant de définir la nouvelle
+      container.style.height = "";
 
-  //     // Mettre à jour la hauteur après le chargement de l'image active
-  //     const updateHeight = () => {
-  //       container.style.height = `${activeSlide.offsetHeight}px`;
-  //     };
+      // Mettre à jour la hauteur après le chargement de l'image active
+      const updateHeight = () => {
+        container.style.height = `${activeSlide.offsetHeight}px`;
 
-  //     // Écouter l'événement de chargement de l'image active
-  //     if (!activeSlide.complete) {
-  //       activeSlide.addEventListener("load", updateHeight);
-  //     } else {
-  //       // Si l'image est déjà chargée
-  //       updateHeight();
-  //     }
-  //   }
-  // }
+        // Vérifie les dimensions de l'image et applique min-height si nécessaire
+        if (activeSlide.naturalHeight > activeSlide.naturalWidth) {
+          container.style.minHeight = "450px";
+        } else {
+          container.style.minHeight = ""; // Réinitialise min-height si la condition ne correspond pas
+        }
+      };
 
-  // // Fonction pour appliquer l'objet fit en fonction de la hauteur de l'image et de la taille de l'écran
-  // applyObjectFit() {
-  //   const images = document.querySelectorAll(".mySwiper2 img");
-  //   images.forEach((img) => {
-  //     if (window.innerWidth > 365 && img.offsetHeight > 290) {
-  //       // Utiliser 'contain' si la largeur de l'écran est supérieure à 500 et que l'image est grande
-  //       img.style.objectFit = "contain";
-  //     } else {
-  //       // Sinon, appliquer 'fill'
-  //       img.style.objectFit = "fill";
-  //     }
-  //   });
-  // }
+      // Écouter l'événement de chargement de l'image active
+      if (!activeSlide.complete) {
+        activeSlide.addEventListener("load", updateHeight);
+      } else {
+        updateHeight(); // Si l'image est déjà chargée
+      }
+    }
+  }
+
+  // Fonction pour appliquer l'objet fit en fonction de la hauteur de l'image et de la taille de l'écran
+  applyObjectFit() {
+    const images = document.querySelectorAll(".mySwiper2 img");
+    images.forEach((img) => {
+      if (window.innerWidth > 365 && img.offsetHeight > 290) {
+        img.style.objectFit = "contain";
+      } else {
+        img.style.objectFit = "fill";
+      }
+    });
+  }
 }
