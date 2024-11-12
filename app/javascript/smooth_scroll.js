@@ -43,6 +43,10 @@ function setupScrollButtons() {
 
   // Surveille le défilement pour afficher ou masquer le bouton "Remonter"
   window.addEventListener("scroll", toggleScrollUpButton);
+
+  console.log("isAboutPage:", isAboutPage);
+  console.log("marginTop:", marginTop);
+  console.log("offset:", offset);
 }
 
 // Écoute `DOMContentLoaded` et `turbo:load`
