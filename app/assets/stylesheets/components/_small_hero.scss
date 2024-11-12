@@ -8,14 +8,6 @@
   background-attachment: fixed;
   overflow: hidden;
 
-  /* Ajustement pour les petits écrans */
-  @media (max-width: 768px) {
-    .small-hero {
-      background-attachment: scroll; /* Évitez fixed sur mobile pour de meilleurs résultats */
-      background-position: center center;
-    }
-  }
-
   .small-hero-content {
     height: calc(100% - 82px);
     display: flex;
@@ -88,6 +80,15 @@
         }
       }
     }
+  }
+}
+
+/* Appliquer un léger zoom sur mobile */
+@media (max-width: 768px) {
+  .small-hero {
+    background-size: 120%; /* Légèrement plus grand pour un effet de zoom */
+    background-position: center;
+    background-attachment: scroll; /* Empêcher les problèmes de fixed sur mobile */
   }
 }
 
