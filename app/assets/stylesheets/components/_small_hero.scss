@@ -3,10 +3,18 @@
   height: 100vh;
   // background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
   //   url(https://res.cloudinary.com/djgk65kdl/image/upload/v1727459378/jvejyxzmp8r1isdpxhk7.jpg);
-  background-position: bottom;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
   background-attachment: fixed;
   overflow: hidden;
+
+  /* Ajustement pour les petits écrans */
+  @media (max-width: 768px) {
+    .small-hero {
+      background-attachment: scroll; /* Évitez fixed sur mobile pour de meilleurs résultats */
+      background-position: center center;
+    }
+  }
 
   .small-hero-content {
     height: calc(100% - 82px);
