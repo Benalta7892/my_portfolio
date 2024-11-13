@@ -3,32 +3,36 @@ import { initVantaEffect } from "./vanta";
 // Initialisation du mode sombre et des effets Vanta
 document.addEventListener("turbo:load", () => {
   const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+  const darkModeToggle = document.getElementById("btn-darkmode-toggle");
+
   if (darkModeEnabled) {
     document.documentElement.classList.add("dark-mode");
     document.body.classList.add("dark-mode");
+    if (darkModeToggle) darkModeToggle.checked = true; // Coche le bouton si le mode sombre est activé
   } else {
     document.documentElement.classList.remove("dark-mode");
     document.body.classList.remove("dark-mode");
+    if (darkModeToggle) darkModeToggle.checked = false; // Décoche le bouton pour le mode clair
   }
 
   // Initialiser l'effet Vanta avec le thème actuel
   initVantaEffect();
 
-  // Configuration du bouton de bascule de mode sombre
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  // Écouter les changements sur le bouton de bascule
   if (darkModeToggle) {
-    darkModeToggle.removeEventListener("click", toggleDarkMode);
-    darkModeToggle.addEventListener("click", toggleDarkMode);
+    darkModeToggle.removeEventListener("change", toggleDarkMode);
+    darkModeToggle.addEventListener("change", toggleDarkMode);
   }
 });
 
 // Fonction pour basculer le mode sombre
-function toggleDarkMode() {
-  document.documentElement.classList.toggle("dark-mode");
-  document.body.classList.toggle("dark-mode");
+function toggleDarkMode(event) {
+  const isChecked = event.target.checked;
+  document.documentElement.classList.toggle("dark-mode", isChecked);
+  document.body.classList.toggle("dark-mode", isChecked);
 
-  const darkModeEnabled = document.documentElement.classList.contains("dark-mode");
-  localStorage.setItem("darkMode", darkModeEnabled ? "enabled" : "disabled");
+  // Stocker la préférence de mode sombre dans le localStorage
+  localStorage.setItem("darkMode", isChecked ? "enabled" : "disabled");
 
   // Réinitialiser l'effet Vanta pour refléter le changement de couleur
   initVantaEffect();
