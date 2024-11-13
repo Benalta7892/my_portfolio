@@ -15,3 +15,7 @@ pin "slide", to: "slide.js"
 pin "@stimulus-components/popover", to: "https://cdn.jsdelivr.net/npm/@stimulus-components/popover@7.0.0/dist/stimulus-popover.mjs"
 
 pin 'aos', to: 'aos.js', preload: true
+
+
+pin "vantajs", to: "vantajs.js"
+pin "darkmode", to: "darkmode.js"

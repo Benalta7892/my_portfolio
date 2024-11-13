@@ -17,6 +17,14 @@
     }
   }
 
+  .logo {
+    &:hover {
+      pointer-events: none;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
   a {
     color: #ddd6d5;
     background-color: #222;
@@ -66,6 +74,10 @@
   .hero .hero-content .links .link {
     opacity: 0.6;
 
+    &:hover {
+      opacity: 1;
+    }
+
     img {
       &:hover {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3),
@@ -75,7 +87,24 @@
     }
   }
 
-  #scroll-down {
+  .small-hero .small-hero-content .links .link {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      &:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3),
+          0 0 40px rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  #scroll-down,
+  #scroll-up {
     background-color: #222;
 
     &:hover {
@@ -85,9 +114,9 @@
     }
   }
 
-  .fa-caret-up,
-  .fa-caret-down {
-    color: #ddd6d5;
+  .fa-solid {
+    color: #ddd6d5 !important;
+    background-color: #222 !important;
   }
 
   header::after {
@@ -150,6 +179,14 @@
         transform: scale(1.05);
       }
     }
+
+    .popover-content {
+      background-color: #222;
+      color: #ddd6d5;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+        0 0 60px rgba(255, 255, 255, 0.05);
+      transition: box-shadow 0.4s ease, transform 0.3s ease;
+    }
   }
 
   .section-portolio {
@@ -206,7 +243,18 @@
     .contact-input .textarea {
       background-color: #333;
       color: #ddd6d5;
-      border: 1px solid #ddd6d5;
+      border: 2px solid #ddd6d5;
+    }
+
+    .button-submit {
+      background-color: #222;
+      color: #ddd6d5;
+
+      &:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3),
+          0 0 40px rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -233,6 +281,111 @@
         color: inherit;
       }
     }
+  }
+
+  .cv-description,
+  .section-parcours,
+  .section-experiences {
+    background: #222;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+  }
+
+  .cv-download img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+  }
+
+  .box-timeline {
+    background: linear-gradient(0deg, #222 0%, #222 6%, #38b6ff 100%);
+  }
+
+  .box {
+    background: #222;
+    color: #ddd6d5;
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+  }
+
+  .rond {
+    border: 2px solid #222;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+  }
+
+  .ligne {
+    background: #222;
+  }
+
+  .carousel-mask-left {
+    background: linear-gradient(90deg, #222 50%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .carousel-mask-right {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #222 50%);
+  }
+
+  .education-btn .button-edit,
+  .button-delete {
+    background: #222;
+  }
+
+  .section-swiper {
+    background: #222;
+    color: #ddd6d5;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+  }
+
+  .swiper-slide img {
+    background: #333;
+  }
+
+  .link-github {
+    background: #222;
+    color: #ddd6d5;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .dark-mode a {
+      &:hover {
+        pointer-events: none;
+        box-shadow: none;
+        transform: none;
+      }
+    }
+  }
+
+  .btn-carousel-next,
+  .btn-carousel-prev {
+    background: #222;
+    color: #ddd6d5;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+    .custom-arrow {
+      filter: invert(1);
+    }
+  }
+
+  .section-details-container {
+    background: #222;
+    color: #ddd6d5;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.08),
+      0 0 60px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
   }
 }
 

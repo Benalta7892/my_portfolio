@@ -63,11 +63,11 @@
     </div>
   </div>
 
-  <div class="link-github">
-    <% if @project.link.present? %>
-      <%= link_to "🔗 Lien GitHub.", @project.link, target: "_blank" %>
-    <% end %>
-  </div>
+  <%# <div class="link-github"> %>
+  <% if @project.link.present? %>
+    <%= link_to "🔗 Lien GitHub.", @project.link, target: "_blank", class: "link-github" %>
+  <% end %>
+  <%# </div> %>
 </section>
 
 
