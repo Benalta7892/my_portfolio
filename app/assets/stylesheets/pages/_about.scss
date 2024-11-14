@@ -633,7 +633,7 @@
   }
 }
 
-@media (min-width: 500px) and (max-width: 600px) {
+@media (min-width: 501px) and (max-width: 600px) {
   .cv-container {
     flex-direction: row;
   }
@@ -642,13 +642,13 @@
     padding: 12px;
 
     p {
-      font-size: 14px;
+      font-size: 16px;
       padding: 0;
     }
   }
 
   .cv-download {
-    top: -134px;
+    top: -164px;
     margin: 0;
 
     img {
