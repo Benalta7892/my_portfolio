@@ -132,7 +132,7 @@ function initVantaEffect() {
       minHeight: 200.0,
       minWidth: 200.0,
       ...colors.net,
-      points: 20,
+      points: 30,
       maxDistance: 70,
       spacing: 90,
     });
