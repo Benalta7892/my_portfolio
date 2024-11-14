@@ -1,5 +1,8 @@
 <br>
 <a id="first-section"></a>
+<% if request.referer == root_url %>
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, request.referer, class: "button button-back-about" %>
+<% end %>
 
 
 <div class="cv-container">
