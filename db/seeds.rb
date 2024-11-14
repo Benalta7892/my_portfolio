@@ -14,7 +14,6 @@ require 'cloudinary'
 # Clear the database
 puts "Clearing the database..."
 
-# Supprimer les dépendances directes d'abord
 ProjectTechnology.destroy_all
 Experience.destroy_all
 Education.destroy_all
@@ -22,14 +21,11 @@ Project.destroy_all
 Resume.destroy_all
 TechnologyItem.destroy_all
 Contact.destroy_all
-
-# Supprimer l'utilisateur à la fin
 User.destroy_all
 
 puts "Database cleared!"
 
 
-# Create a user
 puts "Creating a user..."
 user = User.create!(
   last_name: ENV["LAST_NAME_ADMIN"],
@@ -81,7 +77,6 @@ tools = [
 
 def create_technology_items(technologies, category)
   technologies.each do |tech|
-    # Création de la technologie avec les champs 'name', 'link', et 'category'
     technology = TechnologyItem.create!(
       name: tech[:name],
       link: tech[:link],
@@ -89,12 +84,9 @@ def create_technology_items(technologies, category)
       order_position: tech[:order_position]
     )
 
-    # Attacher le logo via l'URL Cloudinary générée à partir de l'identifiant
     if tech[:logo].present? && !technology.logo.attached?
-      # Construire l'URL de l'image à partir de l'identifiant de Cloudinary
       logo_url = logo_url = "https://res.cloudinary.com/djgk65kdl/image/upload/#{tech[:version]}/#{tech[:logo]}"
       file = URI.open(logo_url)
-      # Attacher le fichier à la technologie en utilisant Active Storage
       technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
     end
   end
@@ -107,21 +99,11 @@ create_technology_items(tools, 'tools')
 puts "TechnologyItems created!"
 
 
-# Create projects
 puts "Creating projects..."
-
-
-"Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
-Avec une interface intuitive et une gestion fluide des réservations,
-elle offre une expérience utilisateur optimale.
-Le projet repose sur un concept ludique de super-héros,
-permettant d’explorer les fonctionnalités clés d’un service de réservation en ligne."
-
-
 
 projects = [
   {
-    title: "Zero to Heroes1",
+    title: "Zero to Heroes",
     subtitle: "Application web de location.",
     description: "Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
       Avec une interface intuitive et une gestion fluide des réservations,
@@ -141,7 +123,6 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
     ],
     background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370314/hero1_oqudl7.jpg",
-    # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
     tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
@@ -150,7 +131,7 @@ projects = [
     dev_count: 5
   },
   {
-    title: "PokéSwype1",
+    title: "PokéSwype",
     subtitle: "Application web de collection.",
     description: "PokéSwype, c’est le Tinder des cartes Pokémon :
       une application web mobile qui connecte les passionnés pour échanger leurs cartes et gérer leurs collections.
@@ -179,80 +160,12 @@ projects = [
       "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
     ],
     background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370403/poke1_jg78kt.jpg",
-    # Référence aux objets TechnologyItem par catégorie
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
     tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
     link: "https://github.com/Benalta7892/pokeswype",
     dev_count: 5
   },
-  {
-    title: "Zero to Heroes2",
-    subtitle: "Application web de location.",
-    description: "Une plateforme de location pour des événements spéciaux, inspirée du modèle d’Airbnb.
-      Avec une interface intuitive et une gestion fluide des réservations,
-      elle offre une expérience utilisateur optimale.
-      Le projet repose sur un concept ludique de super-héros,
-      permettant d’explorer les fonctionnalités clés d’un service de réservation en ligne.",
-    features: [
-      "Un espace personnel sécurisé.",
-      "La gestion des réservations.",
-      "Une recherche basée sur la géolocalisation.",
-      "La réservation à la journée ou pour plusieurs jours."
-    ],
-    pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
-    ],
-    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370314/hero1_oqudl7.jpg",
-    # Référence aux objets TechnologyItem par catégorie
-    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
-    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
-    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
-
-    link: "https://github.com/Chorusgrey/zero_to_heroes",
-    dev_count: 5
-  },
-  {
-    title: "PokéSwype2",
-    subtitle: "Application web de collection.",
-    description: "PokéSwype, c’est le Tinder des cartes Pokémon :
-      une application web mobile qui connecte les passionnés pour échanger leurs cartes et gérer leurs collections.
-      Ce projet a été l’occasion de travailler sur des interfaces intuitives, la gestion de bases de données
-      et des fonctionnalités de réseau social rendant les échanges plus accessibles.",
-    features: [
-      "Un espace personnel sécurisé.",
-      "La gestion des échanges de cartes.",
-      "Une recherche avec Swype, basée sur la géolocalisation.",
-      "Une messagerie instantanée.",
-      "La validation des échanges par QR Code.",
-      "Des notifications en temps réel.",
-      "Un système de notation pour renforcer la confiance."
-    ],
-    pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
-    ],
-    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370403/poke1_jg78kt.jpg",
-    # Référence aux objets TechnologyItem par catégorie
-    frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
-    backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
-    tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
-    link: "https://github.com/Benalta7892/pokeswype",
-    dev_count: 5
-  },
-
 ]
 
 projects.each do |project_data|
@@ -271,18 +184,14 @@ projects.each do |project_data|
     end
   end
 
-  # Attacher l'image de fond du projet si elle est présente
   if project_data[:background_image] && !project.background_image.attached?
     project.background_image.attach(io: URI.open(project_data[:background_image]), filename: "background_image.jpg")
   end
 
-  # Associer les technologies front-end
   project.frontend_technologies << project_data[:frontend_technologies].to_a
 
-  # Associer les technologies back-end
   project.backend_technologies << project_data[:backend_technologies].to_a
 
-  # Associer les outils
   project.tools << project_data[:tools].to_a
 end
 
@@ -302,8 +211,6 @@ resume = user.create_resume!(
     stimulant ma curiosité et nourrissant mon desir d'aller toujours plus loin."
   ]
 )
-# "attisant mon désir d'aller toujours plus loin"
-# "stimulant ma curiosité à aller toujours plus loin"
 
 unless resume.picture.attached?
   resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1728311478/cv_w47x6j.png"), filename: "cv.jpg")
@@ -473,12 +380,10 @@ experiences.each do |experience_data|
   )
 
   if experience_data[:logo].present?
-    # Si c'est un tableau de logos (plusieurs logos)
     if experience_data[:logo].is_a?(Array)
       experience_data[:logo].each_with_index do |logo_url, index|
         experience.logos.attach(io: URI.open(logo_url), filename: "logo_#{index}.jpg")
       end
-    # Si c'est un seul logo (string)
     elsif experience_data[:logo].is_a?(String)
       experience.logos.attach(io: URI.open(experience_data[:logo]), filename: "logo.jpg")
     end

@@ -3,15 +3,12 @@ document.addEventListener("turbo:load", function () {
 
   const carouselContainer = document.getElementById("carouselContainer");
 
-  // Vérification si l'élément existe avant de manipuler son contenu
   if (carouselContainer) {
-    // Clone the carousel content to create a continuous loop
     const carouselItems = carouselContainer.innerHTML;
     carouselContainer.innerHTML += carouselItems;
 
-    // Set up animation
     let scrollLeft = 0;
-    const scrollSpeed = 4; // Adjust the scroll speed as needed
+    const scrollSpeed = 4;
 
     function animateCarousel(timestamp) {
       if (!lastTimestamp) {
@@ -21,7 +18,7 @@ document.addEventListener("turbo:load", function () {
       const deltaTime = timestamp - lastTimestamp;
       lastTimestamp = timestamp;
 
-      scrollLeft += (scrollSpeed * deltaTime) / 60; // Normalize speed
+      scrollLeft += (scrollSpeed * deltaTime) / 60;
       if (scrollLeft >= carouselContainer.scrollWidth / 2) {
         scrollLeft = 0;
       }

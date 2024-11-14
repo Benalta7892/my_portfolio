@@ -20,8 +20,6 @@
 
     <link rel="stylesheet" href="https://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/gh.css">
 
-    <!-- Appliquer immédiatement le mode sombre si activé dans localStorage -->
-    <!-- Application immédiate du thème sombre si activé -->
     <script>
       (function() {
         // Appliquez immédiatement le mode sombre si activé dans localStorage
@@ -50,12 +48,6 @@
         style="background-image: url(<%= cl_image_path('neweditform_crvorp.png') %>);"
       <% end %>
     >
-
-
-      <%# id="= current_page?(root_path) ? 'vantajs' : ''" %>
-
-
-      <%# <div class="overlay"></div> %>
 
       <!-- Inclure la navbar -->
       <%= render "shared/navbar" %>

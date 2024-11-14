@@ -5,7 +5,6 @@
 .carousel-logos {
   width: 100%;
   margin: 0 auto;
-  // background-color: bisque;
 }
 
 .carousel {
@@ -15,7 +14,6 @@
 }
 
 .carousel-container {
-  /* Prevent logos from wrapping to the next line */
   white-space: nowrap;
   display: flex;
   gap: 100px;
@@ -41,9 +39,9 @@
 .carousel-mask-right {
   position: absolute;
   top: 0;
-  width: 20%; /* Ajuste selon la taille du fondu désiré */
+  width: 20%;
   height: 100%;
-  pointer-events: none; /* Laisse passer les clics */
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -58,45 +56,6 @@
   height: 150px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ebf8ff 50%);
 }
-
-// .carousel {
-//   width: 100%;
-//   overflow: hidden;
-//   position: relative;
-// }
-
-// .carousel-logos {
-//   position: relative;
-//   margin: 0 auto;
-// }
-
-// .carousel-logos::before,
-// .carousel-logos::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   width: 120px; /* Ajustez la largeur du fondu */
-//   z-index: 1;
-//   pointer-events: none;
-// }
-
-// .carousel-logos::before {
-//   left: 0;
-//   background: linear-gradient(to right, white, transparent);
-// }
-
-// .carousel-logos::after {
-//   right: 0;
-//   background: linear-gradient(to left, white, transparent);
-// }
-
-// .carousel-container {
-//   white-space: nowrap;
-//   display: flex;
-//   gap: 100px;
-//   padding: 4px;
-// }
 
 @media (max-width: 320px) {
   .carousel-container {

@@ -11,7 +11,6 @@ pin "@popperjs/core", to: "popper.js", preload: true
 
 pin "scroll", to: "scroll.js"
 pin "slide", to: "slide.js"
-# pin "swiper", to: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"
 pin "@stimulus-components/popover", to: "https://cdn.jsdelivr.net/npm/@stimulus-components/popover@7.0.0/dist/stimulus-popover.mjs"
 
 pin 'aos', to: 'aos.js', preload: true

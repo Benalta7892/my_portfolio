@@ -7,25 +7,20 @@
 
       <div class="contact-row">
         <div class="contact-input">
-          <%#= form.label :last_name, "Nom" %>
           <%= form.text_field :last_name, placeholder: "Votre nom", required: true %>
         </div>
 
         <div class="contact-input">
-          <%#= form.label :email, "Adresse email" %>
           <%= form.email_field :email, placeholder: "Adresse email", required: true %>
         </div>
       </div>
 
 
       <div class="contact-input">
-        <%#= form.label :message, "Message" %>
         <%= form.text_area :message, placeholder: "Votre message", class: "textarea", required: true %>
       </div>
 
-      <%# <div class="btn"> %>
       <%= form.submit "Envoyer.", class: "button-submit" %>
-      <%# </div> %>
     <% end %>
   </div>
 

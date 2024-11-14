@@ -31,20 +31,20 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité selon le besoin */
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 5; /* Placez le z-index juste en dessous de la navbar ouverte */
+  z-index: 5;
 }
 
 .overlay.open {
   opacity: 1;
-  pointer-events: all; /* Active le clic pour fermer l'overlay */
+  pointer-events: all;
 }
 
 .nav-links {
-  z-index: 10; /* Pour assurer que la navbar est au-dessus de l'overlay */
+  z-index: 10;
 }
 
 header {
@@ -57,9 +57,8 @@ header::after {
   bottom: -1px;
   left: 0;
   right: 0;
-  height: 200px; /* Ajuste la hauteur du fondu */
+  height: 200px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ebf8ff 100%);
-  /* Change la couleur #ffffff en fonction de la couleur de fond du main */
   z-index: 0;
 }
 
@@ -294,6 +293,7 @@ main {
     padding: 24px 140px;
   }
 }
+
 // contribution github graphique
 
 .contributions {
@@ -312,7 +312,6 @@ main {
 .ghCalendarCard {
   background-color: #ffffff !important;
   border: 2px solid #f1f1f1 !important;
-  // box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   border-radius: 24px !important;
 }
 
@@ -335,7 +334,6 @@ main {
 
 @media (min-width: 530px) and (max-width: 870px) {
   .section-portolio {
-    // padding: 4px;
     margin: 24px 0;
     padding: 20px;
   }
@@ -360,7 +358,7 @@ main {
 
 @media (max-width: 1395px) {
   .container-portfolio {
-    grid-template-columns: 1fr; /* Passe à une seule colonne sur les petits écrans */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -519,13 +517,6 @@ main {
   .section-presentation {
     margin: 24px 0;
     padding: 18px;
-
-    .text-content-presentation {
-      // img {
-      //   width: 120px;
-      //   height: 120px;
-      // }
-    }
 
     a {
       margin: 8px;
@@ -804,21 +795,19 @@ main {
 }
 
 .contributions-container {
-  // overflow: auto;
   width: 100%;
   padding-bottom: 10px;
   margin: 50px 0;
   scrollbar-color: #38b6ff transparent;
-  // scrollbar-width: thin;
 }
 
 .contributions-container::-webkit-scrollbar-thumb {
-  background-color: #38b6ff; /* Couleur du pouce de défilement */
-  border-radius: 10px; /* Ajoute un border-radius pour arrondir */
+  background-color: #38b6ff;
+  border-radius: 10px;
 }
 
 .contributions-container::-webkit-scrollbar-track {
-  background: transparent; /* Couleur de la piste */
+  background: transparent;
 }
 
 .contributions {
@@ -829,6 +818,6 @@ main {
 
 @media (max-width: 822px) {
   .contributions-container {
-    overflow-x: auto; /* Affiche la barre de défilement si nécessaire */
+    overflow-x: auto;
   }
 }

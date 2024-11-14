@@ -63,7 +63,6 @@ document.addEventListener("turbo:load", function () {
     });
   }
 
-  // Initialiser les timelines pour les éducations et les expériences
   setupTimeline(".parcours-timeline", ".parcours-rond", ".parcours-box", ".parcours-ligne");
   setupTimeline(".experience-timeline", ".experience-rond", ".experience-box", ".experience-ligne");
 });

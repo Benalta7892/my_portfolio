@@ -4,7 +4,6 @@ export default class extends Controller {
   static targets = ["slide"];
 
   connect() {
-    // Récupère l'index stocké ou revient à 0
     const savedIndex = localStorage.getItem("carouselIndex");
     this.currentIndex = savedIndex ? parseInt(savedIndex) : 0;
     this.showCurrentSlide();
@@ -33,7 +32,6 @@ export default class extends Controller {
   }
 
   saveCurrentIndex() {
-    // Sauvegarder l'index de la slide actuelle dans le localStorage
     localStorage.setItem("carouselIndex", this.currentIndex);
   }
 }

@@ -5,15 +5,15 @@ export default class extends Controller {
 
   connect() {
     console.log("Popover initialized");
-    this.showTimeout = null; // Pour stocker le timeout de show
-    this.hideTimeout = null; // Pour stocker le timeout de hide
+    this.showTimeout = null;
+    this.hideTimeout = null;
   }
 
   show() {
     console.log("Attempting to show popover");
 
     if (this.hideTimeout) {
-      clearTimeout(this.hideTimeout); // Annuler la tentative de cacher si elle est en cours
+      clearTimeout(this.hideTimeout);
     }
 
     if (this.hasContentTarget) {
@@ -23,11 +23,10 @@ export default class extends Controller {
       }
 
       if (this.hasCardTarget) {
-        // Ajoutez un léger délai pour éviter le spam de l'événement
         this.showTimeout = setTimeout(() => {
-          this.cardTarget.classList.add("popover-visible"); // Ajoute la classe pour l'afficher avec la transition
+          this.cardTarget.classList.add("popover-visible");
           console.log("Popover displayed:", this.cardTarget);
-        }, 200); // Un petit délai pour initier l'affichage
+        }, 200);
       } else {
         console.error("cardTarget is not defined or found after cloning");
       }
@@ -40,14 +39,14 @@ export default class extends Controller {
     console.log("Hiding popover");
 
     if (this.showTimeout) {
-      clearTimeout(this.showTimeout); // Annuler la tentative d'afficher si elle est en cours
+      clearTimeout(this.showTimeout);
     }
 
     this.hideTimeout = setTimeout(() => {
       if (this.hasCardTarget) {
-        this.cardTarget.classList.remove("popover-visible"); // Retire la classe pour cacher avec transition
+        this.cardTarget.classList.remove("popover-visible");
         console.log("Popover hidden:", this.cardTarget);
       }
-    }, 100); // Un délai léger avant de cacher l'élément
+    }, 100);
   }
 }

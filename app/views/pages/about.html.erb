@@ -1,7 +1,7 @@
 <br>
 <a id="first-section"></a>
 <% if request.referer == root_url %>
-  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, request.referer, class: "button button-back-about" %>
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, request.referer, class: "button button-back-about", data: { turbo: false } %>
 <% end %>
 
 
@@ -14,7 +14,6 @@
   <div class="cv-download" data-aos="fade-up">
     <%= cl_image_tag @resume.picture.key, alt: "Image du CV" %>
 
-    <!-- bouton de téléchargement avec popover -->
     <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
       <%= link_to download_resume_path(@resume), class: "button-download", target: "_blank", rel: "noopener noreferrer" do %> <!-- Lien de téléchargement -->
         <i class="fa-solid fa-download" style="color: #000000;"></i>
@@ -31,7 +30,6 @@
 
 </div>
 
-<%# <div class="time-line-container"> %>
 <!-- Section Éducation -->
 <div class="section-parcours" data-aos="fade-up" data-aos-once="true">
   <h2><span>C</span>onfirmé par des diplômes</h2>
@@ -53,9 +51,7 @@
         <!-- Affichage des boutons Modifier et Supprimer si l'utilisateur est admin -->
         <% if user_signed_in? && current_user.admin? %>
           <div class="editOrDeleteBtn education-btn">
-            <%# <div class="edit-project-button"> %>
             <%= link_to 'Modifier', edit_resume_education_path(@resume, education), class: 'button button-edit', data: { turbo: false } %>
-            <%# </div> %>
             <%= link_to 'Supprimer', resume_education_path(@resume, education),
                 data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette éducation ?" },
                 class: "button button-delete" %>
@@ -89,9 +85,7 @@
           <!-- Affichage des boutons Modifier et Supprimer si l'utilisateur est admin -->
           <% if user_signed_in? && current_user.admin? %>
             <div class="editOrDeleteBtn education-btn">
-              <%# <div class="edit-project-button"> %>
               <%= link_to 'Modifier', edit_resume_experience_path(@resume, experience), class: 'button button-edit' %>
-              <%# </div> %>
               <%= link_to 'Supprimer', resume_experience_path(@resume, experience),
                 data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cette éducation ?" },
                 class: "button button-delete" %>
@@ -103,7 +97,6 @@
     </div>
   </div>
 <% end %>
-<%# </div> %>
 
 
 <section class="carousel-logos">

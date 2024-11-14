@@ -1,13 +1,6 @@
 <br>
 <a id="first-section"></a>
 
-<%# Ici rajouter un lien/bouton pour un retour a l'index des projets %>
-<%# <div class="back-btn" id="first-section"> %>
-<%# link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "back-btn", id: "first-section" %>
-<%# </div> %>
-
-
-<%# Affichage du bouton Modifier si l'utilisateur est admin %>
 <div class="editOrDeleteBtn">
   <%= link_to '<i class="fa-solid fa-arrow-left"></i> Retour'.html_safe, projects_path, class: "button button-back" %>
 
@@ -63,11 +56,9 @@
     </div>
   </div>
 
-  <%# <div class="link-github"> %>
   <% if @project.link.present? %>
     <%= link_to "🔗 Lien GitHub.", @project.link, target: "_blank", class: "link-github" %>
   <% end %>
-  <%# </div> %>
 </section>
 
 
@@ -100,9 +91,6 @@
   </div>
 
 </section>
-
-
-<%# <h2>Technologies utilisées</h2> %>
 
 
 <section class="section-skills" data-aos="fade-up" data-aos-once="true">
@@ -179,39 +167,3 @@
 
   </div>
 </section>
-
-
-<%# <div class="project-show"> %>
-<%# <div class="project-picture"> %>
-<%# if @project.pictures.attached? %>
-<%# @project.pictures.each do |picture| %>
-  <%#= image_tag url_for(picture) %>
-  <%# end %>
-  <%# else %>
-  <%# <p>Aucune image disponible pour ce projet.</p> %>
-  <%# end %>
-  <%# </div> %>
-
-  <%# <div class="project-description"> %>
-  <%# <h3> %>
-  <%#= @project.title %>
-  <%# </h3> %>
-  <%# <p> %>
-  <%#= @project.description %>
-  <%# </p> %>
-
-  <%# <p><strong>Technologies utilisées :</strong></p> %>
-  <%# <div class="project-technologies"> %>
-  <%# Affiche les technologies séparées par une virgule %>
-  <%# <p> %>
-  <%#= @project.technologies %>
-  <%# </p> %>
-  <%# </div> %>
-
-  <%# <div class="project-links"> %>
-  <%# if @project.link.present? %>
-  <%#= link_to "Voir le code source", @project.link, target: "_blank", class: "button" %>
-  <%# end %>
-  <%# </div> %>
-  <%# </div> %>
-  <%# </div> %>

@@ -16,7 +16,6 @@ legend ~ div.form-check:first-of-type {
   position: relative;
   z-index: 2;
   margin-bottom: -50px;
-  // margin-top: 90px;
 }
 
 .form-contact {
@@ -38,7 +37,6 @@ legend ~ div.form-check:first-of-type {
   width: 100%;
   min-height: 355px;
   justify-content: space-evenly;
-  // margin-top: 28px;
   padding: 28px;
   background-color: white;
   border-radius: 24px;
@@ -214,42 +212,4 @@ form {
       }
     }
   }
-
-  // // Styles des boutons
-  // .actions {
-  //   display: flex;
-  //   justify-content: flex-start;
-
-  //   .button {
-  //     padding: 0.5rem 1rem;
-  //     font-size: 1rem;
-  //     color: #fff;
-  //     background-color: #007bff;
-  //     border: none;
-  //     border-radius: 4px;
-  //     cursor: pointer;
-  //     transition: background-color 0.2s ease;
-
-  //     &:hover {
-  //       background-color: #0056b3;
-  //     }
-  //   }
-  // }
-
-  // .button-cancel {
-  //   padding: 0.5rem 1rem;
-  //   font-size: 1rem;
-  //   color: #555;
-  //   background-color: #f0f0f0;
-  //   border: 1px solid #ccc;
-  //   border-radius: 4px;
-  //   cursor: pointer;
-  //   margin-left: 1rem;
-  //   transition: background-color 0.2s ease, color 0.2s ease;
-
-  //   &:hover {
-  //     background-color: #e0e0e0;
-  //     color: #333;
-  //   }
-  // }
 }
