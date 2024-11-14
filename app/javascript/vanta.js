@@ -30,7 +30,7 @@ const darkModeColors = {
   },
   net: {
     backgroundColor: 0x1b1b1b,
-    color: 0x50596b,
+    color: 0x5588,
   },
 };
 
@@ -134,7 +134,7 @@ function initVantaEffect() {
       ...colors.net,
       points: 30,
       maxDistance: 70,
-      spacing: 90,
+      spacing: 80,
     });
   }
 }
