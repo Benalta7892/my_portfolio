@@ -22,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ebf8ff;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -297,6 +298,7 @@ main {
 
 .contributions {
   margin: 60px auto 150px;
+  margin: 4px;
 }
 
 .ghThumbNail {
@@ -309,8 +311,8 @@ main {
 
 .ghCalendarCard {
   background-color: #ffffff !important;
-  border: none !important;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.46);
+  border: 2px solid #f1f1f1 !important;
+  // box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   border-radius: 24px !important;
 }
 
@@ -799,4 +801,17 @@ main {
       }
     }
   }
+}
+
+.contributions-container {
+  overflow: scroll;
+  width: 100%;
+  padding-bottom: 10px;
+  margin: 50px 0;
+}
+
+.contributions {
+  min-width: 700px;
+  margin: 0 auto;
+  padding: 0 2px;
 }

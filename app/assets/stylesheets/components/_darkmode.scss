@@ -518,6 +518,23 @@
       transition: box-shadow 0.4s ease, transform 0.3s ease;
     }
   }
+
+  .ghCalendarHeader span {
+    color: #ddd6d5 !important;
+  }
+
+  .ghCalendarLabel {
+    color: #ddd6d5 !important;
+  }
+
+  .ghCalendarCard {
+    background: #222 !important;
+    border: 2px solid #f1f1f1 !important;
+  }
+
+  .ghCalendarDayCell[data-level="NONE"] {
+    background-color: #282828 !important;
+  }
 }
 
 .logo-dark {

@@ -13,3 +13,10 @@ import "./features";
 import "./aos_init";
 import "./sessionstorage";
 import "./darkmode";
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const container = document.querySelector(".contributions-container");
+//   if (container) {
+//     container.scrollLeft = container.scrollWidth; // Positionne le défilement à la fin (côté droit)
+//   }
+// });
