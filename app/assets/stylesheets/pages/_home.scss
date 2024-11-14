@@ -799,7 +799,6 @@ main {
   padding-bottom: 10px;
   margin: 50px 0;
   scrollbar-color: #38b6ff transparent;
-  box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Ombre légère sur le bord droit */
 }
 
 .contributions-container::-webkit-scrollbar-thumb {
@@ -820,5 +819,6 @@ main {
 @media (max-width: 822px) {
   .contributions-container {
     overflow-x: auto;
+    box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Ombre légère sur le bord droit */
   }
 }
