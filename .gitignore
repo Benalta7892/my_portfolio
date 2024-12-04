@@ -41,4 +41,4 @@
 .DS_Store
 
 # Ignore the database config file
-# db/seeds.rb
+db/seeds.rb
