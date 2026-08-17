@@ -36,5 +36,5 @@ local:
 # Cloudinary configuration
 cloudinary:
   service: Cloudinary
-  folder: <%= Rails.env %>
+  folder: my_portfolio/<%= Rails.env %>
   url: <%= ENV['CLOUDINARY_URL'] %>

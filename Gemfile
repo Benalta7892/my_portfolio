@@ -85,5 +85,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "activestorage-cloudinary-service", "~> 0.2.3"

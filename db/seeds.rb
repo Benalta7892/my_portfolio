@@ -49,7 +49,7 @@ puts "User created!"
 puts "Creating TechnologyItems"
 
 frontend_technologies = [
-  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "figma_d7mc4z.png", version: "v1727700623", alt: "Figma logo", order_position: 1 },
+  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "my_portfolio/development/figma.png", version: "v1786976834", alt: "Figma logo", order_position: 1 },
   { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", logo: "html5_kf7hmz.png", version: "v1727700623", alt: "HTML5 logo", order_position: 2 },
   { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", logo: "css3_q9lv1h.png", version: "v1727700623", alt: "CSS3 logo", order_position: 3 },
   { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", logo: "js_qh6ndw.png", version: "v1727700623", alt: "JavaScript logo", order_position: 4 },
@@ -86,7 +86,7 @@ def create_technology_items(technologies, category)
     )
 
     if tech[:logo].present? && !technology.logo.attached?
-      logo_url = logo_url = "https://res.cloudinary.com/djgk65kdl/image/upload/#{tech[:version]}/#{tech[:logo]}"
+      logo_url = "https://res.cloudinary.com/tl0y1cue/image/upload/#{tech[:version]}/#{tech[:logo]}"
       file = URI.open(logo_url)
       technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
     end
