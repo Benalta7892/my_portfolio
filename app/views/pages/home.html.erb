@@ -197,6 +197,8 @@
           <div class="carousel-image-container">
             <% if project.pictures.attached? %>
               <%= cl_image_tag project.pictures.first.key, class: "carousel-image" %>
+            <% elsif project.local_pictures.present? %>
+              <%= image_tag project.local_pictures.first, class: "carousel-image", alt: "Image du projet #{project.title}" %>
             <% else %>
               <p>Aucune image disponible pour ce projet.</p>
             <% end %>

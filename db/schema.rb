@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_08_21_190312) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_21_221500) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -107,6 +107,8 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_21_190312) do
     t.text "tools"
     t.string "subtitle"
     t.string "background_image"
+    t.json "local_pictures"
+    t.string "local_background_image"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

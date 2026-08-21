@@ -119,12 +119,12 @@ projects = [
       "La réservation à la journée ou pour plusieurs jours."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1731125857/zerotohero1_ntkhgr.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.27_ju3ccf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718195/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.28.53_ayjjuf.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727718194/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_15.29.28_cirhek.png"
+      "projects/zero_to_heroes/zerotoheroes1.png",
+      "projects/zero_to_heroes/zerotoheroes2.png",
+      "projects/zero_to_heroes/zerotoheroes3.png",
+      "projects/zero_to_heroes/zerotoheroes4.png"
     ],
-    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370314/hero1_oqudl7.jpg",
+    background_image: "projects/zero_to_heroes/zerotoheroesBG.jpg",
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Stimulus", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
     tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
@@ -149,19 +149,18 @@ projects = [
       "Un système de notation pour renforcer la confiance."
     ],
     pictures: [
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799295/pokeswype_copie_ymvvv7.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799314/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.23.41_ywfz5a.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799319/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.11_alwxam.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799325/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.24.41_pbv64u.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799330/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.26.55_d3ukct.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799334/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.05_m2k2hw.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799346/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.28.52_rqoav1.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799348/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.29.28_zmhylb.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799354/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.30_wnnsgq.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799358/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.30.40_hfuroi.png",
-      "https://res.cloudinary.com/djgk65kdl/image/upload/v1727799362/Capture_d_e%CC%81cran_2024-04-05_a%CC%80_17.31.04_thidt0.png"
+      "projects/pokeswype/pokeswype1.png",
+      "projects/pokeswype/pokeswype2.png",
+      "projects/pokeswype/pokeswype3.png",
+      "projects/pokeswype/pokeswype4.png",
+      "projects/pokeswype/pokeswype5.png",
+      "projects/pokeswype/pokeswype6.png",
+      "projects/pokeswype/pokeswype7.png",
+      "projects/pokeswype/pokeswype8.png",
+      "projects/pokeswype/pokeswype9.png",
+      "projects/pokeswype/pokeswype10.png",
     ],
-    background_image: "https://res.cloudinary.com/djgk65kdl/image/upload/v1731370403/poke1_jg78kt.jpg",
+    background_image: "projects/pokeswype/pokeswypeBG.jpg",
     frontend_technologies: TechnologyItem.where(name: ["HTML5", "CSS3", "JavaScript", "Sass", "Figma"]),
     backend_technologies: TechnologyItem.where(name: ["Rails", "Devise", "Cloudinary", "Postman", "PostgreSQL", "Heroku"]),
     tools: TechnologyItem.where(name: ["VSCode", "Git", "GitHub", "Slack", "Trello"]),
@@ -177,7 +176,9 @@ projects.each do |project_data|
     description: project_data[:description],
     features: project_data[:features],
     link: project_data[:link],
-    dev_count: project_data[:dev_count]
+    dev_count: project_data[:dev_count],
+    local_pictures: project_data[:pictures],
+    local_background_image: project_data[:background_image]
   )
 
   # if project_data[:pictures] && !project.pictures.attached?
@@ -214,13 +215,13 @@ resume = user.create_resume!(
   ]
 )
 
-# unless resume.picture.attached?
-#   resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305726/BenoitAlexandreCVimg_mhk6jb.png"), filename: "cv.jpg")
-# end
+unless resume.picture.attached?
+  resume.picture.attach(io: URI.open("https://res.cloudinary.com/tl0y1cue/image/upload/v1787342994/my_portfolio/development/AlexandreTachdjianBenoitCVOP.png"), filename: "AlexandreTachdjianBenoitCVOP.png")
+end
 
-# unless resume.pdf.attached?
-#   resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305455/BenoitAlexandreCV_ljpjtl.pdf"), filename: "BenoitAlexandreCV.pdf")
-# end
+unless resume.pdf.attached?
+  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/tl0y1cue/image/upload/v1787345206/my_portfolio/development/AlexandreTachdjianBenoitCVO.pdf"), filename: "AlexandreTachdjianBenoitCVO.pdf")
+end
 
 puts "Resume created: #{resume.title}"
 

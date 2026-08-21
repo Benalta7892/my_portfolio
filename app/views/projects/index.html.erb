@@ -26,6 +26,8 @@
           <div class="project-picture">
             <% if project.pictures.attached? %>
               <%= cl_image_tag project.pictures.first.key, alt: project.title %>
+            <% elsif project.local_pictures.present? %>
+              <%= image_tag project.local_pictures.first, alt: project.title %>
             <% else %>
               <p>Aucune image disponible pour ce projet.</p>
             <% end %>

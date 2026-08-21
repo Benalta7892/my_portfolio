@@ -42,8 +42,13 @@
         id="vantajs"
       <% end %>
       class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %> <%= controller_name %>-page"
-      <% if controller_name == "projects" && action_name == "show" && @project.background_image.attached? %>
-        style="background-image: url(<%= cl_image_path(@project.background_image.key) %>);"
+      <% if controller_name == "projects" && action_name == "show" %>
+        <% if @project.background_image.attached? %>
+          style="background-image: url('<%= cl_image_path(@project.background_image.key) %>');"
+        <% elsif @project.local_background_image.present? %>
+          style="background-image: url('<%= asset_path(@project.local_background_image) %>');"
+        <% end %>
+
       <% elsif ["new", "edit"].include?(action_name) && controller_name != "contacts" %>
         style="background-image: url(<%= cl_image_path('neweditform_crvorp.png') %>);"
       <% end %>
