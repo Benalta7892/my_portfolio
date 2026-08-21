@@ -12,7 +12,7 @@ class TechnologyItemsController < ApplicationController
     if @technology_item.save
       redirect_to root_path, notice: "Nouvelle technologie ajoutée avec succès."
     else
-      render :new, alert: "Erreur lors de l'ajout de la technologie."
+      render :new, alert: "Erreur lors de l'ajout de la technologie.", status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class TechnologyItemsController < ApplicationController
     if @technology_item.update(technology_item_params)
       redirect_to root_path, notice: "Technologie modifiée avec succès."
     else
-      render :edit, alert: "Erreur lors de la modification de la technologie."
+      render :edit, alert: "Erreur lors de la modification de la technologie.", status: :unprocessable_entity
     end
   end
 
@@ -39,7 +39,7 @@ class TechnologyItemsController < ApplicationController
     if @technology_item.destroy
       redirect_to root_path, notice: "Technologie supprimée avec succès."
     else
-      redirect_to root_path, alert: "Erreur lors de la suppression de la technologie."
+      redirect_to root_path, alert: "Erreur lors de la suppression de la technologie.", status: :unprocessable_entity
     end
   end
 
