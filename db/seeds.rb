@@ -49,31 +49,31 @@ puts "User created!"
 puts "Creating TechnologyItems"
 
 frontend_technologies = [
-  { name: "Figma", link: "https://www.figma.com/fr-fr/", logo: "my_portfolio/development/figma.png", version: "v1786976834", alt: "Figma logo", order_position: 1 },
-  { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", logo: "html5_kf7hmz.png", version: "v1727700623", alt: "HTML5 logo", order_position: 2 },
-  { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", logo: "css3_q9lv1h.png", version: "v1727700623", alt: "CSS3 logo", order_position: 3 },
-  { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", logo: "js_qh6ndw.png", version: "v1727700623", alt: "JavaScript logo", order_position: 4 },
-  { name: "Stimulus", link: "https://stimulus.hotwired.dev/", logo: "stimulus_byehql.png", version: "v1728895436", alt: "Stimulus logo", order_position: 5 },
-  { name: "Sass", link: "https://sass-lang.com/", logo: "sass_lfse0e.png", version: "v1728894867", alt: "Sass logo", order_position: 6 },
+  { name: "Figma", link: "https://www.figma.com/fr-fr/", local_logo: "logos/figma.png", alt: "Figma logo", order_position: 1 },
+  { name: "HTML5", link: "https://developer.mozilla.org/fr/docs/Web/HTML", local_logo: "logos/html5.png", alt: "HTML5 logo", order_position: 2 },
+  { name: "CSS3", link: "https://developer.mozilla.org/fr/docs/Web/CSS", local_logo: "logos/css3.png", alt: "CSS3 logo", order_position: 3 },
+  { name: "JavaScript", link: "https://developer.mozilla.org/fr/docs/Web/JavaScript", local_logo: "logos/js.png", alt: "JavaScript logo", order_position: 4 },
+  { name: "Stimulus", link: "https://stimulus.hotwired.dev/", local_logo: "logos/stimulus.png", alt: "Stimulus logo", order_position: 5 },
+  { name: "Sass", link: "https://sass-lang.com/", local_logo: "logos/sass.png", alt: "Sass logo", order_position: 6 },
 ]
 
 backend_technologies = [
-  { name: "Ruby", link: "https://www.ruby-lang.org/fr/", logo: "ruby_u4fzgi.png", version: "v1727700624", alt: "Ruby logo", order_position: 1 },
-  { name: "Rails", link: "https://rubyonrails.org/", logo: "rails_w8dl1x.png", version: "v1727700624", alt: "Rails logo", order_position: 2 },
-  { name: "PHP", link: "https://www.php.net/", logo: "php_ehpiwx.png", version: "v1727700623", alt: "PHP logo", order_position: 3 },
-  { name: "Devise", link: "https://github.com/heartcombo/devise", logo: "devise_p8bflb.png", version: "v1728894338", alt: "Devise logo", order_position: 4 },
-  { name: "Cloudinary", link: "https://cloudinary.com/", logo: "cloudinary_mrktzt.png", version: "v1728894646", alt: "Cloudinary logo", order_position: 5 },
-  { name: "Postman", link: "https://www.postman.com/", logo: "postman_y3zgpe.png", version: "v1729721156", alt: "Postman logo", order_position: 6 },
-  { name: "PostgreSQL", link: "https://www.postgresql.org/", logo: "postgresql_czwsff.png", version: "v1727700624", alt: "PostgreSQL logo", order_position: 7 },
-  { name: "Heroku", link: "https://www.heroku.com/", logo: "heroku_vqw6qd.png", version: "v1727700623", alt: "Heroku logo", order_position: 8 },
+  { name: "Ruby", link: "https://www.ruby-lang.org/fr/", local_logo: "logos/ruby.png", alt: "Ruby logo", order_position: 1 },
+  { name: "Rails", link: "https://rubyonrails.org/", local_logo: "logos/rails.png", alt: "Rails logo", order_position: 2 },
+  { name: "PHP", link: "https://www.php.net/", local_logo: "logos/php.png", alt: "PHP logo", order_position: 3 },
+  { name: "Devise", link: "https://github.com/heartcombo/devise", local_logo: "logos/devise.png", alt: "Devise logo", order_position: 4 },
+  { name: "Cloudinary", link: "https://cloudinary.com/", local_logo: "logos/cloudinary.png", alt: "Cloudinary logo", order_position: 5 },
+  { name: "Postman", link: "https://www.postman.com/", local_logo: "logos/postman.png", alt: "Postman logo", order_position: 6 },
+  { name: "PostgreSQL", link: "https://www.postgresql.org/", local_logo: "logos/postgresql.png", alt: "PostgreSQL logo", order_position: 7 },
+  { name: "Heroku", link: "https://www.heroku.com/", local_logo: "logos/heroku.png", alt: "Heroku logo", order_position: 8 },
 ]
 
 tools = [
-  { name: "VSCode", link: "https://code.visualstudio.com/", logo: "vscode_aio2rn.png", version: "v1729717392", alt: "VSCode logo", order_position: 1 },
-  { name: "Git", link: "https://git-scm.com/", logo: "git_h8j6pt.png", version: "v1728900994", alt: "Git logo", order_position: 2 },
-  { name: "GitHub", link: "https://github.com/", logo: "github_hjj2ba.png", version: "v1728900778", alt: "GitHub logo", order_position: 3 },
-  { name: "Slack", link: "https://slack.com/intl/fr-fr/", logo: "slack_ft3jeu.png", version: "v1729721553", alt: "Slack logo", order_position: 4 },
-  { name: "Trello", link: "https://trello.com/fr", logo: "trello_zsnis6.png", version: "v1728894156", alt: "Trello logo", order_position: 5 },
+  { name: "VSCode", link: "https://code.visualstudio.com/", local_logo: "logos/vscode.png", alt: "VSCode logo", order_position: 1 },
+  { name: "Git", link: "https://git-scm.com/", local_logo: "logos/git.png", alt: "Git logo", order_position: 2 },
+  { name: "GitHub", link: "https://github.com/", local_logo: "logos/github1.png", alt: "GitHub logo", order_position: 3 },
+  { name: "Slack", link: "https://slack.com/intl/fr-fr/", local_logo: "logos/slack.png", alt: "Slack logo", order_position: 4 },
+  { name: "Trello", link: "https://trello.com/fr", local_logo: "logos/trello.png", alt: "Trello logo", order_position: 5 },
 ]
 
 def create_technology_items(technologies, category)
@@ -82,14 +82,15 @@ def create_technology_items(technologies, category)
       name: tech[:name],
       link: tech[:link],
       category: category,
-      order_position: tech[:order_position]
+      order_position: tech[:order_position],
+      local_logo: tech[:local_logo],
     )
 
-    if tech[:logo].present? && !technology.logo.attached?
-      logo_url = "https://res.cloudinary.com/tl0y1cue/image/upload/#{tech[:version]}/#{tech[:logo]}"
-      file = URI.open(logo_url)
-      technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
-    end
+    # if tech[:logo].present? && !technology.logo.attached?
+    #   logo_url = "https://res.cloudinary.com/tl0y1cue/image/upload/#{tech[:version]}/#{tech[:logo]}"
+    #   file = URI.open(logo_url)
+    #   technology.logo.attach(io: file, filename: tech[:logo], content_type: "image/png")
+    # end
   end
 end
 
@@ -179,15 +180,15 @@ projects.each do |project_data|
     dev_count: project_data[:dev_count]
   )
 
-  if project_data[:pictures] && !project.pictures.attached?
-    project_data[:pictures].each_with_index do |picture_url, index|
-      project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
-    end
-  end
+  # if project_data[:pictures] && !project.pictures.attached?
+  #   project_data[:pictures].each_with_index do |picture_url, index|
+  #     project.pictures.attach(io: URI.open(picture_url), filename: "picture_#{index}.jpg")
+  #   end
+  # end
 
-  if project_data[:background_image] && !project.background_image.attached?
-    project.background_image.attach(io: URI.open(project_data[:background_image]), filename: "background_image.jpg")
-  end
+  # if project_data[:background_image] && !project.background_image.attached?
+  #   project.background_image.attach(io: URI.open(project_data[:background_image]), filename: "background_image.jpg")
+  # end
 
   project.frontend_technologies << project_data[:frontend_technologies].to_a
 
@@ -213,13 +214,13 @@ resume = user.create_resume!(
   ]
 )
 
-unless resume.picture.attached?
-  resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305726/BenoitAlexandreCVimg_mhk6jb.png"), filename: "cv.jpg")
-end
+# unless resume.picture.attached?
+#   resume.picture.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305726/BenoitAlexandreCVimg_mhk6jb.png"), filename: "cv.jpg")
+# end
 
-unless resume.pdf.attached?
-  resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305455/BenoitAlexandreCV_ljpjtl.pdf"), filename: "BenoitAlexandreCV.pdf")
-end
+# unless resume.pdf.attached?
+#   resume.pdf.attach(io: URI.open("https://res.cloudinary.com/djgk65kdl/image/upload/v1733305455/BenoitAlexandreCV_ljpjtl.pdf"), filename: "BenoitAlexandreCV.pdf")
+# end
 
 puts "Resume created: #{resume.title}"
 
@@ -283,9 +284,9 @@ educations.each do |education_data|
     order_position: education_data[:order_position]
     )
 
-    if education_data[:logo].present?
-      education.logo.attach(io: URI.open(education_data[:logo]), filename: "logo.jpg")
-    end
+    # if education_data[:logo].present?
+    #   education.logo.attach(io: URI.open(education_data[:logo]), filename: "logo.jpg")
+    # end
 end
 
 puts "Educations created!"
@@ -380,15 +381,15 @@ experiences.each do |experience_data|
     order_position: experience_data[:order_position]
   )
 
-  if experience_data[:logo].present?
-    if experience_data[:logo].is_a?(Array)
-      experience_data[:logo].each_with_index do |logo_url, index|
-        experience.logos.attach(io: URI.open(logo_url), filename: "logo_#{index}.jpg")
-      end
-    elsif experience_data[:logo].is_a?(String)
-      experience.logos.attach(io: URI.open(experience_data[:logo]), filename: "logo.jpg")
-    end
-  end
+  # if experience_data[:logo].present?
+  #   if experience_data[:logo].is_a?(Array)
+  #     experience_data[:logo].each_with_index do |logo_url, index|
+  #       experience.logos.attach(io: URI.open(logo_url), filename: "logo_#{index}.jpg")
+  #     end
+  #   elsif experience_data[:logo].is_a?(String)
+  #     experience.logos.attach(io: URI.open(experience_data[:logo]), filename: "logo.jpg")
+  #   end
+  # end
 end
 
 puts "Experiences created!"

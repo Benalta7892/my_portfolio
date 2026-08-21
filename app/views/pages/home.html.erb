@@ -45,9 +45,16 @@
       <h2><span>F</span>ront-End</h2>
       <div class="logos">
         <% @frontend_technologies.each do |tech| %>
-          <% if tech.logo.attached? && tech.link.present? %>
+          <% if tech.link.present? && (tech.logo.attached? || tech.local_logo.present?) %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <%= link_to tech.link, target: "_blank", data: { turbo: false } do %>
+                <% if tech.logo.attached? %>
+                  <%= cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100) %>
+                <% else %>
+                  <%= image_tag(tech.local_logo, alt: tech.name, width: 100, height: 100) %>
+                <% end %>
+              <% end %>
+
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tech.name %></p>
@@ -85,9 +92,16 @@
       <h2><span>B</span>ack-End</h2>
       <div class="logos">
         <% @backend_technologies.each do |tech| %>
-          <% if tech.logo.attached? && tech.link.present? %>
+          <% if tech.link.present? && (tech.logo.attached? || tech.local_logo.present?) %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100), tech.link, target: "_blank", data: { turbo: false } %>
+              <%= link_to tech.link, target: "_blank", data: { turbo: false } do %>
+                <% if tech.logo.attached? %>
+                  <%= cl_image_tag(tech.logo.key, alt: tech.name, width: 100, height: 100) %>
+                <% else %>
+                  <%= image_tag(tech.local_logo, alt: tech.name, width: 100, height: 100) %>
+                <% end %>
+              <% end %>
+
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tech.name %></p>
@@ -122,9 +136,16 @@
       <h2><span>O</span>utils</h2>
       <div class="logos">
         <% @tools.each do |tool| %>
-          <% if tool.logo.attached? && tool.link.present? %>
+          <% if tool.link.present? && (tool.logo.attached? || tool.local_logo.present?) %>
             <div data-controller="popover" data-action="mouseenter->popover#show mouseleave->popover#hide">
-              <%= link_to cl_image_tag(tool.logo.key, alt: tool.name, width: 100, height: 100), tool.link, target: "_blank", data: { turbo: false } %>
+              <%= link_to tool.link, target: "_blank", data: { turbo: false } do %>
+                <% if tool.logo.attached? %>
+                  <%= cl_image_tag(tool.logo.key, alt: tool.name, width: 100, height: 100) %>
+                <% else %>
+                  <%= image_tag(tool.local_logo, alt: tool.name, width: 100, height: 100) %>
+                <% end %>
+              <% end %>
+
               <template data-popover-target="content">
                 <div data-popover-target="card" class="popover-content <%= 'admin-visible' if user_signed_in? && current_user.admin? %>">
                   <p><%= tool.name %></p>
