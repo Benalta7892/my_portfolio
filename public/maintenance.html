@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benoit Alexandre</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(56, 182, 255, 0.18),
+            transparent 35%
+          ),
+          linear-gradient(135deg, #ebf8ff, #ffffff);
+        color: #1a2c37;
+        padding: 24px;
+      }
+
+      .maintenance-card {
+        width: min(100%, 700px);
+        padding: 60px 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #e6e6e6;
+        border-radius: 28px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 24px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: #ebf8ff;
+        color: #188acb;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: clamp(36px, 7vw, 64px);
+        margin-bottom: 18px;
+      }
+
+      .subtitle {
+        font-size: clamp(18px, 3vw, 24px);
+        font-weight: 600;
+        margin-bottom: 14px;
+      }
+
+      .description {
+        max-width: 520px;
+        margin: 0 auto;
+        color: #5d6870;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .thanks {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a2c37;
+      }
+
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background: #38b6ff;
+      }
+
+      @media (max-width: 600px) {
+        .maintenance-card {
+          padding: 40px 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="maintenance-card">
+      <div class="badge">
+        <span class="dot"></span>
+        Maintenance
+      </div>
+
+      <h1>Bonjour 👋🏼</h1>
+
+      <p class="subtitle">Accès temporairement indisponible.</p>
+
+      <p class="description">
+        Je travaille actuellement sur quelques améliorations. Mon portfolio sera
+        de nouveau accessible très bientôt !
+      </p>
+
+      <p class="thanks">Merci de votre visite et à bientôt !</p>
+    </main>
+  </body>
+</html>
