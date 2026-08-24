@@ -38,9 +38,10 @@
 
     <!-- Définition de la classe du header en fonction de la page -->
     <header
-      <% if !(controller_name == "projects" && action_name == "show") %>
+      <% unless controller_name == "projects" && ["show", "new", "edit"].include?(action_name) %>
         id="vantajs"
       <% end %>
+
       class="<%= current_page?(root_path) ? 'hero' : 'small-hero' %> <%= controller_name %>-page"
       <% if controller_name == "projects" && action_name == "show" %>
         <% if @project.background_image.attached? %>
@@ -50,7 +51,7 @@
         <% end %>
 
       <% elsif ["new", "edit"].include?(action_name) && controller_name != "contacts" %>
-        style="background-image: url(<%= cl_image_path('neweditform_crvorp.png') %>);"
+        style="background-image: url('<%= asset_path('neweditform.jpg') %>');"
       <% end %>
     >
 
