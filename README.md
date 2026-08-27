@@ -1,28 +1,44 @@
-# Portfolio — Benoît Alexandre
+# 💻 Portfolio — Benoît Alexandre
 
-Mon portfolio personnel de développeur web.
+Portfolio personnel de développeur web présentant mon parcours, mes compétences et les différents projets que j’ai réalisés.
 
-Il présente mon parcours, mes compétences et les différents projets que j’ai réalisés.
 
-## Site
+## 🌐 Lien du site
 
-Actuellement en maintenance.
+👉 https://www.benoit-alexandre.com
 
-https://www.benoit-alexandre.com
+Site actuellement en maintenance.
 
-## Stack
 
-- Ruby on Rails
-- PostgreSQL
-- JavaScript / Stimulus
-- SCSS
-- Heroku
+## 🧠 Objectif
 
-## Fonctionnalités
+Ce portfolio a été développé pour présenter mon profil, mon parcours et mes projets de développement web.
 
-- Présentation de mes projets
-- Pages détaillées pour chaque projet
-- Présentation de mon parcours et de mes compétences
-- Formulaire de contact
-- Mode sombre
-- Interface d’administration pour gérer le contenu du portfolio
+Il me permet également de mettre en pratique et d’approfondir mes compétences en Ruby on Rails, JavaScript et développement d’applications web.
+
+
+## ⚙️ Stack technique
+
+### Back-end :
+
+* Ruby on Rails
+* PostgreSQL
+
+### Front-end :
+
+* JavaScript / Stimulus
+* SCSS
+
+### Hébergement :
+
+* Heroku
+
+
+## 💡 Fonctionnalités principales
+
+* Présentation de mes projets
+* Pages détaillées pour chaque projet
+* Présentation de mon parcours et de mes compétences
+* Formulaire de contact
+* Mode sombre
+* Interface d’administration pour gérer le contenu du portfolio
