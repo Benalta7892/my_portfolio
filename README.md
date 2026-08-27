@@ -2,6 +2,7 @@
 
 Portfolio personnel de développeur web présentant mon parcours, mes compétences et les différents projets que j’ai réalisés.
 
+---
 
 ## 🌐 Lien du site
 
@@ -9,6 +10,7 @@ Portfolio personnel de développeur web présentant mon parcours, mes compétenc
 
 Site actuellement en maintenance.
 
+---
 
 ## 🧠 Objectif
 
@@ -16,6 +18,7 @@ Ce portfolio a été développé pour présenter mon profil, mon parcours et mes
 
 Il me permet également de mettre en pratique et d’approfondir mes compétences en Ruby on Rails, JavaScript et développement d’applications web.
 
+---
 
 ## ⚙️ Stack technique
 
@@ -33,6 +36,7 @@ Il me permet également de mettre en pratique et d’approfondir mes compétence
 
 * Heroku
 
+---
 
 ## 💡 Fonctionnalités principales
 
@@ -42,3 +46,5 @@ Il me permet également de mettre en pratique et d’approfondir mes compétence
 * Formulaire de contact
 * Mode sombre
 * Interface d’administration pour gérer le contenu du portfolio
+
+---
